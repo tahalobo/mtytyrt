@@ -1,0 +1,2121 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IQESF Events </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images.ico">
+
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="font-flaticon/flaticon.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        
+        <style>    @font-face {
+            font-family: 'Cairo';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+          }
+          
+           
+              body {
+                  font-family: "Cairo", sans-serif;
+              }</style>
+        <style>/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+        ::-webkit-scrollbar {
+            width: 12px; /* Width of the scrollbar */
+            height: 10px; /* Height for horizontal scrolling */
+        }
+        
+        /* Scrollbar Track (Background) */
+        ::-webkit-scrollbar-track {
+            background: #0a071b; /* Dark futuristic background */
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px #ff0047; /* Inner glow effect */
+        }
+        
+        /* Scrollbar Thumb (Draggable Part) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff0047, #800020, #ff2267);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047;
+            animation: neon-pulse 1.5s infinite alternate;
+        }
+        
+        /* Scrollbar Thumb Hover Effect */
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ff2267, #990033, #ff0047);
+            box-shadow: 0 0 25px #ff0047, 0 0 35px #ff0047;
+            animation: neon-glow 0.7s infinite alternate;
+        }
+        
+        /* Scrollbar Corner (for when two scrollbars meet) */
+        ::-webkit-scrollbar-corner {
+            background: #0a071b;
+        }
+        
+        /* Firefox Scrollbar */
+        * {
+            scrollbar-width: thin; /* Options: auto, thin, none */
+            scrollbar-color: #ff0047 #0a071b; /* thumb color, track color */
+        }
+        
+        /* Pulsating Neon Effect */
+        @keyframes neon-pulse {
+            0% { box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047; }
+            100% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
+        }
+        
+        /* Glowing Animation for Hover */
+        @keyframes neon-glow {
+            0% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
+            100% { box-shadow: 0 0 30px #ff0047, 0 0 40px #ff0047; }
+        }
+        </style>
+     <!-- header -->
+     <!-- header -->
+     <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#">EVENTS</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+                <li class="dropdown">
+                    <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="referee.htm">Apply as a referee</a></li>
+                        <li><a href="coach.html">Apply as coach</a></li>
+                        <li><a href="event.htm">Event license</a></li>
+                        <li><a href="talent.html">Apply as a talent</a></li>
+                        <li><a href="team.htm">Apply as a team/club</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Right Section -->
+            <div class="right-section">
+                <!-- Translate Button -->
+             
+                
+                <!-- Signup/Login Button -->
+                <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
+                
+                <!-- Mobile Menu Icon -->
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+    <style>
+  /* General Reset */
+/* Updated Translate Button Tooltip */
+.translate-btn:hover::before {
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Mobile Tooltip Adjustments */
+@media (max-width: 768px) {
+    .translate-btn:hover::before {
+        left: auto;
+        right: 0;
+        transform: none;
+        bottom: auto;
+        top: 100%;
+        margin-top: 8px;
+        white-space: normal;
+        width: 160px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    
+    .translate-btn:hover::after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 100%;
+        border-width: 0 6px 6px;
+        border-style: solid;
+        border-color: #1a1a1a transparent;
+        margin-top: 2px;
+    }
+}
+
+/* Add slight delay for mobile hover */
+@media (hover: hover) {
+    .translate-btn::before {
+        transition-delay: 0.1s;
+    }
+}
+/* Translate Button Improvements */
+.translate-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 14px;
+    margin-left: 15px; /* Add space between buttons */
+}
+
+.translate-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.translate-btn:hover::before {
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 1;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.translate-btn::before {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translate(-50%, 5px);
+}
+
+.translate-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+}
+
+.translate-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* Adjust right section spacing */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between elements */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .translate-btn {
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+    
+    .translate-btn span {
+        display: none;
+    }
+    
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+    
+    .right-section {
+        gap: 8px;
+    }
+}
+
+  /* Add to existing CSS */
+.translate-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.translate-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.translate-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Mobile Logo Replacement */
+@media (max-width: 768px) {
+    .logo img {
+        display: none;
+    }
+    
+    .logo::before {
+        content: "iqesf";
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+/* Update mobile menu for translate button */
+@media (max-width: 768px) {
+    .right-section {
+        gap: 8px;
+    }
+
+    .translate-btn span {
+        display: none;
+    }
+
+    .nav-links.active .translate-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20px; /* Added top space */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
+    padding: 15px 50px;
+    border-radius: 12px; /* Rounded edges for a modern look */
+    backdrop-filter: blur(10px); /* Glass effect */
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100%; /* Ensures logo scales properly */
+    max-height: 120px; /* Ensures maximum height of logo */
+    width: auto; /* Keeps aspect ratio intact */
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff3333;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
+    padding: 10px;
+    list-style: none;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu a {
+    color: white;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #ff3333;
+}
+
+/* Signup/Login Button */
+.login-btn {
+    background: linear-gradient(135deg, #ff1e00, #b30000);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #b30000, #ff1e00);
+    box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
+/* Mobile Menu Icon */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: rgba(10, 10, 22, 0.85);
+        padding: 12px 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
+
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 50px; /* Larger logo on mobile */
+    }
+
+    /* Right Section (Login + Menu Button in a Row) */
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between login & menu button */
+    }
+
+    /* Login Button */
+    .login-btn {
+        background: linear-gradient(135deg, #ff1e00, #b30000);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #b30000, #ff1e00);
+        box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+        background: linear-gradient(135deg, #333, #111);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    /* Move Close Button Inside the Menu */
+    .menu-toggle.menu-open {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    /* Hover Effect */
+    .menu-toggle:hover {
+        background: linear-gradient(135deg, #111, #333);
+    }
+
+    /* Mobile Nav */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 22, 0.95);
+        padding: 50px 20px;
+        text-align: center;
+        transition: right 0.4s ease-in-out;
+        overflow-y: auto; /* Enables vertical scroll */
+    }
+
+    /* Show Menu */
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Mobile Nav Links */
+    .nav-links li {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        color: white;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 30, 0, 0.6);
+    }
+}
+
+    </style>
+    <script>/* Toggle Mobile Menu */
+        /* Toggle Mobile Menu */
+function toggleMenu() {
+    let menu = document.querySelector('.nav-links');
+    let toggleButton = document.querySelector('.menu-toggle');
+    let translateBtn = document.querySelector('.translate-btn').cloneNode(true);
+
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        toggleButton.textContent = "☰";
+        document.querySelector('.nav-links .translate-btn')?.remove();
+    } else {
+        menu.classList.add('active');
+        toggleButton.textContent = "✕";
+        const listItem = document.createElement('li');
+        listItem.appendChild(translateBtn);
+        menu.appendChild(listItem);
+    }
+}
+function toggleMenu() {
+    let menu = document.querySelector('.nav-links');
+    let toggleButton = document.querySelector('.menu-toggle');
+
+    menu.classList.toggle('active');
+
+    // If menu is open, move button inside and change text to "CLOSE"
+    if (menu.classList.contains('active')) {
+        toggleButton.textContent = "CLOSE";
+        toggleButton.classList.add("menu-open"); // Moves button inside menu
+    } 
+    // If menu is closed, reset button position & text
+    else {
+        toggleButton.textContent = "MENU";
+        toggleButton.classList.remove("menu-open"); // Returns to original position
+    }
+}
+
+        </script>
+    <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
+        <p style="color: #00ff00; font-size: 24px; text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+        <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+            <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+                Download Now
+            </button>
+            <button id="close-alert" style="background-color: #dc3545; border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(220, 53, 69, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+                Close
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Function to detect mobile devices
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+    
+        // Show the alert if the user is on a mobile device
+        window.onload = function() {
+            if (isMobile()) {
+                document.getElementById("mobile-alert").style.display = "block";
+            }
+    
+            // Close the alert when the close button is clicked
+            document.getElementById("close-alert").onclick = function() {
+                document.getElementById("mobile-alert").style.display = "none";
+            };
+    
+            // Download button click (replace this with your actual download link)
+            document.getElementById("download-btn").onclick = function() {
+                window.location.href = "https://yourappdownloadlink.com"; // Replace with your actual download link
+            };
+        };
+    </script>
+    
+    <style>
+        /* Keyframe animation for sliding the alert in */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    
+        /* Animation for pulsing neon effect */
+        @keyframes pulseText {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+        }
+    
+        /* Styling for the alert box */
+        #mobile-alert {
+            background: rgba(75, 0, 130, 0.8); /* Transparent background */
+            color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.6), 0 0 30px rgba(138, 43, 226, 0.6);
+            text-align: center;
+            padding: 15px;
+            animation: slideIn 1s ease-out;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        /* Pulse effect on text */
+        #mobile-alert p {
+            animation: pulseText 1.5s infinite alternate;
+        }
+    
+        /* Button hover effects */
+        #download-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 105, 180, 0.8);
+            background: linear-gradient(45deg, #ff66cc, #ff3366);
+        }
+    
+        #close-alert:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(220, 53, 69, 0.8);
+            background-color: #c82333;
+        }
+    
+        /* Flexbox for button layout */
+        .mobile-alert div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+    
+
+        <main>
+    
+            <section class="about-section">
+                <style>
+                  /********************************
+                   *        SECTION WRAPPER
+                   ********************************/
+                  .about-section {
+                    position: relative;
+                    width: 100%;
+                    min-height: 100vh; /* full viewport height */
+                    margin: 0;
+                    padding: 0;
+                    background: url("e.jpg") no-repeat center center;
+                    background-size: cover;
+                    background-attachment: fixed; /* optional parallax effect */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                  }
+              
+                  /* Dark overlay to increase contrast */
+                  .about-section::before {
+                    content: "";
+                    position: absolute;
+                    top: 0; 
+                    left: 0; 
+                    width: 100%; 
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                    z-index: 1;
+                  }
+              
+                  /********************************
+                   *         TEXT CONTENT
+                   ********************************/
+                  .about-content {
+                    position: relative;
+                    z-index: 2; /* above overlay */
+                    text-align: center;
+                    color: #fff;
+                    max-width: 800px;
+                    width: 90%;
+                    margin: 0 auto;
+                    opacity: 0; 
+                    transform: translateY(20px); 
+                  }
+              
+                  .about-content h1 {
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: #ff2e2e; /* bright red */
+                  }
+              
+                  .about-content .subheading {
+                    font-size: 1.25rem;
+                    color: #ffffff;
+                  }
+              
+                  /********************************
+                   *         BOTTOM WAVE
+                   ********************************/
+                  .bottom-wave {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 80px; /* less height for a smaller wave */
+                    overflow: hidden;
+                    line-height: 0;
+                    z-index: 2;
+                  }
+              
+                  .bottom-wave svg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    fill: #ff2e2e; /* main red color */
+                    /* Simple up/down animation on the wave */
+                    animation: wave-pulse 3s ease-in-out infinite;
+                  }
+              
+                  @keyframes wave-pulse {
+                    0%, 100% { transform: translateY(0); }
+                    50%      { transform: translateY(10px); }
+                  }
+              
+                  /********************************
+                   *      FADE-IN JS CLASS
+                   ********************************/
+                  .fade-in {
+                    transition: opacity 1s ease, transform 1s ease;
+                  }
+                </style>
+              
+                <script>
+                  // Fade-in effect on load
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const aboutContent = document.querySelector('.about-content');
+                    setTimeout(() => {
+                      aboutContent.classList.add('fade-in');
+                      aboutContent.style.opacity = 1;
+                      aboutContent.style.transform = 'translateY(0)';
+                    }, 300);
+                  });
+                </script>
+              
+                <!-- TEXT CONTENT (no description) -->
+                <div class="about-content">
+                  <h1>Events</h1>
+                  <div class="subheading">HOME • EVENTS</div>
+                </div>
+              
+                <!-- BOTTOM WAVE EFFECT -->
+                <div class="bottom-wave">
+                  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                    <!-- Reduced wave amplitude for a smaller effect -->
+                    <path d="M0,80 C150,100 350,60 500,80 L500,150 L0,150 Z"></path>
+                  </svg>
+                </div>
+              </section>
+              
+            <!-- breadcrumb-area-end -->
+            <section class="gaming-events" style="background: url(qq.png) no-repeat;">
+                    <style>/* === MODAL ALERT STYLES === */
+                        .event-modal-overlay {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(10, 10, 10, 0.85);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            z-index: 9999;
+                            backdrop-filter: blur(4px);
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: opacity 0.3s ease, visibility 0.3s ease;
+                        }
+                        
+                        .event-modal-overlay.active {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        
+                        .event-modal {
+                            background: #121212;
+                            border-radius: 16px;
+                            max-width: 700px;
+                            width: 90%;
+                            color: #fff;
+                            padding: 30px;
+                            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.25);
+                            position: relative;
+                            animation: slideFadeIn 0.4s ease;
+                        }
+                        
+                        @keyframes slideFadeIn {
+                            0% {
+                                opacity: 0;
+                                transform: translateY(30px) scale(0.95);
+                            }
+                            100% {
+                                opacity: 1;
+                                transform: translateY(0) scale(1);
+                            }
+                        }
+                        
+                        .event-modal img {
+                            width: 100%;
+                            border-radius: 12px;
+                            margin-bottom: 20px;
+                            max-height: 300px;
+                            object-fit: cover;
+                        }
+                        
+                        .event-modal h3 {
+                            font-size: 1.8rem;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            font-weight: 700;
+                        }
+                        
+                        .event-modal .modal-date {
+                            font-size: 1rem;
+                            margin-bottom: 20px;
+                            color: #FF4C4C;
+                            font-weight: 600;
+                        }
+                        
+                        .event-modal .modal-description {
+                            font-size: 0.95rem;
+                            line-height: 1.6;
+                            color: rgba(255, 255, 255, 0.85);
+                            margin-bottom: 20px;
+                        }
+                        
+                        .event-modal .modal-buttons {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                        }
+                        
+                        .event-modal .rules-btn,
+                        .event-modal .close-btn {
+                            background: linear-gradient(90deg, #8B0000 0%, #FF0000 100%);
+                            color: #fff;
+                            border: none;
+                            padding: 10px 20px;
+                            font-weight: 600;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            font-size: 0.9rem;
+                            transition: background 0.3s ease;
+                        }
+                        
+                        .event-modal .rules-btn:hover,
+                        .event-modal .close-btn:hover {
+                            background: linear-gradient(90deg, #FF0000 0%, #8B0000 100%);
+                        }
+                        /* === RULES MODAL === */
+.rules-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.rules-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.rules-modal {
+    background: #181818;
+    padding: 25px 30px;
+    border-radius: 14px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
+    color: #fff;
+    position: relative;
+    animation: slideFadeIn 0.4s ease;
+}
+
+.rules-modal h4 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #FF4C4C;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.rules-modal p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.rules-modal .close-rules-btn {
+    margin-top: 20px;
+    background: linear-gradient(90deg, #8B0000 0%, #FF0000 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.rules-modal .close-rules-btn:hover {
+    background: linear-gradient(90deg, #FF0000 0%, #8B0000 100%);
+}
+
+             .gaming-events {
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+    padding: 100px 20px;
+ 
+    overflow: hidden;
+    position: relative;
+}
+@font-face {
+    font-family: 'Cairo';
+    src: url('font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{font-family: "Cairo";}
+.events-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
+}
+
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #8B0000 0%, #FF0000 80%);
+    border-radius: 2px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.event-card {
+    background: linear-gradient(145deg, rgba(21,21,21,0.7) 0%, rgba(40,40,40,0.4) 100%);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(50px);
+    position: relative;
+    min-height: 380px;
+}
+
+.event-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(139, 0, 0, 0.1) 0%, rgba(255, 0, 0, 0.05) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.event-card::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, #8B0000 0%, #FF0000 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+}
+
+.event-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.4);
+}
+
+.event-card:hover::after {
+    opacity: 0.2;
+}
+
+.event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px solid rgba(255,0,0,0.15);
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: grayscale(20%);
+}
+
+.event-card:hover .card-image img {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+.card-content {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.event-date {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: inline-block;
+    background: linear-gradient(90deg, #FF0000 0%, #8B0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.event-title {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    line-height: 1.4;
+    position: relative;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.event-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #FF0000;
+    transition: width 0.4s ease;
+}
+
+.event-card:hover .event-title::after {
+    width: 60px;
+}
+
+.event-details {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.event-details i {
+    margin-right: 10px;
+    color: #FF0000;
+    width: 18px;
+    text-align: center;
+}
+
+.register-btn {
+    background: linear-gradient(90deg, #8B0000 0%, #FF0000 100%);
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    font-size: 0.9rem;
+}
+
+.register-btn i {
+    transition: transform 0.3s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #FF0000 0%, #8B0000 100%);
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
+}
+
+.register-btn:hover i {
+    transform: translateX(3px);
+}
+
+@media (max-width: 1200px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .section-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    
+    .event-card {
+        min-height: auto;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.event-card.visible {
+    animation: float 6s ease-in-out infinite;
+}
+                    </style>
+                <!-- Event Details Modal -->
+<div class="event-modal-overlay" id="eventModal">
+    <div class="event-modal">
+        <img src="" alt="Event Image" id="modalImage">
+        <h3 id="modalTitle">Event Title</h3>
+        <div class="modal-date" id="modalDate">Event Date</div>
+        <div class="modal-description" id="modalDescription">
+            Event full description will be loaded here.
+        </div>
+        <div class="modal-buttons">
+            <button class="rules-btn" id="rulesBtn">View Rules</button>
+            <button class="close-btn" id="closeModalBtn">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Rules Modal -->
+<div class="rules-modal-overlay" id="rulesModal">
+    <div class="rules-modal">
+        <h4>Event Rules</h4>
+        <p id="rulesText">Rules content will appear here.</p>
+        <button class="close-rules-btn" id="closeRulesBtn">Close</button>
+    </div>
+</div>
+
+                    <div class="events-container">
+                        <h2 class="section-title">Upcoming Events</h2>
+                        <div class="events-grid">
+                            <div class="event-card"
+                            data-title="Global Esports Championship Finals"
+                            data-date="JUNE 25, 2025"
+                            data-image="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                            data-description="Watch the top teams from around the world compete for the title and a massive $2M prize pool. Enjoy exclusive interviews, behind-the-scenes content, and live commentary throughout the finals."
+                            data-rules="All players must register in advance. Cheating, toxic behavior, and hardware tampering will result in disqualification. Respect referees and adhere to the event schedule.">
+                       
+                           <div class="card-image">
+                               <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Esports Arena">
+                           </div>
+                           <div class="card-content">
+                               <div class="event-date">JUNE 25, 2025</div>
+                               <h3 class="event-title">Global Esports Championship Finals</h3>
+                               <p class="event-details">
+                                   <i class="fas fa-clock"></i>pc<br>
+                                   <i class="fas fa-trophy"></i>$2M Prize Pool<br>
+                                   <i class="fas fa-map-marker-alt"></i>Virtual Stadium
+                               </p>
+                               <!-- "register-btn" is the trigger for modal in your JS -->
+                               <button class="register-btn">Read More</button>
+                           </div>
+                       </div>
+                       
+                
+                       <div class="event-card"
+     data-title="Global Esports Championship Finals"
+     data-date="JUNE 25, 2024"
+     data-image="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+     data-description="Watch the top teams from around the world compete for the title and a massive $2M prize pool. Enjoy exclusive interviews, behind-the-scenes content, and live commentary throughout the finals."
+     data-rules="All players must register in advance. Cheating, toxic behavior, and hardware tampering will result in disqualification. Respect referees and adhere to the event schedule.">
+
+    <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Esports Arena">
+    </div>
+    <div class="card-content">
+        <div class="event-date">JUNE 25, 2024</div>
+        <h3 class="event-title">Global Esports Championship Finals</h3>
+        <p class="event-details">
+            <i class="fas fa-clock"></i>mobile<br>
+            <i class="fas fa-trophy"></i>$2M Prize Pool<br>
+            <i class="fas fa-map-marker-alt"></i>Virtual Stadium
+        </p>
+        <button class="register-btn">Read More</button>
+    </div>
+</div>
+
+                            <!-- Card 3 -->
+                            <div class="event-card"
+                            data-title="Global Esports Championship Finals"
+                            data-date="JUNE 25, 2024"
+                            data-image="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                            data-description="Watch the top teams from around the world compete for the title and a massive $2M prize pool. Enjoy exclusive interviews, behind-the-scenes content, and live commentary throughout the finals."
+                            data-rules="All players must register in advance. Cheating, toxic behavior, and hardware tampering will result in disqualification. Respect referees and adhere to the event schedule.">
+                       
+                           <div class="card-image">
+                               <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Esports Arena">
+                           </div>
+                           <div class="card-content">
+                               <div class="event-date">JUNE 25, 2024</div>
+                               <h3 class="event-title">Global Esports Championship Finals</h3>
+                               <p class="event-details">
+                                <i class="fas fa-clock"></i>pc<br>
+                                <i class="fas fa-trophy"></i>$2M Prize Pool<br>
+                                   <i class="fas fa-map-marker-alt"></i>Virtual Stadium
+                               </p>
+                               <button class="register-btn">Read More</button>
+                           </div>
+                       </div>
+                       
+                       <div class="event-card"
+                       data-title="Global Esports Championship Finals"
+                       data-date="JUNE 25, 2024"
+                       data-image="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                       data-description="Watch the top teams from around the world compete for the title and a massive $2M prize pool. Enjoy exclusive interviews, behind-the-scenes content, and live commentary throughout the finals."
+                       data-rules="All players must register in advance. Cheating, toxic behavior, and hardware tampering will result in disqualification. Respect referees and adhere to the event schedule.">
+                  
+                      <div class="card-image">
+                          <img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Esports Arena">
+                      </div>
+                      <div class="card-content">
+                          <div class="event-date">JUNE 25, 2024</div>
+                          <h3 class="event-title">Global Esports Championship Finals</h3>
+                          <p class="event-details">
+                            <i class="fas fa-clock"></i>pc<br>
+                            <i class="fas fa-trophy"></i>$2M Prize Pool<br>
+                              <i class="fas fa-map-marker-alt"></i>Virtual Stadium
+                          </p>
+                          <button class="register-btn">Read More</button>
+                      </div>
+                  </div>
+                  
+                          <!-- Card 3 -->
+                       
+                        </div>
+                    </div>
+                    <script>
+                        // Scroll Animation (unchanged)
+                        const observerOptions = {
+                            threshold: 0.1,
+                            rootMargin: '0px'
+                        };
+                    
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('visible');
+                                }
+                            });
+                        }, observerOptions);
+                    
+                        const sectionTitle = document.querySelector('.section-title');
+                        observer.observe(sectionTitle);
+                    
+                        document.querySelectorAll('.event-card').forEach((card, index) => {
+                            card.style.transitionDelay = `${index * 0.1}s`;
+                            observer.observe(card);
+                        });
+                    
+                        // Register Button Logic
+                        document.querySelectorAll('.register-btn').forEach(button => {
+                            button.addEventListener('click', function () {
+                                const card = this.closest('.event-card');
+                                const title = card.getAttribute('data-title');
+                                const date = card.getAttribute('data-date');
+                                const image = card.getAttribute('data-image');
+                                const description = card.getAttribute('data-description');
+                                const rules = card.getAttribute('data-rules');
+                    
+                                // Fill modal content
+                                document.getElementById('modalImage').src = image;
+                                document.getElementById('modalTitle').textContent = title;
+                                document.getElementById('modalDate').textContent = date;
+                                document.getElementById('modalDescription').textContent = description;
+                                document.getElementById('rulesBtn').setAttribute('data-rules', rules);
+                    
+                                document.getElementById('eventModal').classList.add('active');
+                            });
+                        });
+                    
+                        // Close Event Modal
+                        document.getElementById('closeModalBtn').addEventListener('click', () => {
+                            document.getElementById('eventModal').classList.remove('active');
+                        });
+                    
+                        // Open Rules Modal
+                        document.getElementById('rulesBtn').addEventListener('click', function () {
+                            const rulesText = this.getAttribute('data-rules');
+                            document.getElementById('rulesText').textContent = rulesText;
+                            document.getElementById('rulesModal').classList.add('active');
+                        });
+                    
+                        // Close Rules Modal
+                        document.getElementById('closeRulesBtn').addEventListener('click', () => {
+                            document.getElementById('rulesModal').classList.remove('active');
+                        });
+                    </script>
+                    
+                </section>
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <section class="previous-events" style="background: url(q.jpg);">
+                    <style>@font-face {
+                        font-family: 'Cairo';
+                        src: url('font.ttf') format('truetype');
+                        font-weight: normal;
+                        font-style: normal;
+                      }
+                    
+                      *{font-family: "Cairo";}
+           .previous-events {
+    background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%);
+    padding: 120px 20px;
+     position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,50,50,0.1);
+}
+
+.pe-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.previous-events::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 80% 20%, rgba(255,0,0,0.05) 0%, transparent 40%),
+        repeating-linear-gradient(
+            45deg,
+            transparent 0px,
+            transparent 2px,
+            rgba(255,50,50,0.02) 2px,
+            rgba(255,50,50,0.02) 4px
+        );
+    z-index: 1;
+}
+
+.event-category {
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.event-category.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.category-header {
+    color: #ff3333;
+    font-size: 3.2rem;
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(255, 51, 51, 0.4),
+                 2px 2px 0px #8b0000;
+    background: linear-gradient(45deg, 
+                #ff3333 0%, 
+                #ff6666 50%, 
+                #ff3333 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 3px solid #ff4444;
+    border-radius: 8px;
+    animation: glow 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.category-header:hover {
+    transform: scale(1.02);
+    text-shadow: 0 0 30px rgba(255, 51, 51, 0.6);
+}
+
+.category-header::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent 0px,
+        transparent 5px,
+        rgba(255, 51, 51, 0.1) 5px,
+        rgba(255, 51, 51, 0.1) 10px
+    );
+    z-index: -1;
+    border-radius: 12px;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 51, 51, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 51, 51, 0.5);
+    }
+}
+
+.pe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.pe-card {
+    background: rgba(15,15,15,0.95);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    min-height: 480px;
+    opacity: 0;
+    transform: translateY(50px);
+    box-shadow: 
+        0 16px 40px rgba(0,0,0,0.4),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.pe-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pe-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(255,50,50,0.08) 50%, 
+        transparent 100%);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+.pe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 25px 60px rgba(255,0,0,0.3),
+        inset 0 0 0 1px rgba(255,255,255,0.1);
+}
+
+.pe-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        transparent 40%,
+        rgba(255,255,255,0.05) 50%,
+        transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.pe-card:hover::after {
+    opacity: 1;
+}
+
+.completed-ribbon {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    background: #ff0044;
+    color: white;
+    padding: 8px 30px;
+    clip-path: polygon(100% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+    font-size: 0.9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(255,0,68,0.3);
+    transform: rotate(3deg);
+}
+
+.completed-ribbon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        transparent 30%,
+        rgba(255,255,255,0.3) 50%,
+        transparent 70%);
+    mix-blend-mode: overlay;
+}
+
+.pe-card-image {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(255,0,68,0.3);
+}
+
+.pe-card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(0,0,0,0) 40%, 
+        rgba(0,0,0,0.95) 100%);
+}
+
+.pe-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: sepia(50%) hue-rotate(-10deg);
+}
+
+.pe-card:hover .pe-card-image img {
+    transform: scale(1.1);
+    filter: sepia(0%) hue-rotate(0deg);
+}
+
+.pe-card-content {
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.pe-date {
+    color: #ff0044;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255,0,68,0.3);
+    position: relative;
+    padding-left: 25px;
+}
+
+.pe-date::before {
+    content: '⏳';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 4px #ff0044);
+}
+
+.pe-title {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-weight: 800;
+    position: relative;
+    background: linear-gradient(45deg, #fff 0%, #ff9999 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pe-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #ff0044;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px #ff0044;
+}
+
+.pe-card:hover .pe-title::after {
+    width: 100px;
+}
+
+.pe-details {
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.pe-details i {
+    margin-right: 15px;
+    color: #ff0044;
+    font-size: 1.2em;
+    text-shadow: 0 0 8px rgba(255,0,68,0.3);
+}
+
+.watch-replay {
+    background: linear-gradient(45deg, #ff0044 0%, #ff0066 100%);
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 20px rgba(255,0,68,0.3);
+}
+
+.watch-replay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        transparent 30%,
+        rgba(255,255,255,0.2) 50%,
+        transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.watch-replay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255,0,68,0.5);
+}
+
+.watch-replay:hover::before {
+    opacity: 1;
+}
+
+.watch-replay i {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 2px #fff);
+}
+
+.watch-replay:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 1200px) {
+    .pe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .category-header {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .pe-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .category-header {
+        font-size: 2rem;
+        margin-bottom: 50px;
+        padding-left: 20px;
+    }
+    
+    .pe-card {
+        min-height: auto;
+    }
+    
+    .pe-card-image {
+        height: 220px;
+    }
+    
+    .pe-card-content {
+        padding: 25px;
+    }
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+                    </style>
+                
+                    <div class="pe-container">
+                        <!-- Tournaments Category -->
+                        <div class="event-category">
+                            <h3 class="category-header">Previous Mobile Events</h3>
+                            <div class="pe-grid">
+                                <div class="pe-card">
+                                    <div class="completed-ribbon">Completed</div>
+                                    <div class="pe-card-image">
+                                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tournament">
+                                    </div>
+                                    <div class="pe-card-content">
+                                        <div class="pe-date">March 15, 2024</div>
+                                        <h4 class="pe-title">Global Championship Finals</h4>
+                                        <div class="pe-details">
+                                            <i class="fas fa-trophy"></i>Winner: Team Phoenix<br>
+                                            <i class="fas fa-users"></i>128 Teams Competed<br>
+                                            <i class="fas fa-coins"></i>$500K Prize Pool
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                
+                                <div class="pe-card">
+                                    <div class="completed-ribbon">Completed</div>
+                                    <div class="pe-card-image">
+                                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tournament">
+                                    </div>
+                                    <div class="pe-card-content">
+                                        <div class="pe-date">February 28, 2024</div>
+                                        <h4 class="pe-title">Summer Showdown</h4>
+                                        <div class="pe-details">
+                                            <i class="fas fa-trophy"></i>Winner: Dark Wolves<br>
+                                            <i class="fas fa-users"></i>64 Teams Competed<br>
+                                            <i class="fas fa-coins"></i>$250K Prize Pool
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                
+                                <div class="pe-card">
+                                    <div class="completed-ribbon">Completed</div>
+                                    <div class="pe-card-image">
+                                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tournament">
+                                    </div>
+                                    <div class="pe-card-content">
+                                        <div class="pe-date">January 10, 2024</div>
+                                        <h4 class="pe-title">Winter Clash</h4>
+                                        <div class="pe-details">
+                                            <i class="fas fa-trophy"></i>Winner: Neon Warriors<br>
+                                            <i class="fas fa-users"></i>32 Teams Competed<br>
+                                            <i class="fas fa-coins"></i>$100K Prize Pool
+                                        </div>
+ 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Workshops Category -->
+                        <div class="event-category">
+                              <h3 class="category-header">Others</h3>
+                              <div class="pe-grid">
+                                <div class="pe-card">
+                                    <div class="completed-ribbon">Completed</div>
+                                    <div class="pe-card-image">
+                                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tournament">
+                                    </div>
+                                    <div class="pe-card-content">
+                                        <div class="pe-date">March 15, 2024</div>
+                                        <h4 class="pe-title">Global Championship Finals</h4>
+                                        <div class="pe-details">
+                                            <i class="fas fa-trophy"></i>Winner: Team Phoenix<br>
+                                            <i class="fas fa-users"></i>128 Teams Competed<br>
+                                            <i class="fas fa-coins"></i>$500K Prize Pool
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                
+                                <div class="pe-card">
+                                    <div class="completed-ribbon">Completed</div>
+                                    <div class="pe-card-image">
+                                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tournament">
+                                    </div>
+                                    <div class="pe-card-content">
+                                        <div class="pe-date">February 28, 2024</div>
+                                        <h4 class="pe-title">Summer Showdown</h4>
+                                        <div class="pe-details">
+                                            <i class="fas fa-trophy"></i>Winner: Dark Wolves<br>
+                                            <i class="fas fa-users"></i>64 Teams Competed<br>
+                                            <i class="fas fa-coins"></i>$250K Prize Pool
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                
+                                <div class="pe-card">
+                                    <div class="completed-ribbon">Completed</div>
+                                    <div class="pe-card-image">
+                                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tournament">
+                                    </div>
+                                    <div class="pe-card-content">
+                                        <div class="pe-date">January 10, 2024</div>
+                                        <h4 class="pe-title">Winter Clash</h4>
+                                        <div class="pe-details">
+                                            <i class="fas fa-trophy"></i>Winner: Neon Warriors<br>
+                                            <i class="fas fa-users"></i>32 Teams Competed<br>
+                                            <i class="fas fa-coins"></i>$100K Prize Pool
+                                        </div>
+ 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <script>
+                              // Scroll Animation Observer
+                    // Scroll Animation Observer
+    const eventObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Animate category headers
+                if (entry.target.classList.contains('event-category')) {
+                    entry.target.classList.add('visible');
+                }
+                // Animate individual cards
+                if (entry.target.classList.contains('pe-card')) {
+                    entry.target.classList.add('visible');
+                }
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px'
+    });
+
+    // Observe all categories
+    document.querySelectorAll('.event-category').forEach(category => {
+        eventObserver.observe(category);
+    });
+
+    // Observe all cards with staggered delay
+    document.querySelectorAll('.pe-card').forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        eventObserver.observe(card);
+    });
+
+                    
+                          
+                              // Add hover effect to cards
+                              document.querySelectorAll('.pe-card').forEach(card => {
+                                  card.addEventListener('mousemove', (e) => {
+                                      const rect = card.getBoundingClientRect();
+                                      const x = e.clientX - rect.left;
+                                      const y = e.clientY - rect.top;
+                                      card.style.setProperty('--mouse-x', `${x}px`);
+                                      card.style.setProperty('--mouse-y', `${y}px`);
+                                  });
+                              });
+                          </script>
+                </section>
+           
+         
+        </main>
+        <!-- main-area-end -->
+ <!-- footer -->
+ <footer>
+
+    <div class="footer-top" style="padding-top: 10px; background-color: #0a071b;">
+      <div class="container">
+
+       
+
+        
+
+          <div class="footer-menu-wrapper">
+
+   
+            <ul class="footer-menu-list">
+        
+                <li>
+                  <a href="index-3.html" class="footer-menu-link">Home</a>
+                </li>
+  
+                <li>
+                  <a href="about.html" class="footer-menu-link">About</a>
+                </li>
+  
+                <li>
+                  <a href="community.html" class="footer-menu-link">Community</a>
+                </li>
+  
+                <li>
+                  <a href="sign.html" class="footer-menu-link">Login</a>
+                </li>
+  
+                
+              </ul>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; 2025 all rights reserved
+        </p>
+
+        <figure class="footer-bottom-img">
+          <img src="d.png" alt="Online payment companies logo">
+        </figure>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+         <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

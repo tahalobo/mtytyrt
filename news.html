@@ -1,0 +1,1511 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IQESF News </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images.ico">
+
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="font-flaticon/flaticon.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        
+        <style>    @font-face {
+            font-family: 'Cairo';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+          }
+          
+           
+              body {
+                  font-family: "Cairo", sans-serif;
+              }</style>
+        <style>/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+        ::-webkit-scrollbar {
+            width: 12px; /* Width of the scrollbar */
+            height: 10px; /* Height for horizontal scrolling */
+        }
+        
+        /* Scrollbar Track (Background) */
+        ::-webkit-scrollbar-track {
+            background: #0a071b; /* Dark futuristic background */
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px #ff0047; /* Inner glow effect */
+        }
+        
+        /* Scrollbar Thumb (Draggable Part) */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff0047, #800020, #ff2267);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047;
+            animation: neon-pulse 1.5s infinite alternate;
+        }
+        
+        /* Scrollbar Thumb Hover Effect */
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ff2267, #990033, #ff0047);
+            box-shadow: 0 0 25px #ff0047, 0 0 35px #ff0047;
+            animation: neon-glow 0.7s infinite alternate;
+        }
+        
+        /* Scrollbar Corner (for when two scrollbars meet) */
+        ::-webkit-scrollbar-corner {
+            background: #0a071b;
+        }
+        
+        /* Firefox Scrollbar */
+        * {
+            scrollbar-width: thin; /* Options: auto, thin, none */
+            scrollbar-color: #ff0047 #0a071b; /* thumb color, track color */
+        }
+        
+        /* Pulsating Neon Effect */
+        @keyframes neon-pulse {
+            0% { box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047; }
+            100% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
+        }
+        
+        /* Glowing Animation for Hover */
+        @keyframes neon-glow {
+            0% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
+            100% { box-shadow: 0 0 30px #ff0047, 0 0 40px #ff0047; }
+        }
+        </style>
+     <!-- header -->
+     <!-- header -->
+     <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+                <li class="dropdown">
+                    <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="referee.htm">Apply as a referee</a></li>
+                        <li><a href="coach.html">Apply as coach</a></li>
+                        <li><a href="event.htm">Event license</a></li>
+                        <li><a href="talent.html">Apply as a talent</a></li>
+                        <li><a href="team.htm">Apply as a team/club</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Right Section -->
+            <div class="right-section">
+                <!-- Translate Button
+                <button class="translate-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        <path d="M2 12h20"/>
+                    </svg>
+                    <span>عربي</span>
+                </button> -->
+                
+                <!-- Signup/Login Button -->
+                <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
+                
+                <!-- Mobile Menu Icon -->
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+    <style>
+  /* General Reset */
+/* Updated Translate Button Tooltip */
+.translate-btn:hover::before {
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Mobile Tooltip Adjustments */
+@media (max-width: 768px) {
+    .translate-btn:hover::before {
+        left: auto;
+        right: 0;
+        transform: none;
+        bottom: auto;
+        top: 100%;
+        margin-top: 8px;
+        white-space: normal;
+        width: 160px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    
+    .translate-btn:hover::after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 100%;
+        border-width: 0 6px 6px;
+        border-style: solid;
+        border-color: #1a1a1a transparent;
+        margin-top: 2px;
+    }
+}
+
+/* Add slight delay for mobile hover */
+@media (hover: hover) {
+    .translate-btn::before {
+        transition-delay: 0.1s;
+    }
+}
+/* Translate Button Improvements */
+.translate-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 14px;
+    margin-left: 15px; /* Add space between buttons */
+}
+
+.translate-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.translate-btn:hover::before {
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 1;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.translate-btn::before {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translate(-50%, 5px);
+}
+
+.translate-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+}
+
+.translate-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* Adjust right section spacing */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between elements */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .translate-btn {
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+    
+    .translate-btn span {
+        display: none;
+    }
+    
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+    
+    .right-section {
+        gap: 8px;
+    }
+}
+
+  /* Add to existing CSS */
+.translate-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.translate-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.translate-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Mobile Logo Replacement */
+@media (max-width: 768px) {
+    .logo img {
+        display: none;
+    }
+    
+    .logo::before {
+        content: "iqesf";
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+/* Update mobile menu for translate button */
+@media (max-width: 768px) {
+    .right-section {
+        gap: 8px;
+    }
+
+    .translate-btn span {
+        display: none;
+    }
+
+    .nav-links.active .translate-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20px; /* Added top space */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
+    padding: 15px 50px;
+    border-radius: 12px; /* Rounded edges for a modern look */
+    backdrop-filter: blur(10px); /* Glass effect */
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100%; /* Ensures logo scales properly */
+    max-height: 120px; /* Ensures maximum height of logo */
+    width: auto; /* Keeps aspect ratio intact */
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff3333;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
+    padding: 10px;
+    list-style: none;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu a {
+    color: white;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #ff3333;
+}
+
+/* Signup/Login Button */
+.login-btn {
+    background: linear-gradient(135deg, #ff1e00, #b30000);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #b30000, #ff1e00);
+    box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
+/* Mobile Menu Icon */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: rgba(10, 10, 22, 0.85);
+        padding: 12px 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
+
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 50px; /* Larger logo on mobile */
+    }
+
+    /* Right Section (Login + Menu Button in a Row) */
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between login & menu button */
+    }
+
+    /* Login Button */
+    .login-btn {
+        background: linear-gradient(135deg, #ff1e00, #b30000);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #b30000, #ff1e00);
+        box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+        background: linear-gradient(135deg, #333, #111);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    /* Move Close Button Inside the Menu */
+    .menu-toggle.menu-open {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    /* Hover Effect */
+    .menu-toggle:hover {
+        background: linear-gradient(135deg, #111, #333);
+    }
+
+    /* Mobile Nav */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 22, 0.95);
+        padding: 50px 20px;
+        text-align: center;
+        transition: right 0.4s ease-in-out;
+        overflow-y: auto; /* Enables vertical scroll */
+    }
+
+    /* Show Menu */
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Mobile Nav Links */
+    .nav-links li {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        color: white;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 30, 0, 0.6);
+    }
+}
+
+    </style>
+    <script>/* Toggle Mobile Menu */
+        /* Toggle Mobile Menu */
+function toggleMenu() {
+    let menu = document.querySelector('.nav-links');
+    let toggleButton = document.querySelector('.menu-toggle');
+    let translateBtn = document.querySelector('.translate-btn').cloneNode(true);
+
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        toggleButton.textContent = "☰";
+        document.querySelector('.nav-links .translate-btn')?.remove();
+    } else {
+        menu.classList.add('active');
+        toggleButton.textContent = "✕";
+        const listItem = document.createElement('li');
+        listItem.appendChild(translateBtn);
+        menu.appendChild(listItem);
+    }
+}
+function toggleMenu() {
+    let menu = document.querySelector('.nav-links');
+    let toggleButton = document.querySelector('.menu-toggle');
+
+    menu.classList.toggle('active');
+
+    // If menu is open, move button inside and change text to "CLOSE"
+    if (menu.classList.contains('active')) {
+        toggleButton.textContent = "CLOSE";
+        toggleButton.classList.add("menu-open"); // Moves button inside menu
+    } 
+    // If menu is closed, reset button position & text
+    else {
+        toggleButton.textContent = "MENU";
+        toggleButton.classList.remove("menu-open"); // Returns to original position
+    }
+}
+
+        </script>
+    <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
+        <p style="color: #00ff00; font-size: 24px; text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+        <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+            <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+                Download Now
+            </button>
+            <button id="close-alert" style="background-color: #dc3545; border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(220, 53, 69, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+                Close
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Function to detect mobile devices
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+    
+        // Show the alert if the user is on a mobile device
+        window.onload = function() {
+            if (isMobile()) {
+                document.getElementById("mobile-alert").style.display = "block";
+            }
+    
+            // Close the alert when the close button is clicked
+            document.getElementById("close-alert").onclick = function() {
+                document.getElementById("mobile-alert").style.display = "none";
+            };
+    
+            // Download button click (replace this with your actual download link)
+            document.getElementById("download-btn").onclick = function() {
+                window.location.href = "https://yourappdownloadlink.com"; // Replace with your actual download link
+            };
+        };
+    </script>
+    
+    <style>
+        /* Keyframe animation for sliding the alert in */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    
+        /* Animation for pulsing neon effect */
+        @keyframes pulseText {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+        }
+    
+        /* Styling for the alert box */
+        #mobile-alert {
+            background: rgba(75, 0, 130, 0.8); /* Transparent background */
+            color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.6), 0 0 30px rgba(138, 43, 226, 0.6);
+            text-align: center;
+            padding: 15px;
+            animation: slideIn 1s ease-out;
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        /* Pulse effect on text */
+        #mobile-alert p {
+            animation: pulseText 1.5s infinite alternate;
+        }
+    
+        /* Button hover effects */
+        #download-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 105, 180, 0.8);
+            background: linear-gradient(45deg, #ff66cc, #ff3366);
+        }
+    
+        #close-alert:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(220, 53, 69, 0.8);
+            background-color: #c82333;
+        }
+    
+        /* Flexbox for button layout */
+        .mobile-alert div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+    
+
+        <main>
+    
+            <section class="about-section">
+                <style>
+                  /********************************
+                   *        SECTION WRAPPER
+                   ********************************/
+                  .about-section {
+                    position: relative;
+                    width: 100%;
+                    min-height: 100vh; /* full viewport height */
+                    margin: 0;
+                    padding: 0;
+                    background: url("e.jpg") no-repeat center center;
+                    background-size: cover;
+                    background-attachment: fixed; /* optional parallax effect */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                  }
+              
+                  /* Dark overlay to increase contrast */
+                  .about-section::before {
+                    content: "";
+                    position: absolute;
+                    top: 0; 
+                    left: 0; 
+                    width: 100%; 
+                    height: 100%;
+                    background: rgba(0,0,0,0.5);
+                    z-index: 1;
+                  }
+              
+                  /********************************
+                   *         TEXT CONTENT
+                   ********************************/
+                  .about-content {
+                    position: relative;
+                    z-index: 2; /* above overlay */
+                    text-align: center;
+                    color: #fff;
+                    max-width: 800px;
+                    width: 90%;
+                    margin: 0 auto;
+                    opacity: 0; 
+                    transform: translateY(20px); 
+                  }
+              
+                  .about-content h1 {
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: #ff2e2e; /* bright red */
+                  }
+              
+                  .about-content .subheading {
+                    font-size: 1.25rem;
+                    color: #ffffff;
+                  }
+              
+                  /********************************
+                   *         BOTTOM WAVE
+                   ********************************/
+                  .bottom-wave {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 80px; /* less height for a smaller wave */
+                    overflow: hidden;
+                    line-height: 0;
+                    z-index: 2;
+                  }
+              
+                  .bottom-wave svg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    fill: #ff2e2e; /* main red color */
+                    /* Simple up/down animation on the wave */
+                    animation: wave-pulse 3s ease-in-out infinite;
+                  }
+              
+                  @keyframes wave-pulse {
+                    0%, 100% { transform: translateY(0); }
+                    50%      { transform: translateY(10px); }
+                  }
+              
+                  /********************************
+                   *      FADE-IN JS CLASS
+                   ********************************/
+                  .fade-in {
+                    transition: opacity 1s ease, transform 1s ease;
+                  }
+                </style>
+              
+                <script>
+                  // Fade-in effect on load
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const aboutContent = document.querySelector('.about-content');
+                    setTimeout(() => {
+                      aboutContent.classList.add('fade-in');
+                      aboutContent.style.opacity = 1;
+                      aboutContent.style.transform = 'translateY(0)';
+                    }, 300);
+                  });
+                </script>
+              
+                <!-- TEXT CONTENT (no description) -->
+                <div class="about-content">
+                  <h1>News</h1>
+                  <div class="subheading">HOME • NEWS</div>
+                </div>
+              
+                <!-- BOTTOM WAVE EFFECT -->
+                <div class="bottom-wave">
+                  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                    <!-- Reduced wave amplitude for a smaller effect -->
+                    <path d="M0,80 C150,100 350,60 500,80 L500,150 L0,150 Z"></path>
+                  </svg>
+                </div>
+              </section>
+          
+              <section class="modern-news">
+                <div class="news-wrapper">
+                    <nav class="news-filter">
+                        <h2 class="filter-title">Filter by Category</h2>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="politics">Politics</button>
+                            <button class="filter-btn" data-filter="tech">Technology</button>
+                            <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+                            <button class="filter-btn" data-filter="sports">Sports</button>
+                        </div>
+                    </nav>
+            
+                    <main class="news-column">
+                        <!-- News Articles (20 items) -->
+                        <article class="news-article" data-category="sports">
+                            <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
+                            <div class="article-content">
+                                <span class="article-category tech">Technology</span>
+                                <time class="article-date">Dec 20, 2023</time>
+                                <h2 class="article-title">Quantum Computing Breakthrough</h2>
+                                <p class="article-excerpt">Researchers have made significant progress in quantum computing technology, achieving unprecedented processing speeds that could revolutionize various industries. This breakthrough enables complex calculations previously thought impossible, opening new possibilities in cryptography, drug discovery, and artificial intelligence.</p>
+                            </div>
+                        </article>
+            
+                        <article class="news-article" data-category="politics">
+                            <div class="article-image"><img src="esports.webp" alt="Politics News"></div>
+                            <div class="article-content">
+                                <span class="article-category politics">Politics</span>
+                                <time class="article-date">Dec 19, 2023</time>
+                                <h2 class="article-title">Global Climate Agreement</h2>
+                                <p class="article-excerpt">World leaders from 195 countries have reached a historic agreement on climate change mitigation. The new pact includes binding commitments to reduce carbon emissions, phase out coal power by 2040, and establish a global carbon trading system with strict environmental regulations.</p>
+                            </div>
+                        </article>
+            
+                        <!-- Continue adding 18 more articles following the same structure -->
+                        <!-- Example articles 3-20 -->
+                        <article class="news-article" data-category="entertainment">
+                            <div class="article-image"><img src="esports.webp" alt="Entertainment News"></div>
+                            <div class="article-content">
+                                <span class="article-category entertainment">Entertainment</span>
+                                <time class="article-date">Dec 18, 2023</time>
+                                <h2 class="article-title">Award Season Highlights</h2>
+                                <p class="article-excerpt">This year's award season brings unexpected nominations and fierce competition across all categories. Critics are praising the diversity of nominees and groundbreaking performances that challenge traditional cinematic conventions.</p>
+                            </div>
+                        </article>
+            
+                        <!-- Remaining articles... -->
+            
+                        <div class="pagination-controls">
+                            <button class="page-btn prev-btn" disabled>Previous</button>
+                            <span class="page-indicator">Page 1 of 4</span>
+                            <button class="page-btn next-btn">Next</button>
+                        </div>
+                    </main>
+                </div>
+            
+                <div class="news-modal">
+                    <div class="modal-container">
+                        <button class="modal-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        </button>
+                        <div class="modal-header">
+                            <div class="header-image">
+                                <img src="" alt="News Image">
+                                <div class="header-gradient"></div>
+                            </div>
+                            <div class="header-content">
+                                <span class="modal-category"></span>
+                                <h1 class="modal-title"></h1>
+                                <div class="modal-meta">
+                                    <time class="modal-date"></time>
+                                    <span class="modal-reading-time"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-scroll">
+                            <div class="modal-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <style>
+            .modern-news {
+                background: #0a0a0a;
+                color: #fff;
+                padding: 4rem 2rem;
+                min-height: 100vh;
+                font-family: 'Inter', system-ui, sans-serif;
+            }
+            
+            .news-wrapper {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 250px 1fr;
+                gap: 2.5rem;
+            }
+            
+            .news-filter {
+                padding: 1.5rem;
+                background: #151515;
+                border-radius: 12px;
+                height: fit-content;
+                position: sticky;
+                top: 2rem;
+            }
+            
+            .filter-title {
+                font-size: 1.1rem;
+                color: #888;
+                margin-bottom: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .filter-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .filter-btn {
+                background: transparent;
+                border: 1px solid #333;
+                color: #fff;
+                padding: 0.8rem 1.2rem;
+                border-radius: 8px;
+                cursor: pointer;
+                text-align: left;
+                transition: all 0.3s ease;
+            }
+            
+            .filter-btn:hover, .filter-btn.active {
+                border-color: #0066ff;
+                background: rgba(0, 102, 255, 0.1);
+                color: #0066ff;
+            }
+            
+            .news-column {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .news-article {
+                background: #151515;
+                border-radius: 12px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            
+            .news-article:hover {
+                transform: translateY(-3px);
+            }
+            
+            .article-image {
+                height: 240px;
+                position: relative;
+            }
+            
+            .article-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .article-content {
+                padding: 1.5rem;
+                position: relative;
+            }
+            
+            .article-category {
+                display: inline-block;
+                padding: 0.3rem 0.8rem;
+                border-radius: 6px;
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            
+            .article-category.tech { background: rgba(0, 102, 255, 0.15); color: #0066ff; }
+            .article-category.politics { background: rgba(255, 50, 0, 0.15); color: #ff3200; }
+            .article-category.entertainment { background: rgba(255, 200, 0, 0.15); color: #ffc800; }
+            .article-category.sports { background: rgba(0, 200, 0, 0.15); color: #00c800; }
+            
+            .article-date {
+                display: block;
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+                margin: 0 0 1rem;
+                line-height: 1.3;
+            }
+            
+            .article-excerpt {
+                color: #aaa;
+                line-height: 1.6;
+                margin: 0 0 1rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .read-more {
+                background: rgba(255,255,255,0.1);
+                border: 1px solid #333;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                display: none;
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+            }
+            
+            .read-more:hover {
+                background: rgba(255,255,255,0.2);
+                border-color: #444;
+            }
+            
+            .news-modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.95);
+                z-index: 1000;
+                backdrop-filter: blur(10px);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            
+            .news-modal.active {
+                opacity: 1;
+                display: block;
+            }
+            
+            .modal-container {
+                position: relative;
+                max-width: 700px;
+                margin: 2rem auto;
+                background: #0f0f0f;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                transform: scale(0.95);
+                transition: transform 0.3s ease;
+                max-height: 90vh;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .news-modal.active .modal-container {
+                transform: scale(1);
+            }
+            
+            .modal-close {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                background: rgba(255,255,255,0.1);
+                border: none;
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 100;
+                transition: all 0.3s ease;
+            }
+            
+            .modal-close:hover {
+                background: rgba(255,255,255,0.2);
+                transform: rotate(90deg);
+            }
+            
+            .modal-header {
+                position: relative;
+                flex-shrink: 0;
+            }
+            
+            .header-image {
+                height: 300px;
+                position: relative;
+            }
+            
+            .header-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .header-gradient {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 60%;
+                background: linear-gradient(180deg, transparent 0%, #0f0f0f 100%);
+            }
+            
+            .header-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 2rem;
+                z-index: 2;
+            }
+            
+            .modal-category {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                background: rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+            }
+            
+            .modal-title {
+                font-size: 1.8rem;
+                margin: 0 0 1rem;
+                line-height: 1.3;
+                text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            }
+            
+            .modal-meta {
+                display: flex;
+                gap: 1.5rem;
+                color: #888;
+                font-size: 0.95rem;
+            }
+            
+            .modal-scroll {
+                flex: 1;
+                overflow-y: auto;
+            }
+            
+            .modal-body {
+                padding: 2rem;
+                color: #ddd;
+                line-height: 1.8;
+                font-size: 1rem;
+            }
+            
+            .modal-body p {
+                margin: 0 0 1.5rem;
+            }
+            
+            .pagination-controls {
+                margin-top: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+            
+            .page-btn {
+                background: rgba(255,255,255,0.05);
+                border: 1px solid #333;
+                color: #fff;
+                padding: 0.8rem 1.5rem;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            .page-btn:hover:not(:disabled) {
+                background: rgba(0, 102, 255, 0.1);
+                border-color: #0066ff;
+                color: #0066ff;
+            }
+            
+            .page-btn:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+            
+            .page-indicator {
+                color: #666;
+                font-size: 0.9rem;
+            }
+            
+            @media (max-width: 1024px) {
+                .news-wrapper {
+                    grid-template-columns: 1fr;
+                }
+                
+                .modal-container {
+                    margin: 1rem;
+                    max-width: calc(100% - 2rem);
+                }
+                
+                .header-image {
+                    height: 250px;
+                }
+                
+                .modal-title {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .modal-container {
+                    margin: 0;
+                    border-radius: 0;
+                    max-height: 100vh;
+                }
+                
+                .header-image {
+                    height: 200px;
+                }
+                
+                .header-content {
+                    padding: 1.5rem;
+                }
+                
+                .modal-body {
+                    padding: 1.5rem;
+                }
+            }
+            </style>
+            
+            <script>
+            const itemsPerPage = 5;
+            let currentPage = 1;
+            let currentFilter = 'all';
+            let filteredArticles = [];
+            
+            function initializePagination() {
+                filteredArticles = Array.from(document.querySelectorAll('.news-article'))
+                    .filter(article => currentFilter === 'all' || article.dataset.category === currentFilter);
+                
+                const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
+                updatePaginationControls(totalPages);
+                showPage(currentPage);
+                addReadMoreButtons();
+            }
+            
+            function showPage(page) {
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                
+                document.querySelectorAll('.news-article').forEach(article => article.style.display = 'none');
+                filteredArticles.slice(start, end).forEach(article => article.style.display = 'grid');
+            }
+            
+            function updatePaginationControls(totalPages) {
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                const pageIndicator = document.querySelector('.page-indicator');
+                
+                prevBtn.disabled = currentPage === 1;
+                nextBtn.disabled = currentPage === totalPages;
+                pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+            }
+            
+            function addReadMoreButtons() {
+                document.querySelectorAll('.news-article').forEach(article => {
+                    const excerpt = article.querySelector('.article-excerpt');
+                    const existingButton = article.querySelector('.read-more');
+                    
+                    if (!existingButton && excerpt.scrollHeight > excerpt.clientHeight) {
+                        const readMore = document.createElement('button');
+                        readMore.className = 'read-more';
+                        readMore.textContent = 'Read More';
+                        article.querySelector('.article-content').appendChild(readMore);
+                    }
+                });
+            }
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentFilter = btn.dataset.filter;
+                    currentPage = 1;
+                    initializePagination();
+                });
+            });
+            
+            document.querySelector('.next-btn').addEventListener('click', () => {
+                currentPage++;
+                initializePagination();
+            });
+            
+            document.querySelector('.prev-btn').addEventListener('click', () => {
+                currentPage--;
+                initializePagination();
+            });
+            
+            document.querySelectorAll('.news-article').forEach(article => {
+                article.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('read-more')) {
+                        openModal(article);
+                    }
+                });
+                
+                article.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('read-more')) {
+                        e.stopPropagation();
+                        openModal(article);
+                    }
+                });
+            });
+            
+            function openModal(article) {
+                const modal = document.querySelector('.news-modal');
+                const excerpt = article.querySelector('.article-excerpt').textContent;
+                
+                modal.querySelector('.header-image img').src = article.querySelector('img').src;
+                modal.querySelector('.modal-category').textContent = article.querySelector('.article-category').textContent;
+                modal.querySelector('.modal-title').textContent = article.querySelector('.article-title').textContent;
+                modal.querySelector('.modal-date').textContent = article.querySelector('.article-date').textContent;
+                modal.querySelector('.modal-body').textContent = excerpt;
+                
+                const words = excerpt.split(/\s+/).length;
+                const readingTime = Math.ceil(words / 200);
+                modal.querySelector('.modal-reading-time').textContent = `${readingTime} min read`;
+                
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('active'));
+                document.body.style.overflow = 'hidden';
+            }
+            
+            document.querySelector('.modal-close').addEventListener('click', closeModal);
+            window.addEventListener('click', (e) => e.target === document.querySelector('.news-modal') && closeModal());
+            document.addEventListener('keydown', (e) => e.key === 'Escape' && closeModal());
+            
+            function closeModal() {
+                const modal = document.querySelector('.news-modal');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+            
+            initializePagination();
+            </script>
+        </main>
+        <!-- main-area-end -->
+ <!-- footer -->
+ <footer>
+
+    <div class="footer-top" style="padding-top: 10px; background-color: #0a071b;">
+      <div class="container">
+
+       
+
+        
+
+          <div class="footer-menu-wrapper">
+
+   
+            <ul class="footer-menu-list">
+        
+                <li>
+                  <a href="index-3.html" class="footer-menu-link">Home</a>
+                </li>
+  
+                <li>
+                  <a href="about.html" class="footer-menu-link">About</a>
+                </li>
+  
+                <li>
+                  <a href="community.html" class="footer-menu-link">Community</a>
+                </li>
+  
+                <li>
+                  <a href="sign.html" class="footer-menu-link">Login</a>
+                </li>
+  
+                
+              </ul>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; 2025 all rights reserved
+        </p>
+
+        <figure class="footer-bottom-img">
+          <img src="d.png" alt="Online payment companies logo">
+        </figure>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+         <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
