@@ -434,14 +434,18 @@ body {
     background: linear-gradient(135deg, #b30000, #ff1e00);
     box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
 }
-
-/* Mobile Menu Icon */
+/* Update the mobile menu toggle styles */
 .menu-toggle {
     display: none;
     font-size: 24px;
     color: white;
     cursor: pointer;
+    background: transparent !important;
+    border: none !important;
+    padding: 10px !important;
+    transition: all 0.3s ease;
 }
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -457,7 +461,8 @@ body {
 @media (max-width: 768px) {
     /* Navbar */
     .navbar {
-        display: flex;
+        display: flex;        padding: 15px 20px !important;
+
         justify-content: space-between;
         align-items: center;
         position: fixed;
@@ -588,18 +593,21 @@ function toggleMenu() {
     let menu = document.querySelector('.nav-links');
     let toggleButton = document.querySelector('.menu-toggle');
     let translateBtn = document.querySelector('.translate-btn').cloneNode(true);
-
+/* Revised toggleMenu function */
+function toggleMenu() {
+    let menu = document.querySelector('.nav-links');
+    let toggleButton = document.querySelector('.menu-toggle');
+    
+    menu.classList.toggle('active');
+    
+    // Toggle between menu icon and close icon
     if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        toggleButton.textContent = "☰";
-        document.querySelector('.nav-links .translate-btn')?.remove();
+        toggleButton.innerHTML = "&times;"; // × symbol
     } else {
-        menu.classList.add('active');
-        toggleButton.textContent = "✕";
-        const listItem = document.createElement('li');
-        listItem.appendChild(translateBtn);
-        menu.appendChild(listItem);
+        toggleButton.innerHTML = "&#9776;"; // ☰ symbol
     }
+}
+   
 }
 function toggleMenu() {
     let menu = document.querySelector('.nav-links');
