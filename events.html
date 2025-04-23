@@ -478,13 +478,13 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 100%;
         background: rgba(10, 10, 22, 0.85);
-        padding: 12px 20px;
-        border-radius: 12px;
+         border-radius: 12px;
         backdrop-filter: blur(10px);
         z-index: 1000;
     }
+
 
     /* Logo */
     .logo {
@@ -635,8 +635,8 @@ function toggleMenu() {
 }
 
         </script>
-    <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
-        <p style="color: #00ff00; font-size: 24px; text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+     <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
+        <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
         <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
             <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
                 Download Now
@@ -694,7 +694,14 @@ function toggleMenu() {
                 text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
             }
         }
-    
+        @font-face {
+    font-family: 'Cairo';
+    src: url('font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{font-family: "Cairo";}  
         /* Styling for the alert box */
         #mobile-alert {
             background: rgba(75, 0, 130, 0.8); /* Transparent background */
@@ -704,8 +711,7 @@ function toggleMenu() {
             text-align: center;
             padding: 15px;
             animation: slideIn 1s ease-out;
-            font-family: 'Press Start 2P', cursive;
-            display: flex;
+             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -736,7 +742,6 @@ function toggleMenu() {
             gap: 20px;
         }
     </style>
-    
 
         <main>
     
@@ -2062,7 +2067,7 @@ function toggleMenu() {
             <ul class="footer-menu-list">
         
                 <li>
-                  <a href="index-3.html" class="footer-menu-link">Home</a>
+                    <a href="index.html" class="footer-menu-link">Home</a>
                 </li>
   
                 <li>

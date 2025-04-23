@@ -475,7 +475,6 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    /* Navbar */
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -484,10 +483,9 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 100%;
         background: rgba(10, 10, 22, 0.85);
-        padding: 12px 20px;
-        border-radius: 12px;
+         border-radius: 12px;
         backdrop-filter: blur(10px);
         z-index: 1000;
     }
@@ -642,7 +640,7 @@ function toggleMenu() {
 
         </script>
     <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
-        <p style="color: #00ff00; font-size: 24px; text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+        <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
         <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
             <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
                 Download Now
@@ -700,7 +698,14 @@ function toggleMenu() {
                 text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
             }
         }
-    
+        @font-face {
+    font-family: 'Cairo';
+    src: url('font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{font-family: "Cairo";}  
         /* Styling for the alert box */
         #mobile-alert {
             background: rgba(75, 0, 130, 0.8); /* Transparent background */
@@ -710,8 +715,7 @@ function toggleMenu() {
             text-align: center;
             padding: 15px;
             animation: slideIn 1s ease-out;
-            font-family: 'Press Start 2P', cursive;
-            display: flex;
+             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -742,7 +746,6 @@ function toggleMenu() {
             gap: 20px;
         }
     </style>
-    
 
         <main>
     
@@ -877,41 +880,41 @@ function toggleMenu() {
                         <h2 class="filter-title">Filter by Category</h2>
                         <div class="filter-buttons">
                             <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="politics">Politics</button>
-                            <button class="filter-btn" data-filter="tech">Technology</button>
-                            <button class="filter-btn" data-filter="entertainment">Entertainment</button>
-                            <button class="filter-btn" data-filter="sports">Sports</button>
+                            <button class="filter-btn" data-filter="iqesf">IQESF</button>
+                            <button class="filter-btn" data-filter="events">Events</button>
+                            <button class="filter-btn" data-filter="gaming">Gaming</button>
+                            <button class="filter-btn" data-filter="other">Other</button>
                         </div>
                     </nav>
             
                     <main class="news-column">
                         <!-- News Articles (20 items) -->
-                        <article class="news-article" data-category="sports">
+                        <article class="news-article" data-category="iqesf">
                             <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
                             <div class="article-content">
-                                <span class="article-category tech">Technology</span>
+                                <span class="article-category tech">iqesf</span>
                                 <time class="article-date">Dec 20, 2023</time>
-                                <h2 class="article-title">Quantum Computing Breakthrough</h2>
-                                <p class="article-excerpt">Researchers have made significant progress in quantum computing technology, achieving unprecedented processing speeds that could revolutionize various industries. This breakthrough enables complex calculations previously thought impossible, opening new possibilities in cryptography, drug discovery, and artificial intelligence.</p>
+                                <h2 class="article-title">iqesf news </h2>
+                                <p class="article-excerpt">dfsfsfs sfdfa dsgdvs sdhnb shs</p>
                             </div>
                         </article>
             
-                        <article class="news-article" data-category="politics">
-                            <div class="article-image"><img src="esports.webp" alt="Politics News"></div>
+                        <article class="news-article" data-category="gaming">
+                            <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
                             <div class="article-content">
-                                <span class="article-category politics">Politics</span>
-                                <time class="article-date">Dec 19, 2023</time>
-                                <h2 class="article-title">Global Climate Agreement</h2>
-                                <p class="article-excerpt">World leaders from 195 countries have reached a historic agreement on climate change mitigation. The new pact includes binding commitments to reduce carbon emissions, phase out coal power by 2040, and establish a global carbon trading system with strict environmental regulations.</p>
+                                <span class="article-category tech">gaming</span>
+                                <time class="article-date">Dec 20, 2023</time>
+                                <h2 class="article-title">iqesf news </h2>
+                                <p class="article-excerpt">dfsfsfs sfdfa dsgdvs sdhnb shs</p>
                             </div>
                         </article>
             
                         <!-- Continue adding 18 more articles following the same structure -->
                         <!-- Example articles 3-20 -->
-                        <article class="news-article" data-category="entertainment">
+                        <article class="news-article" data-category="events">
                             <div class="article-image"><img src="esports.webp" alt="Entertainment News"></div>
                             <div class="article-content">
-                                <span class="article-category entertainment">Entertainment</span>
+                                <span class="article-category entertainment">events</span>
                                 <time class="article-date">Dec 18, 2023</time>
                                 <h2 class="article-title">Award Season Highlights</h2>
                                 <p class="article-excerpt">This year's award season brings unexpected nominations and fierce competition across all categories. Critics are praising the diversity of nominees and groundbreaking performances that challenge traditional cinematic conventions.</p>
@@ -919,7 +922,15 @@ function toggleMenu() {
                         </article>
             
                         <!-- Remaining articles... -->
-            
+                        <article class="news-article" data-category="other">
+                            <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
+                            <div class="article-content">
+                                <span class="article-category tech">other</span>
+                                <time class="article-date">Dec 20, 2023</time>
+                                <h2 class="article-title">iqesf news </h2>
+                                <p class="article-excerpt">dfsfsfs sfdfa dsgdvs sdhnb shs</p>
+                            </div>
+                        </article>
                         <div class="pagination-controls">
                             <button class="page-btn prev-btn" disabled>Previous</button>
                             <span class="page-indicator">Page 1 of 4</span>
@@ -955,366 +966,419 @@ function toggleMenu() {
             </section>
             
             <style>
-            .modern-news {
-                background: #0a0a0a;
-                color: #fff;
-                padding: 4rem 2rem;
-                min-height: 100vh;
-                font-family: 'Inter', system-ui, sans-serif;
-            }
-            
-            .news-wrapper {
-                max-width: 1200px;
-                margin: 0 auto;
-                display: grid;
-                grid-template-columns: 250px 1fr;
-                gap: 2.5rem;
-            }
-            
-            .news-filter {
-                padding: 1.5rem;
-                background: #151515;
-                border-radius: 12px;
-                height: fit-content;
-                position: sticky;
-                top: 2rem;
-            }
-            
-            .filter-title {
-                font-size: 1.1rem;
-                color: #888;
-                margin-bottom: 1.5rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
-            
-            .filter-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-            
-            .filter-btn {
-                background: transparent;
-                border: 1px solid #333;
-                color: #fff;
-                padding: 0.8rem 1.2rem;
-                border-radius: 8px;
-                cursor: pointer;
-                text-align: left;
-                transition: all 0.3s ease;
-            }
-            
-            .filter-btn:hover, .filter-btn.active {
-                border-color: #0066ff;
-                background: rgba(0, 102, 255, 0.1);
-                color: #0066ff;
-            }
-            
-            .news-column {
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .news-article {
-                background: #151515;
-                border-radius: 12px;
-                overflow: hidden;
-                position: relative;
-                cursor: pointer;
-                transition: transform 0.3s ease;
-            }
-            
-            .news-article:hover {
-                transform: translateY(-3px);
-            }
-            
-            .article-image {
-                height: 240px;
-                position: relative;
-            }
-            
-            .article-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            
-            .article-content {
-                padding: 1.5rem;
-                position: relative;
-            }
-            
-            .article-category {
-                display: inline-block;
-                padding: 0.3rem 0.8rem;
-                border-radius: 6px;
-                font-size: 0.85rem;
-                font-weight: 500;
-                text-transform: uppercase;
-                margin-bottom: 1rem;
-            }
-            
-            .article-category.tech { background: rgba(0, 102, 255, 0.15); color: #0066ff; }
-            .article-category.politics { background: rgba(255, 50, 0, 0.15); color: #ff3200; }
-            .article-category.entertainment { background: rgba(255, 200, 0, 0.15); color: #ffc800; }
-            .article-category.sports { background: rgba(0, 200, 0, 0.15); color: #00c800; }
-            
-            .article-date {
-                display: block;
-                color: #666;
-                font-size: 0.9rem;
-                margin-bottom: 0.5rem;
-            }
-            
-            .article-title {
-                font-size: 1.5rem;
-                margin: 0 0 1rem;
-                line-height: 1.3;
-            }
-            
-            .article-excerpt {
-                color: #aaa;
-                line-height: 1.6;
-                margin: 0 0 1rem;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                position: relative;
-            }
-            
-            .read-more {
-                background: rgba(255,255,255,0.1);
-                border: 1px solid #333;
-                color: #fff;
-                padding: 0.5rem 1rem;
-                border-radius: 6px;
-                cursor: pointer;
-                font-weight: 500;
-                transition: all 0.3s ease;
-                display: none;
-                position: absolute;
-                bottom: 1rem;
-                right: 1rem;
-            }
-            
-            .read-more:hover {
-                background: rgba(255,255,255,0.2);
-                border-color: #444;
-            }
-            
-            .news-modal {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0,0,0,0.95);
-                z-index: 1000;
-                backdrop-filter: blur(10px);
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
-            
-            .news-modal.active {
-                opacity: 1;
-                display: block;
-            }
-            
-            .modal-container {
-                position: relative;
-                max-width: 700px;
-                margin: 2rem auto;
-                background: #0f0f0f;
-                border-radius: 16px;
-                overflow: hidden;
-                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-                transform: scale(0.95);
-                transition: transform 0.3s ease;
-                max-height: 90vh;
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .news-modal.active .modal-container {
-                transform: scale(1);
-            }
-            
-            .modal-close {
-                position: absolute;
-                top: 1.5rem;
-                right: 1.5rem;
-                background: rgba(255,255,255,0.1);
-                border: none;
-                color: #fff;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 100;
-                transition: all 0.3s ease;
-            }
-            
-            .modal-close:hover {
-                background: rgba(255,255,255,0.2);
-                transform: rotate(90deg);
-            }
-            
-            .modal-header {
-                position: relative;
-                flex-shrink: 0;
-            }
-            
-            .header-image {
-                height: 300px;
-                position: relative;
-            }
-            
-            .header-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            
-            .header-gradient {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 60%;
-                background: linear-gradient(180deg, transparent 0%, #0f0f0f 100%);
-            }
-            
-            .header-content {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                padding: 2rem;
-                z-index: 2;
-            }
-            
-            .modal-category {
-                display: inline-block;
-                padding: 0.5rem 1rem;
-                border-radius: 8px;
-                font-size: 0.9rem;
-                font-weight: 600;
-                text-transform: uppercase;
-                margin-bottom: 1rem;
-                background: rgba(255,255,255,0.1);
-                backdrop-filter: blur(10px);
-            }
-            
-            .modal-title {
-                font-size: 1.8rem;
-                margin: 0 0 1rem;
-                line-height: 1.3;
-                text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            }
-            
-            .modal-meta {
-                display: flex;
-                gap: 1.5rem;
-                color: #888;
-                font-size: 0.95rem;
-            }
-            
-            .modal-scroll {
-                flex: 1;
-                overflow-y: auto;
-            }
-            
-            .modal-body {
-                padding: 2rem;
-                color: #ddd;
-                line-height: 1.8;
-                font-size: 1rem;
-            }
-            
-            .modal-body p {
-                margin: 0 0 1.5rem;
-            }
-            
-            .pagination-controls {
-                margin-top: 2rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 1.5rem;
-                padding: 1rem 0;
-            }
-            
-            .page-btn {
-                background: rgba(255,255,255,0.05);
-                border: 1px solid #333;
-                color: #fff;
-                padding: 0.8rem 1.5rem;
-                border-radius: 8px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-            
-            .page-btn:hover:not(:disabled) {
-                background: rgba(0, 102, 255, 0.1);
-                border-color: #0066ff;
-                color: #0066ff;
-            }
-            
-            .page-btn:disabled {
-                opacity: 0.5;
-                cursor: not-allowed;
-            }
-            
-            .page-indicator {
-                color: #666;
-                font-size: 0.9rem;
-            }
-            
-            @media (max-width: 1024px) {
-                .news-wrapper {
-                    grid-template-columns: 1fr;
-                }
-                
-                .modal-container {
-                    margin: 1rem;
-                    max-width: calc(100% - 2rem);
-                }
-                
-                .header-image {
-                    height: 250px;
-                }
-                
-                .modal-title {
-                    font-size: 1.5rem;
-                }
-            }
-            
-            @media (max-width: 768px) {
-                .modal-container {
-                    margin: 0;
-                    border-radius: 0;
-                    max-height: 100vh;
-                }
-                
-                .header-image {
-                    height: 200px;
-                }
-                
-                .header-content {
-                    padding: 1.5rem;
-                }
-                
-                .modal-body {
-                    padding: 1.5rem;
-                }
-            }
+         .modern-news {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.news-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2.5rem;
+}
+
+.news-filter {
+    padding: 1.5rem;
+    background: #151515;
+    border-radius: 12px;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.filter-title {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    border-color: #0066ff;
+    background: rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+}
+
+.news-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.news-article {
+    background: #151515;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: articleFade 0.6s ease forwards;
+}
+
+@keyframes articleFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-article:nth-child(1) { animation-delay: 0.1s; }
+.news-article:nth-child(2) { animation-delay: 0.2s; }
+.news-article:nth-child(3) { animation-delay: 0.3s; }
+.news-article:nth-child(4) { animation-delay: 0.4s; }
+.news-article:nth-child(5) { animation-delay: 0.5s; }
+
+.news-article:hover {
+    transform: translateY(-3px);
+}
+
+.article-image {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.article-image:hover img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.article-category {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.article-category.tech { background: rgba(0, 102, 255, 0.15); color: #0066ff; }
+.article-category.politics { background: rgba(255, 50, 0, 0.15); color: #ff3200; }
+.article-category.entertainment { background: rgba(255, 200, 0, 0.15); color: #ffc800; }
+.article-category.sports { background: rgba(0, 200, 0, 0.15); color: #00c800; }
+
+.article-date {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+}
+
+.article-excerpt {
+    color: #aaa;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: none;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.read-more:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.news-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.news-modal.active {
+    opacity: 1;
+    display: block;
+}
+
+.modal-container {
+    position: relative;
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #0f0f0f;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-modal.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255,255,255,0.2);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.header-image {
+    height: 300px;
+    position: relative;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(180deg, transparent 0%, #0f0f0f 100%);
+}
+
+.header-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.modal-category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.modal-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.modal-scroll {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-body {
+    padding: 2rem;
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.modal-body p {
+    margin: 0 0 1.5rem;
+}
+
+.pagination-controls {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.page-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #333;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: rgba(0, 102, 255, 0.1);
+    border-color: #0066ff;
+    color: #0066ff;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-indicator {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+    .news-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-filter {
+        position: static;
+        margin-bottom: 2rem;
+    }
+    
+    .modal-container {
+        margin: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+    
+    .header-image {
+        height: 250px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .modern-news {
+        padding: 2rem 1rem;
+    }
+    
+    .modal-container {
+        margin: 0;
+        border-radius: 0;
+        max-height: 100vh;
+    }
+    
+    .header-image {
+        height: 200px;
+    }
+    
+    .header-content {
+        padding: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-scroll {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    .news-modal {
+        overscroll-behavior: contain;
+    }
+}
+
+@keyframes articleFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
             </style>
             
             <script>
@@ -1452,7 +1516,7 @@ function toggleMenu() {
             <ul class="footer-menu-list">
         
                 <li>
-                  <a href="index-3.html" class="footer-menu-link">Home</a>
+                    <a href="index.html" class="footer-menu-link">Home</a>
                 </li>
   
                 <li>

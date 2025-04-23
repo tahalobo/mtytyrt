@@ -475,10 +475,9 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 100%;
         background: rgba(10, 10, 22, 0.85);
-        padding: 12px 20px;
-        border-radius: 12px;
+         border-radius: 12px;
         backdrop-filter: blur(10px);
         z-index: 1000;
     }
@@ -633,7 +632,7 @@ function toggleMenu() {
 
         </script>
     <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
-        <p style="color: #00ff00; font-size: 24px; text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+        <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
         <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
             <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
                 Download Now
@@ -691,7 +690,14 @@ function toggleMenu() {
                 text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
             }
         }
-    
+        @font-face {
+    font-family: 'Cairo';
+    src: url('font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{font-family: "Cairo";}  
         /* Styling for the alert box */
         #mobile-alert {
             background: rgba(75, 0, 130, 0.8); /* Transparent background */
@@ -701,8 +707,7 @@ function toggleMenu() {
             text-align: center;
             padding: 15px;
             animation: slideIn 1s ease-out;
-            font-family: 'Press Start 2P', cursive;
-            display: flex;
+             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -2229,457 +2234,573 @@ function toggleMenu() {
                         });
                     </script>
                 </section>
-              <section class="team-section"  style="background: url(f.jpeg)  ;">
-                <div class="team-container">
-                    <h2 class="team-heading">Talents</h2>
-                    <p class="team-subheading">The brilliant gamers who lead our success</p>
-                    
-                    <div class="scroll-controls">
-                        <button class="scroll-btn left-btn" aria-label="Scroll left">&#10094;</button>
-                        <button class="scroll-btn right-btn" aria-label="Scroll right">&#10095;</button>
+                <section class="committees"  style="background: url(s.jpeg);">
+                    <style>
+              @font-face {
+  font-family: 'Cairo';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+:root {
+  --primary: #D32F2F;
+  --primary-hover: #B71C1C;
+  --dark: #1A1A1A;
+  --darker: #0F0F0F;
+  --text: #FFFFFF;
+  --muted: #CCCCCC;
+}
+
+.committees {
+  position: relative;
+  padding: 6rem 2rem 8rem;
+  background: var(--darker);
+  color: var(--text);
+  overflow: hidden;
+  text-align: center;
+}
+
+.committes::before {
+  top: -40px;
+}
+
+.committes::after {
+  bottom: -40px;
+  clip-path: ellipse(120% 100% at 50% 100%);
+}
+
+.committes::after {
+  background: linear-gradient(to bottom, var(--dark), rgba(211, 47, 47, 0.1));
+}
+
+.committee-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.committee-btn {
+  background: linear-gradient(45deg, var(--dark), rgba(255, 255, 255, 0.1));
+  border: 2px solid var(--primary);
+  color: var(--text);
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.committee-btn.active {
+  background: linear-gradient(45deg, var(--primary), var(--primary-hover));
+  box-shadow: 0 0 25px rgba(211, 47, 47, 0.4);
+  transform: translateY(-2px);
+}
+
+.cards-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-image-container {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-name {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.card-name::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70%;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.card-title {
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.card-details {
+  display: grid;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.member-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+}
+
+.modal-content {
+  background: var(--dark);
+  border-radius: 20px;
+  max-width: 600px;
+  width: 95%;
+  padding: 2rem;
+  position: relative;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  max-height: 80vh;
+  overflow-y: auto;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: modalShow 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes modalShow {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg);
+  color: var(--primary);
+}
+
+.modal-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.modal-img {
+  width: 120px;
+  height: 160px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-info {
+  flex: 1;
+}
+
+.modal-name {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+}
+
+.modal-title {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border-left: 3px solid var(--primary);
+}
+
+.modal-section h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+  color: var(--primary);
+}
+
+.modal-section p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Mobile Portrait and Landscape Fix */
+@media (max-width: 767px) {
+  .committees {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .cards-container {
+    padding: 0 1.5rem;
+  }
+
+  .card {
+    margin: 0 1rem;
+  }
+
+  .card-name {
+    font-size: 1.2rem;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .modal-img {
+    width: 90px;
+    height: 120px;
+  }
+
+  .modal-name {
+    font-size: 1.4rem;
+  }
+
+  .modal-section h3 {
+    font-size: 1rem;
+  }
+
+  .modal-section p {
+    font-size: 0.9rem;
+  }
+
+  .committee-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .card-image-container {
+    height: 250px;
+  }
+}
+
+/* Center content and adapt for mobile */
+@media (max-width: 600px) {
+  .committees {
+    text-align: center;
+    padding: 3rem 1rem 5rem;
+  }
+
+  .cards-container {
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .committee-header {
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .modal-header {
+    text-align: center;
+  }
+}
+
+                    </style>
+                
+                    <div class="committee-header">
+                        <button class="committee-btn active" onclick="showCommittee('talents')">Talents</button>
+                        <button class="committee-btn" onclick="showCommittee('coachs')">Coachs</button>
+                        <button class="committee-btn" onclick="showCommittee('referees')">Referees</button>
                     </div>
-                    
-                    <div class="team-grid">
-                        <!-- Team Member 1 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <div class="image-overlay"></div>
-                                <img src="d.jpg" alt="Emma Wilson">
-                                <div class="card-header">
-                                    <h3 class="member-name">Sarah Williams</h3>
-                                    <p class="member-role">ESPORTS PLAYER</p>
+                
+                    <div id="cards-container" class="cards-container"></div>
+                
+                    <div class="member-modal" id="memberModal">
+                        <div class="modal-content">
+                            <button class="modal-close" onclick="closeModal()">&times;</button>
+                            <div class="modal-header">
+                                <img class="modal-img" id="modalImg" src="" alt="Member">
+                                <div class="modal-info">
+                                    <h2 class="modal-name" id="modalName"></h2>
+                                    <p class="modal-title" id="modalTitle"></p>
                                 </div>
                             </div>
-                            <div class="card-info">
-                                <p class="member-desc">A really good player that plays call of duty</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
+                            <div class="modal-section">
+                                <h3>About</h3>
+                                <p id="modalAbout"></p>
                             </div>
-                            <div class="card-glare"></div>
-                        </div>
-            
-                        <!-- Repeat for other team members (2-6) following same structure -->
-                        <!-- Team Member 2 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <div class="image-overlay"></div>
-                                <img src="d.jpg" alt="Emma Wilson">
-                                <div class="card-header">
-                                    <h3 class="member-name">Sarah Williams</h3>
-                                    <p class="member-role">ESPORTS PLAYER</p>
-                                </div>
+                            <div class="modal-section">
+                                <h3>Experience</h3>
+                                <p id="modalExperience"></p>
                             </div>
-                            <div class="card-info">
-                                <p class="member-desc">A really good player that plays call of duty</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
+                            <div class="modal-section">
+                                <h3>Contact</h3>
+                                <p id="modalContact"></p>
                             </div>
-                            <div class="card-glare"></div>
-                        </div>
-                        <div class="team-card">
-                            <div class="card-image">
-                                <div class="image-overlay"></div>
-                                <img src="d.jpg" alt="Emma Wilson">
-                                <div class="card-header">
-                                    <h3 class="member-name">Sarah Williams</h3>
-                                    <p class="member-role">ESPORTS PLAYER</p>
-                                </div>
-                            </div>
-                            <div class="card-info">
-                                <p class="member-desc">A really good player that plays call of duty</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-glare"></div>
-                        </div>
-                        <!-- Team Member 4 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <div class="image-overlay"></div>
-                                <img src="d.jpg" alt="Emma Wilson">
-                                <div class="card-header">
-                                    <h3 class="member-name">Sarah Williams</h3>
-                                    <p class="member-role">ESPORTS PLAYER</p>
-                                </div>
-                            </div>
-                            <div class="card-info">
-                                <p class="member-desc">A really good player that plays call of duty</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-glare"></div>
-                        </div>
-            
-                        <div class="team-card">
-                            <div class="card-image">
-                                <div class="image-overlay"></div>
-                                <img src="d.jpg" alt="Emma Wilson">
-                                <div class="card-header">
-                                    <h3 class="member-name">Sarah Williams</h3>
-                                    <p class="member-role">ESPORTS PLAYER</p>
-                                </div>
-                            </div>
-                            <div class="card-info">
-                                <p class="member-desc">A really good player that plays call of duty</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-glare"></div>
-                        </div>
-                        <!-- Team Member 6 -->
-                        <div class="team-card">
-                            <div class="card-image">
-                                <div class="image-overlay"></div>
-                                <img src="d.jpg" alt="Emma Wilson">
-                                <div class="card-header">
-                                    <h3 class="member-name">Sarah Williams</h3>
-                                    <p class="member-role">ESPORTS PLAYER</p>
-                                </div>
-                            </div>
-                            <div class="card-info">
-                                <p class="member-desc">A really good player that plays call of duty</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-glare"></div>
                         </div>
                     </div>
-                </div>
-            
-                <style>@font-face {
-                    font-family: 'Cairo';
-                    src: url('font.ttf') format('truetype');
-                    font-weight: normal;
-                    font-style: normal;
-                }
                 
-                body {
-                    font-family: "Cairo", sans-serif;
-                }
+                    <script>
+                        const committeesData = {
+                            talents: [
+                            {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },        {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },        {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },       {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },   
+                            ],
+                            coachs: [
+                            {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },      {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },      {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                }, 
+                            ],
+                            referees: [
+                            {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },         {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },      {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },        {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },        {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                },        {
+                                    img: "p.png",
+                                    name: "Olivia Brown",
+                                    title: "example name",
+                                    about: "gegegegegegegegeg egeg.",
+                                    experience: "i won alot of awards",
+                                    contact: "📧 olivia.gaming@example.com\n📱 +964 (555) 456-7890\n💼 linkedin.com/in/gaming"
+                                }, 
+                            ]
+                        };
                 
-                .team-section {
-
-
-
-                    background: #0a0a0a;
-                    padding: 5rem 0;
-                     position: relative;
-                    overflow: hidden;
-                }
+                        let currentCommittee = 'tech';
                 
-                .team-container {
-                    max-width: 1400px;
-                    margin: 0 auto;
-                    padding: 0 20px;
-                    position: relative;
-                }
+                        function showCommittee(committee) {
+                            currentCommittee = committee;
+                            document.querySelectorAll('.committee-btn').forEach(btn => btn.classList.remove('active'));
+                            event.target.classList.add('active');
                 
-                .team-heading {
-                    text-align: center;
-                    color: #ffffff;
-                    font-size: 2.5rem;
-                    margin-bottom: 1rem;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
-                }
+                            const container = document.getElementById('cards-container');
+                            container.innerHTML = committeesData[committee].map((member, index) => `
+                                <div class="card" onclick="showMemberModal(${index})">
+                                    <div class="card-image-container">
+                                        <img src="${member.img}" class="card-img" alt="${member.name}">
+                                    </div>
+                                    <div class="card-content">
+                                        <h3 class="card-name">${member.name}</h3>
+                                        <p class="card-title">${member.title}</p>
+                                        <div class="card-details">
+                                            <p>${member.about.substring(0, 100)}...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('');
                 
-                .team-subheading {
-                    text-align: center;
-                    color: #aaa;
-                    margin-bottom: 3rem;
-                    font-size: 1.1rem;
-                }
-                
-                .team-grid {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 2rem;
-                    padding: 20px 0;
-                }
-                
-                .team-card {
-                    background: #1a1a1a;
-                    border-radius: 15px;
-                    overflow: hidden;
-                    position: relative;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-                    transform-style: preserve-3d;
-                }
-                
-                .team-card:hover {
-                    transform: translateY(-10px) scale(1.02);
-                    box-shadow: 0 20px 40px #a04343;
-                }
-                
-                .card-image {
-                    height: 400px;
-                    position: relative;
-                    overflow: hidden;
-                }
-                
-                .card-image img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                
-                .image-overlay {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    height: 40%;
-                    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-                    z-index: 1;
-                }
-                
-                .card-header {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    padding: 2rem;
-                    z-index: 2;
-                    color: white;
-                }
-                
-                .member-name {
-                    margin: 0;
-                    font-size: 1.5rem;
-                    color: #ffffff;
-                    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-                }
-                
-                .member-role {
-                    color: #888;
-                    margin: 0.5rem 0 0;
-                    font-size: 0.9rem;
-                }
-                
-                .card-info {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    padding: 2rem;
-                    background: rgba(0, 0, 0, 0.9);
-                    z-index: 3;
-                    opacity: 0;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-                
-                .team-card:hover .card-info {
-                    opacity: 1;
-                }
-                
-                .member-desc {
-                    color: #ddd;
-                    font-size: 0.95rem;
-                    line-height: 1.5;
-                    margin: 1rem 0;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 4;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                }
-                
-                .social-links {
-                    display: flex;
-                    gap: 1rem;
-                    margin-top: 1.5rem;
-                    justify-content: center;
-                }
-                
-                .social-links a {
-                    color: #ff2e2e;
-                    font-size: 1.2rem;
-                    transition: all 0.3s ease;
-                    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-                }
-                
-                .social-links a:hover {
-                    color: #fff;
-                    transform: translateY(-3px);
-                }
-                
-                .card-glare {
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 50%;
-                    height: 100%;
-                    background: linear-gradient(
-                        90deg,
-                        rgba(255, 255, 255, 0) 0%,
-                        rgba(255, 255, 255, 0.1) 50%,
-                        rgba(255, 255, 255, 0) 100%
-                    );
-                    transform: skewX(-45deg);
-                    transition: left 0.6s ease;
-                }
-                
-                .team-card:hover .card-glare {
-                    left: 150%;
-                }
-                
-                .scroll-controls {
-                    display: none;
-                }
-                
-                /* Mobile First Responsive Styles */
-                @media (max-width: 767px) {
-                    .team-section {
-                        padding: 3rem 0;
-                    }
-                
-                    .team-heading {
-                        font-size: 2rem;
-                        letter-spacing: 1px;
-                    }
-                
-                    .team-subheading {
-                        font-size: 1rem;
-                        margin-bottom: 2rem;
-                        padding: 0 15px;
-                    }
-                
-                    .team-grid {
-                        grid-template-columns: 1fr;
-                        gap: 1.5rem;
-                        padding: 10px 0;
-                    }
-                
-                    .team-card {
-                        max-width: 400px;
-                        margin: 0 auto;
-                    }
-                
-                    .card-image {
-                        height: 350px;
-                    }
-                
-                    .card-header {
-                        padding: 1.5rem;
-                    }
-                
-                    .member-name {
-                        font-size: 1.3rem;
-                    }
-                
-                    .member-role {
-                        font-size: 0.85rem;
-                    }
-                
-                    .member-desc {
-                        font-size: 0.9rem;
-                        -webkit-line-clamp: 3;
-                    }
-                
-                    .social-links a {
-                        font-size: 1.1rem;
-                    }
-                }
-                
-                @media (min-width: 768px) and (max-width: 1023px) {
-                    .team-grid {
-                        grid-template-columns: repeat(2, 1fr);
-                    }
-                
-                    .card-image {
-                        height: 380px;
-                    }
-                }
-                
-                @media (max-width: 1024px) {
-                    .scroll-controls {
-                        display: none !important;
-                    }
-                
-                    .team-grid {
-                        overflow-x: visible;
-                        -webkit-overflow-scrolling: auto;
-                        display: grid;
-                    }
-                
-                    .team-card {
-                        min-width: auto;
-                        scroll-snap-align: none;
-                    }
-                }
-                
-                @media (min-width: 1024px) {
-                    .team-grid {
-                        grid-template-columns: repeat(3, 1fr);
-                    }
-                }
-                </style>
-            
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const teamGrid = document.querySelector('.team-grid');
-                        const leftBtn = document.querySelector('.left-btn');
-                        const rightBtn = document.querySelector('.right-btn');
-                        const cardWidth = 300;
-                        const gap = 24;
-            
-                        function updateButtonVisibility() {
-                            if (window.innerWidth >= 1024) return;
-                            
-                            const showLeft = teamGrid.scrollLeft > 0;
-                            const showRight = teamGrid.scrollLeft < (teamGrid.scrollWidth - teamGrid.clientWidth - 1);
-                            leftBtn.style.opacity = showLeft ? '1' : '0';
-                            rightBtn.style.opacity = showRight ? '1' : '0';
+                            // Initialize scroll animations for new cards
+                            initScrollAnimations();
                         }
-            
-                        leftBtn.addEventListener('click', () => {
-                            teamGrid.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+                
+                        function initScrollAnimations() {
+                            const cards = document.querySelectorAll('.card');
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        entry.target.classList.add('animate');
+                                    }
+                                });
+                            }, { threshold: 0.1 });
+                
+                            cards.forEach(card => observer.observe(card));
+                        }
+                
+                        function showMemberModal(index) {
+                            const member = committeesData[currentCommittee][index];
+                            const modal = document.getElementById('memberModal');
+                            modal.style.display = 'flex';
+                
+                            document.getElementById('modalImg').src = member.img;
+                            document.getElementById('modalName').textContent = member.name;
+                            document.getElementById('modalTitle').textContent = member.title;
+                            document.getElementById('modalAbout').innerHTML = member.about.replace(/\n/g, '<br>');
+                            document.getElementById('modalExperience').innerHTML = member.experience.replace(/\n/g, '<br>');
+                            document.getElementById('modalContact').innerHTML = member.contact.replace(/\n/g, '<br>');
+                
+                            document.body.style.overflow = 'hidden';
+                        }
+                
+                        function closeModal() {
+                            document.getElementById('memberModal').style.display = 'none';
+                            document.body.style.overflow = 'auto';
+                        }
+                
+                        document.getElementById('memberModal').addEventListener('click', (e) => {
+                            if(e.target === document.getElementById('memberModal')) closeModal();
                         });
-            
-                        rightBtn.addEventListener('click', () => {
-                            teamGrid.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+                
+                        document.addEventListener('keydown', (e) => {
+                            if(e.key === 'Escape') closeModal();
                         });
-            
-                        teamGrid.addEventListener('scroll', updateButtonVisibility);
-                        window.addEventListener('resize', updateButtonVisibility);
-                        updateButtonVisibility();
-            
-                        // Mobile text truncation
-                        document.querySelectorAll('.member-desc').forEach(desc => {
-                            if (window.innerWidth <= 768) {
-                                const words = desc.innerText.split(' ');
-                                if (words.length > 7) {
-                                    desc.innerHTML = words.slice(0, 7).join(' ') + '...';
-                                }
-                            }
-                        });
-                    });
-                </script>
-            </section>
+                
+                        // Initial load
+                        showCommittee('tech');
+                        initScrollAnimations();
+                    </script>
+                </section>
+                  
             
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
@@ -2703,7 +2824,7 @@ function toggleMenu() {
             <ul class="footer-menu-list">
         
                 <li>
-                  <a href="index-3.html" class="footer-menu-link">Home</a>
+                    <a href="index.html" class="footer-menu-link">Home</a>
                 </li>
   
                 <li>

@@ -477,10 +477,9 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
+        width: 100%;
         background: rgba(10, 10, 22, 0.85);
-        padding: 12px 20px;
-        border-radius: 12px;
+         border-radius: 12px;
         backdrop-filter: blur(10px);
         z-index: 1000;
     }
@@ -634,109 +633,113 @@ function toggleMenu() {
 }
 
         </script>
-    <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
-        <p style="color: #00ff00; font-size: 24px; text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
-        <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
-            <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
-                Download Now
-            </button>
-            <button id="close-alert" style="background-color: #dc3545; border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(220, 53, 69, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
-                Close
-            </button>
-        </div>
+   <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
+    <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+    <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+        <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+            Download Now
+        </button>
+        <button id="close-alert" style="background-color: #dc3545; border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(220, 53, 69, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+            Close
+        </button>
     </div>
-    
-    <script>
-        // Function to detect mobile devices
-        function isMobile() {
-            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        }
-    
-        // Show the alert if the user is on a mobile device
-        window.onload = function() {
-            if (isMobile()) {
-                document.getElementById("mobile-alert").style.display = "block";
-            }
-    
-            // Close the alert when the close button is clicked
-            document.getElementById("close-alert").onclick = function() {
-                document.getElementById("mobile-alert").style.display = "none";
-            };
-    
-            // Download button click (replace this with your actual download link)
-            document.getElementById("download-btn").onclick = function() {
-                window.location.href = "https://yourappdownloadlink.com"; // Replace with your actual download link
-            };
-        };
-    </script>
-    
-    <style>
-        /* Keyframe animation for sliding the alert in */
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-100%);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-    
-        /* Animation for pulsing neon effect */
-        @keyframes pulseText {
-            0% {
-                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
-            }
-            50% {
-                text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8);
-            }
-            100% {
-                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
-            }
-        }
-    
-        /* Styling for the alert box */
-        #mobile-alert {
-            background: rgba(75, 0, 130, 0.8); /* Transparent background */
-            color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(138, 43, 226, 0.6), 0 0 30px rgba(138, 43, 226, 0.6);
-            text-align: center;
-            padding: 15px;
-            animation: slideIn 1s ease-out;
-            font-family: 'Press Start 2P', cursive;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        /* Pulse effect on text */
-        #mobile-alert p {
-            animation: pulseText 1.5s infinite alternate;
-        }
-    
-        /* Button hover effects */
-        #download-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(255, 105, 180, 0.8);
-            background: linear-gradient(45deg, #ff66cc, #ff3366);
-        }
-    
-        #close-alert:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(220, 53, 69, 0.8);
-            background-color: #c82333;
-        }
-    
-        /* Flexbox for button layout */
-        .mobile-alert div {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-    </style>
-    
+</div>
 
+<script>
+    // Function to detect mobile devices
+    function isMobile() {
+        return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    // Show the alert if the user is on a mobile device
+    window.onload = function() {
+        if (isMobile()) {
+            document.getElementById("mobile-alert").style.display = "block";
+        }
+
+        // Close the alert when the close button is clicked
+        document.getElementById("close-alert").onclick = function() {
+            document.getElementById("mobile-alert").style.display = "none";
+        };
+
+        // Download button click (replace this with your actual download link)
+        document.getElementById("download-btn").onclick = function() {
+            window.location.href = "https://yourappdownloadlink.com"; // Replace with your actual download link
+        };
+    };
+</script>
+
+<style>
+    /* Keyframe animation for sliding the alert in */
+    @keyframes slideIn {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* Animation for pulsing neon effect */
+    @keyframes pulseText {
+        0% {
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+        }
+        50% {
+            text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8);
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+        }
+    }
+    @font-face {
+font-family: 'Cairo';
+src: url('font.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+*{font-family: "Cairo";}  
+    /* Styling for the alert box */
+    #mobile-alert {
+        background: rgba(75, 0, 130, 0.8); /* Transparent background */
+        color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(138, 43, 226, 0.6), 0 0 30px rgba(138, 43, 226, 0.6);
+        text-align: center;
+        padding: 15px;
+        animation: slideIn 1s ease-out;
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Pulse effect on text */
+    #mobile-alert p {
+        animation: pulseText 1.5s infinite alternate;
+    }
+
+    /* Button hover effects */
+    #download-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(255, 105, 180, 0.8);
+        background: linear-gradient(45deg, #ff66cc, #ff3366);
+    }
+
+    #close-alert:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(220, 53, 69, 0.8);
+        background-color: #c82333;
+    }
+
+    /* Flexbox for button layout */
+    .mobile-alert div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+</style>
         <main>
     
             <section class="about-section">
@@ -867,249 +870,589 @@ function toggleMenu() {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
            
-            <section id="work" class="pt-120 pb-65" style="background: url(s.jpeg) no-repeat;">
-                <div class="container"> 
-                    <div class="form-container">
-                        <div class="form-content">
-                            <h2>Apply for Coach</h2>
-                            <p>Let's get you started</p>
+            <section class="protected-content">
+                <!-- Authenticated Content -->
+                <div id="authContent" class="hidden">
+                  <!-- Existing Talent Application Section -->
+                  <div class="talent-application">
+                    <div class="progress">
+                        <div class="progress-step active" data-step="1"></div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2"></div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3"></div>
+                      </div>
+                    
+                      <form id="talentForm" class="talent-form">
+                        <!-- Step 1 -->
+                        <div class="form-step active" data-step="1">
+                          <h2>Personal Information</h2>
+                          
+                          <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Full Name</label>
+
                             
-                            <form id="talent-form" onsubmit="return validateForm()">
-                                <div class="input-group">
-                                    <input type="text" id="name" placeholder="Full Name" required>
-                                </div>
-            
-                                <div class="input-group">
-                                    <textarea id="about" placeholder="Tell us about yourself" required></textarea>
-                                </div>
-            
-                                <div class="input-group">
-                                    <input type="url" id="instagram" placeholder="Instagram Account URL" required>
-                                </div>
-            
-                                <div class="input-group">
-                                    <input type="number" id="age" placeholder="Age" required min="1">
-                                </div>
-            
-                                <div class="input-group">
-                                    <label for="game-selector">Select Your Game(s):</label>
-                                    <div class="custom-dropdown">
-                                        <div class="selected-games" id="selected-games">
-                                            <span class="placeholder">Select Games</span>
-                                        </div>
-                                        <div class="dropdown-menu" id="dropdown-menu">
-                                            <label><input type="checkbox" value="fc" class="game-option"> FC</label>
-                                            <label><input type="checkbox" value="tekken" class="game-option"> TEKKEN</label>
-                                            <label><input type="checkbox" value="rainbow" class="game-option"> RAINBOW</label>
-                                            <label><input type="checkbox" value="cod" class="game-option"> COD</label>
-                                            <label><input type="checkbox" value="fortnite" class="game-option"> FORTNITE</label>
-                                            <label><input type="checkbox" value="pubg" class="game-option"> PUBG</label>
-                                            <label><input type="checkbox" value="other" class="game-option"> OTHER(in pdf)</label>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <div class="input-group">
-                                    <label for="file-upload">Attach your data(about/history/location/...) (PDF only):</label>
-                                    <input type="file" id="file-upload" accept=".pdf" required>
-                                </div>
-            
-                                <div class="input-group">
-                                    <label for="terms">
-                                        <input type="checkbox" id="terms" required> I agree to the <a href="#" style="color: red;">Privacy Policy</a> and <a href="#" style="color: red;">Terms of Service</a>.
-                                    </label>
-                                </div>
-            
-                                <button type="submit" class="next-btn">Submit Application</button>
-                            </form>
+                          </div>
+                    
+                          <div class="form-group">
+                            <input type="text" id="location" required>
+                            <label for="location">location</label>
+
                             
+                          </div>
+                    
+                          <div class="form-group">
+                            <select id="age" required>
+                              <option value="">Select Age</option>
+                              <script>
+                                for(let i = 18; i <= 50; i++) {
+                                  document.write(`<option value="${i}">${i} Years</option>`);
+                                }
+                              </script>
+                            </select>
+                          </div>
+                    
+                          <div class="form-group">
+                            <textarea id="about" required></textarea>
+                            <label for="about">About You</label>
+                          </div>
+                    
+                          <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                            <span class="error-message"></span>
+                          </div>
+                    
+                          <div class="form-group">
+                            <input type="tel" id="phone" required>
+                            <label for="phone">Phone Number</label>
+                            <span class="error-message"></span>
+                          </div>
+                    
+                          <div class="form-navigation">
+                            <button type="button" class="next-btn">Next →</button>
+                          </div>
                         </div>
-                    </div>
+                    
+                        <!-- Step 2 -->
+                        <div class="form-step" data-step="2">
+                          <h2>Gaming Information</h2>
+                    
+                          <div class="form-group">
+                            <input type="text" id="games" required>
+                            <label for="games">Main Games</label>
+                          </div>
+                    
+                          <div class="form-group">
+                            <input type="text" id="team">
+                            <label for="team">History (optional)</label>
+                          </div>
+                    
+                          <div class="form-group">
+                            <input type="url" id="instagram" required>
+                            <label for="instagram">Instagram Profile URL</label>
+                            <span class="error-message"></span>
+                          </div>
+                    
+                          <div class="form-navigation">
+                            <button type="button" class="prev-btn">← Previous</button>
+                            <button type="button" class="next-btn">Next →</button>
+                          </div>
+                        </div>
+                    
+                        <!-- Step 3 -->
+                        <div class="form-step" data-step="3">
+                          <h2>Upload CV</h2>
+                    
+                          <div class="upload-area" id="dropZone">
+                            <svg class="upload-icon" viewBox="0 0 24 24">
+                              <path d="M14,13V17H10V13H7L12,8L17,13M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z"/>
+                            </svg>
+                            <p>Drag & Drop your CV here<br>or <span class="browse">browse</span></p>
+                            <input type="file" id="cv" accept="application/pdf" hidden>
+                            <div class="file-info"></div>
+                          </div>
+                    
+                          <div class="form-navigation">
+                            <button type="button" class="prev-btn">← Previous</button>
+                            <button type="submit" class="submit-btn">Submit Application</button>
+                          </div>
+                        </div>
+                      </form>                  </div>
                 </div>
-            
-                <style>
-                    .form-container {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100vh;
-                        backdrop-filter: blur(10px); 
-                        padding: 0 20px;
+              
+                <!-- Unauthenticated Content -->
+                <div id="unauthContent" class="unauth-wrapper">
+                  <div class="access-denied">
+                    <div class="denied-content">
+                      <svg class="lock-icon" viewBox="0 0 24 24">
+                        <path d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
+                      </svg>
+                      <h2>Secure Content Ahead</h2>
+                      <p>Please sign in to access the application portal</p>
+                    <a href="sign.html"> <button class="modern-btn">
+                        <span>Sign In Now</span> 
+                            <svg viewBox="0 0 24 24">
+                              <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/>
+                            </svg>
+                          </button></a> 
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <style>
+              .protected-content {
+                position: relative;
+                min-height: 80vh;
+              }
+              
+              /* Login Prompt Styles */
+              .unauth-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 70vh;
+                animation: fadeIn 0.6s ease-out;
+              }
+              body{           background: url(s.jpeg)  ;
+}
+              .talent-application {
+                background: #0a0a0a;
+                padding: 2rem;
+                border-radius: 15px;
+                max-width: 600px;
+                margin: 2rem auto;
+                box-shadow: 0 0 20px rgba(0,0,0,0.3);
+              }
+              
+              .progress {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 2rem;
+              }
+              
+              .progress-step {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #333;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #666;
+                font-weight: bold;
+                position: relative;
+              }
+              
+              .progress-step.active {
+                background: #ff0000;
+                color: white;
+              }
+              
+              .progress-line {
+                width: 60px;
+                height: 2px;
+                background: #333;
+              }
+              
+              .talent-form {
+                position: relative;
+              }
+              
+              .form-step {
+                display: none;
+                opacity: 0;
+                transform: translateX(20px);
+                transition: 0.3s ease;
+              }
+              
+              .form-step.active {
+                display: block;
+                opacity: 1;
+                transform: translateX(0);
+              }
+              
+              h2 {
+                color: #fff;
+                margin-bottom: 2rem;
+                text-align: center;
+              }
+              
+              .form-group {
+                position: relative;
+                margin-bottom: 1.5rem;
+              }
+              
+              input, select, textarea {
+                width: 100%;
+                padding: 12px;
+                background: #1a1a1a;
+                border: 2px solid #333;
+                border-radius: 8px;
+                color: white;
+                font-size: 16px;
+                transition: 0.3s;
+              }
+              
+              input:focus, select:focus, textarea:focus {
+                outline: none;
+                border-color: #ff0000;
+              }
+              
+              label {
+                position: absolute;
+                left: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+                pointer-events: none;
+                transition: 0.3s;
+                background: #1a1a1a;
+                padding: 0 5px;
+              }
+              
+              textarea {
+                height: 120px;
+                resize: vertical;
+              }
+              
+              input:focus ~ label,
+              input:valid ~ label,
+              textarea:focus ~ label,
+              textarea:valid ~ label,
+              select:valid ~ label {
+                top: 0;
+                font-size: 12px;
+                color: #ff0000;
+              }
+              
+              .error-message {
+                display: none;
+                color: #ff4757;
+                font-size: 12px;
+                margin-top: 5px;
+              }
+              
+              .form-navigation {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 2rem;
+              }
+              
+              button {
+                padding: 12px 30px;
+                border: none;
+                border-radius: 8px;
+                background: #ff0000;
+                color: white;
+                cursor: pointer;
+                transition: 0.3s;
+              }
+              
+              button:hover {
+                opacity: 0.9;
+                transform: translateY(-2px);
+              }
+              
+              .upload-area {
+                border: 2px dashed #333;
+                border-radius: 12px;
+                padding: 2rem;
+                text-align: center;
+                color: #666;
+                transition: 0.3s;
+                cursor: pointer;
+              }
+              
+              .upload-area:hover, .upload-area.dragover {
+                border-color: #ff0000;
+                background: rgba(108,92,231,0.1);
+              }
+              
+              .upload-icon {
+                width: 50px;
+                height: 50px;
+                fill: #333;
+                margin-bottom: 1rem;
+              }
+              
+              .browse {
+                color: #ff0000;
+                text-decoration: underline;
+              }
+              
+              .file-info {
+                margin-top: 1rem;
+                color: #ff0000;
+              }
+              .access-denied {
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(8px);
+                padding: 3rem;
+                border-radius: 20px;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                border: 1px solid rgba(255,255,255,0.1);
+                transform: translateY(0);
+                transition: all 0.3s ease;
+              }
+              
+              .access-denied:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+              }
+              
+              .lock-icon {
+                width: 80px;
+                height: 80px;
+                fill: #ff0000;
+                margin-bottom: 1.5rem;
+                filter: drop-shadow(0 0 10px rgba(108,92,231,0.3));
+              }
+              
+              .access-denied h2 {
+                color: #fff;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                background: linear-gradient(45deg, #b30d0d, #ff0000);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+              
+              .access-denied p {
+                color: #aaa;
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+              }
+              
+              .modern-btn {
+                background: linear-gradient(45deg, #b30d0d, #ff0000);
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 50px;
+                color: white;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+              }
+              
+              .modern-btn svg {
+                width: 24px;
+                height: 24px;
+                fill: white;
+                transition: transform 0.3s ease;
+              }
+              
+              .modern-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(108,92,231,0.3);
+              }
+              
+              .modern-btn:hover svg {
+                transform: translateX(5px);
+              }
+              
+              .modern-btn::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                  120deg,
+                  transparent,
+                  rgba(255,255,255,0.2),
+                  transparent
+                );
+                transition: 0.6s;
+              }
+              
+              .modern-btn:hover::before {
+                left: 100%;
+              }
+              
+              @keyframes fadeIn {
+                from {
+                  opacity: 0;
+                  transform: translateY(20px);
+                }
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+              
+              .hidden {
+                display: none;
+              }
+              </style>
+              
+              <script type="module">
+              import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+              import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+              document.addEventListener('DOMContentLoaded', () => {
+                const steps = document.querySelectorAll('.form-step');
+                const progressSteps = document.querySelectorAll('.progress-step');
+                const form = document.getElementById('talentForm');
+                let currentStep = 0;
+              
+                // Navigation
+                document.querySelectorAll('.next-btn').forEach(btn => {
+                  btn.addEventListener('click', () => {
+                    if(validateStep(currentStep)) {
+                      goToStep(currentStep + 1);
                     }
-            
-                    .form-content {
-                        background-color: rgba(255, 255, 255, 0); 
-                        padding: 40px;
-                        border-radius: 20px; 
-                        width: 100%;
-                        max-width: 600px;
-                        text-align: center;
-                        color: white;
-                        transition: all 0.3s ease;
+                  });
+                });
+              
+                document.querySelectorAll('.prev-btn').forEach(btn => {
+                  btn.addEventListener('click', () => goToStep(currentStep - 1));
+                });
+              
+                function goToStep(step) {
+                  steps[currentStep].classList.remove('active');
+                  progressSteps[currentStep].classList.remove('active');
+                  currentStep = step;
+                  steps[currentStep].classList.add('active');
+                  progressSteps[currentStep].classList.add('active');
+                }
+              
+                // Validation
+                function validateStep(step) {
+                  let valid = true;
+                  const currentFields = steps[step].querySelectorAll('input, select, textarea');
+                  
+                  currentFields.forEach(field => {
+                    if(field.id === 'phone' && !validatePhone(field.value)) {
+                      showError(field, 'Invalid Iraqi number (must start with 07 and 11 digits)');
+                      valid = false;
                     }
-            
-                    .form-content h2 {
-                        font-size: 32px;
-                        margin-bottom: 15px;
-                        font-family: 'Press Start 2P', cursive;
-                        text-transform: uppercase;
+                    if(field.id === 'email' && !validateEmail(field.value)) {
+                      showError(field, 'Invalid email address');
+                      valid = false;
                     }
-            
-                    .form-content p {
-                        font-size: 18px;
-                        margin-bottom: 20px;
-                        font-family: 'Arial', sans-serif;
+                    if(field.id === 'instagram' && !validateInstagram(field.value)) {
+                      showError(field, 'Invalid Instagram URL');
+                      valid = false;
                     }
-            
-                    .input-group {
-                        display: flex;
-                        flex-direction: column;
+                    if(field.required && !field.value.trim()) {
+                      showError(field, 'This field is required');
+                      valid = false;
                     }
-            
-                    .input-group input, .input-group textarea, .input-group select {
-                        padding: 12px;
-                        margin-bottom: 12px;
-                        border: 2px solid #444;
-                        border-radius: 10px;
-                        background-color: rgba(0, 0, 0, 0.5);
-                        color: white;
-                        font-size: 16px;
-                        transition: all 0.3s ease;
-                    }
-            
-                    .input-group input::placeholder, .input-group textarea::placeholder {
-                        color: white;
-                    }
-            
-                    .input-group textarea {
-                        height: 150px;
-                        resize: none;
-                    }
-            
-                    .input-group input:focus, .input-group textarea:focus, .input-group select:focus {
-                        border-color: #F21900;
-                        background-color: rgba(255, 87, 51, 0.2);
-                        outline: none;
-                    }
-            
-                    /* Custom dropdown styles */
-                    .custom-dropdown {
-                        position: relative;
-                        display: inline-block;
-                        width: 100%;
-                        text-align: left;     border: 2px solid #444;
-                        border-radius: 10px;
-                    }
-            
-                    .selected-games {
-                        padding: 12px;
-                        background-color: rgba(0, 0, 0, 0.7);
-                        color: white;
-                        border-radius: 10px;
-                        cursor: pointer;
-                    }
-            
-                    .selected-games .placeholder {
-                        color: white;
-                        font-size: 16px;
-                    }
-            
-                    .dropdown-menu {
-                        display: none;
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        width: 100%;
-                        background-color: rgba(0, 0, 0, 0.9);
-                        border-radius: 10px;
-                        padding: 10px;
-                        box-sizing: border-box;
-                        max-height: 200px;
-                        overflow-y: auto;
-                    }
-            
-                    .dropdown-menu label {
-                        display: block;
-                        font-size: 16px;
-                        color: white;
-                    }
-            
-                    .dropdown-menu label input {
-                        margin-right: 10px;
-                    }
-            
-                    .dropdown-menu.show {
-                        display: block;
-                    }
-            
-                    .next-btn {
-                        background-color: #F21900;
-                        padding: 12px 30px;
-                        font-size: 18px;
-                        color: rgb(255, 255, 255);
-                        border: none;
-                        border-radius: 50px;
-                        cursor: pointer;
-                        transition: background 0.3s ease, transform 0.3s ease;
-                        width: 100%;
-                        text-transform: uppercase;
-                    }
-            
-                    .next-btn:hover {
-                        background-color: #F21900;
-                        transform: scale(1.05);
-                    }
-                </style>
-            
-                <script>
-                    // Toggle dropdown menu visibility
-                    document.getElementById('selected-games').addEventListener('click', function() {
-                        const dropdownMenu = document.getElementById('dropdown-menu');
-                        dropdownMenu.classList.toggle('show');
-                    });
-            
-                    // Handle game selection and update selected games
-                    const gameOptions = document.querySelectorAll('.game-option');
-                    const selectedGames = document.getElementById('selected-games');
-            
-                    gameOptions.forEach(option => {
-                        option.addEventListener('change', function() {
-                            const selectedValues = Array.from(gameOptions)
-                                .filter(option => option.checked)
-                                .map(option => option.value);
-                            
-                            selectedGames.innerHTML = selectedValues.length > 0 
-                                ? selectedValues.join(', ') 
-                                : '<span class="placeholder">Select Games</span>';
-                        });
-                    });
-            
-                    function validateForm() {
-                        const instagram = document.getElementById('instagram').value;
-                        const file = document.getElementById('file-upload').files[0];
-                        const terms = document.getElementById('terms').checked;
-            
-                        const instagramRegex = /^(https?:\/\/)?(www\.)?(instagram\.com\/[a-zA-Z0-9_.-]+)(\/)?(\?[^#]+)?$/;
-            
-                        if (!instagramRegex.test(instagram)) {
-                            alert("Please enter a valid Instagram URL.");
-                            return false;
-                        }
-            
-                        if (file && file.type !== 'application/pdf') {
-                            alert("Only PDF files are allowed.");
-                            return false;
-                        }
-            
-                        if (!terms) {
-                            alert("You must agree to the Privacy Policy and Terms of Service.");
-                            return false;
-                        }
-            
-                        return true;
-                    }
-                </script>
-            </section>
+                  });
+              
+                  return valid;
+                }
+              
+                function validatePhone(number) {
+                  return /^07\d{9}$/.test(number);
+                }
+              
+                function validateEmail(email) {
+                  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                }
+              
+                function validateInstagram(url) {
+                  return /^(https?:\/\/)?(www\.)?instagram\.com\/[a-zA-Z0-9_\.]+\/?$/.test(url);
+                }
+              
+                function showError(field, message) {
+                  const error = field.closest('.form-group').querySelector('.error-message');
+                  error.textContent = message;
+                  error.style.display = 'block';
+                  field.style.borderColor = '#ff4757';
+                }
+              
+                // File Upload
+                const dropZone = document.getElementById('dropZone');
+                const fileInput = document.getElementById('cv');
+                const fileInfo = document.querySelector('.file-info');
+              
+                dropZone.addEventListener('click', () => fileInput.click());
+                
+                fileInput.addEventListener('change', handleFileSelect);
+                
+                ['dragover', 'dragenter'].forEach(event => {
+                  dropZone.addEventListener(event, (e) => {
+                    e.preventDefault();
+                    dropZone.classList.add('dragover');
+                  });
+                });
+              
+                ['dragleave', 'dragend', 'drop'].forEach(event => {
+                  dropZone.addEventListener(event, () => {
+                    dropZone.classList.remove('dragover');
+                  });
+                });
+              
+                dropZone.addEventListener('drop', (e) => {
+                  e.preventDefault();
+                  const files = e.dataTransfer.files;
+                  if(files.length) {
+                    fileInput.files = files;
+                    handleFileSelect();
+                  }
+                });
+              
+                function handleFileSelect() {
+                  const file = fileInput.files[0];
+                  if(file && file.type === 'application/pdf') {
+                    fileInfo.textContent = `Selected: ${file.name}`;
+                  } else {
+                    fileInfo.textContent = 'Please select a PDF file';
+                    fileInput.value = '';
+                  }
+                }
+              
+                // Form Submission
+                form.addEventListener('submit', (e) => {
+                  e.preventDefault();
+                  if(validateStep(currentStep)) {
+                    // Submit form
+                    alert('Application submitted successfully!');
+                    form.reset();
+                    goToStep(0);
+                  }
+                });
+              });    
+              const firebaseConfig = {
+                apiKey: "AIzaSyC0j7fWNCVHHEnVhNIkh-A1UuP9MnNL4Lg",
+                authDomain: "iqesf-94953.firebaseapp.com",
+                projectId: "iqesf-94953",
+                storageBucket: "iqesf-94953.firebasestorage.app",
+                messagingSenderId: "174920297377",
+                appId: "1:174920297377:web:f5e3bc39798a3da0e339e0",
+                measurementId: "G-8HX3RZRGD4"
+              };
+              
+              const app = initializeApp(firebaseConfig);
+              const auth = getAuth(app);
+              
+              const authContent = document.getElementById('authContent');
+              const unauthContent = document.getElementById('unauthContent');
+              
+              onAuthStateChanged(auth, (user) => {
+                if (user) {
+                  authContent.classList.remove('hidden');
+                  unauthContent.style.display = 'none';
+                } else {
+                  authContent.classList.add('hidden');
+                  unauthContent.style.display = 'flex';
+                }
+              });
+              
+              // Keep all your existing form JavaScript code here
+              // ... [your existing script content] ...
+              </script>
             
          
         </main>
@@ -1130,7 +1473,7 @@ function toggleMenu() {
             <ul class="footer-menu-list">
         
                 <li>
-                  <a href="index-3.html" class="footer-menu-link">Home</a>
+                    <a href="index.html" class="footer-menu-link">Home</a>
                 </li>
   
                 <li>
