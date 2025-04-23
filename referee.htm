@@ -88,549 +88,568 @@
         </style>
      <!-- header -->
      <header>
-        <nav class="navbar">
-            <!-- Logo -->
-            <div class="logo">
-                <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
-            </div>
-    
-            <!-- Navigation Links -->
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="events.html">EVENTS</a></li>
-                <li><a href="community.html">COMMUNITY</a></li>
-                <li class="dropdown">
-                    <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Apply as a referee</a></li>
-                        <li><a href="coach.html">Apply as coach</a></li>
-                        <li><a href="event.htm">Event license</a></li>
-                        <li><a href="talent.html">Apply as a talent</a></li>
-                        <li><a href="team.htm">Apply as a team/club</a></li>
-                    </ul>
-                </li>
-            </ul>
-    
-            <!-- Right Section -->
-            <div class="right-section">
-            
-                
-                <!-- Signup/Login Button -->
-                <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
-                
-                <!-- Mobile Menu Icon -->
-                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            </div>
-        </nav>
-    </header>
-    <style>
-  /* General Reset */
+      <nav class="navbar">
+          <!-- Logo -->
+          <div class="logo">
+              <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
+          </div>
+  
+          <!-- Navigation Links -->
+          <ul class="nav-links">
+            <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>        <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+              <li><a href="events.html">EVENTS</a></li>
+              <li><a href="community.html">COMMUNITY</a></li>
+              <li class="dropdown">
+                  <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="referee.htm">Apply as a referee</a></li>
+                      <li><a href="coach.html">Apply as coach</a></li>
+                      <li><a href="event.htm">Event license</a></li>
+                      <li><a href="talent.html">Apply as a talent</a></li>  
+
+                      <li><a href="team.htm">Apply as a team/club</a></li>
+                  </ul>
+              </li>
+          </ul>
+  
+          <!-- Right Section -->
+          <div class="right-section">
+        
+              
+              <!-- Signup/Login Button -->
+              <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
+              
+              <!-- Mobile Menu Icon -->
+              <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+          </div>
+      </nav>
+  </header>
+  <style>/* Add this to your existing mobile styles */
+      /* Mobile Close Button */
+      .mobile-close-btn {
+          display: none;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: 32px;
+          color: white;
+          cursor: pointer;
+          background: none;
+          border: none;
+          padding: 0;
+      }
+@media (max-width: 768px) {
+  .mobile-close-btn {
+      display: block;
+  }
+/* General Reset */
 /* Updated Translate Button Tooltip */
 .translate-btn:hover::before {
-    content: "Translate website to Arabic";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1a1a1a;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    white-space: nowrap;
-    pointer-events: none;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-    width: max-content;
-    max-width: 200px;
-    text-align: center;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  content: "Translate website to Arabic";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a1a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  width: max-content;
+  max-width: 200px;
+  text-align: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 /* Mobile Tooltip Adjustments */
 @media (max-width: 768px) {
-    .translate-btn:hover::before {
-        left: auto;
-        right: 0;
-        transform: none;
-        bottom: auto;
-        top: 100%;
-        margin-top: 8px;
-        white-space: normal;
-        width: 160px;
-        font-size: 11px;
-        line-height: 1.4;
-    }
-    
-    .translate-btn:hover::after {
-        content: '';
-        position: absolute;
-        right: 15px;
-        top: 100%;
-        border-width: 0 6px 6px;
-        border-style: solid;
-        border-color: #1a1a1a transparent;
-        margin-top: 2px;
-    }
+  .translate-btn:hover::before {
+      left: auto;
+      right: 0;
+      transform: none;
+      bottom: auto;
+      top: 100%;
+      margin-top: 8px;
+      white-space: normal;
+      width: 160px;
+      font-size: 11px;
+      line-height: 1.4;
+  }
+  
+  .translate-btn:hover::after {
+      content: '';
+      position: absolute;
+      right: 15px;
+      top: 100%;
+      border-width: 0 6px 6px;
+      border-style: solid;
+      border-color: #1a1a1a transparent;
+      margin-top: 2px;
+  }
 }
 
 /* Add slight delay for mobile hover */
 @media (hover: hover) {
-    .translate-btn::before {
-        transition-delay: 0.1s;
-    }
+  .translate-btn::before {
+      transition-delay: 0.1s;
+  }
 }
 /* Translate Button Improvements */
 .translate-btn {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid #333;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    font-size: 14px;
-    margin-left: 15px; /* Add space between buttons */
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 14px;
+  margin-left: 15px; /* Add space between buttons */
 }
 
 .translate-btn:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: #444;
+  background: rgba(255,255,255,0.2);
+  border-color: #444;
 }
 
 .translate-btn:hover::before {
-    content: "Translate website to Arabic";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #1a1a1a;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    pointer-events: none;
-    opacity: 1;
-    margin-bottom: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  content: "Translate website to Arabic";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a1a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 1;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .translate-btn::before {
-    content: "";
-    opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    transform: translate(-50%, 5px);
+  content: "";
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translate(-50%, 5px);
 }
 
 .translate-btn svg {
-    width: 18px;
-    height: 18px;
-    transition: transform 0.2s ease;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
 }
 
 .translate-btn:hover svg {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Adjust right section spacing */
 .right-section {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Increased gap between elements */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased gap between elements */
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .translate-btn {
-        margin-left: 0;
-        padding: 8px 12px;
-    }
-    
-    .translate-btn span {
-        display: none;
-    }
-    
-    .nav-links.active .translate-btn span {
-        display: inline;
-    }
-    
-    .right-section {
-        gap: 8px;
-    }
+  .translate-btn {
+      margin-left: 0;
+      padding: 8px 12px;
+  }
+  
+  .translate-btn span {
+      display: none;
+  }
+  
+  .nav-links.active .translate-btn span {
+      display: inline;
+  }
+  
+  .right-section {
+      gap: 8px;
+  }
 }
 
-  /* Add to existing CSS */
+/* Add to existing CSS */
 .translate-btn {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid #333;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid #333;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .translate-btn:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: #444;
+  background: rgba(255,255,255,0.2);
+  border-color: #444;
 }
 
 .translate-btn svg {
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 /* Mobile Logo Replacement */
 @media (max-width: 768px) {
-    .logo img {
-        display: none;
-    }
-    
-    .logo::before {
-        content: "iqesf";
-        color: white;
-        font-weight: bold;
-        font-size: 1.4rem;
-        letter-spacing: 1px;
-        position: relative;
-        top: 2px;
-    }
+  .logo img {
+      display: none;
+  }
+  
+  .logo::before {
+      content: "iqesf";
+      color: white;
+      font-weight: bold;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      position: relative;
+      top: 2px;
+  }
 }
 
 /* Update mobile menu for translate button */
 @media (max-width: 768px) {
-    .right-section {
-        gap: 8px;
-    }
+  .right-section {
+      gap: 8px;
+  }
 
-    .translate-btn span {
-        display: none;
-    }
+  .translate-btn span {
+      display: none;
+  }
+  /* Adjust menu padding to accommodate close button */
+  .nav-links {
+      padding-top: 70px !important;
+  }
+  
+  /* Hide the original menu toggle when mobile menu is open */
+  .nav-links.active + .right-section .menu-toggle {
+      visibility: hidden;
+  }
+}
 
-    .nav-links.active .translate-btn {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        margin-top: 20px;
-        padding: 12px;
-    }
+  .nav-links.active .translate-btn {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 12px;
+  }
 
-    .nav-links.active .translate-btn span {
-        display: inline;
-    }
+  .nav-links.active .translate-btn span {
+      display: inline;
+  }
 }
 @font-face {
-  font-family: 'Cairo';
-  src: url('font.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'Cairo';
+src: url('font.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Cairo", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 20px; /* Added top space */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
-    padding: 15px 50px;
-    border-radius: 12px; /* Rounded edges for a modern look */
-    backdrop-filter: blur(10px); /* Glass effect */
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px; /* Added top space */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
+  padding: 15px 50px;
+  border-radius: 12px; /* Rounded edges for a modern look */
+  backdrop-filter: blur(10px); /* Glass effect */
+  z-index: 1000;
 }
 
 /* Logo */
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
 }
 
 .logo img {
-    height: 100%; /* Ensures logo scales properly */
-    max-height: 120px; /* Ensures maximum height of logo */
-    width: auto; /* Keeps aspect ratio intact */
+  height: 100%; /* Ensures logo scales properly */
+  max-height: 120px; /* Ensures maximum height of logo */
+  width: auto; /* Keeps aspect ratio intact */
 }
 
 /* Nav Links */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-links li {
-    position: relative;
+  position: relative;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ff3333;
+  color: #ff3333;
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
-    padding: 10px;
-    list-style: none;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
+  padding: 10px;
+  list-style: none;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .dropdown-menu li {
-    padding: 8px 12px;
+  padding: 8px 12px;
 }
 
 .dropdown-menu a {
-    color: white;
-    display: block;
+  color: white;
+  display: block;
 }
 
 .dropdown-menu a:hover {
-    color: #ff3333;
+  color: #ff3333;
 }
 
 /* Signup/Login Button */
 .login-btn {
-    background: linear-gradient(135deg, #ff1e00, #b30000);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+  background: linear-gradient(135deg, #ff1e00, #b30000);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
 }
 
 .login-btn:hover {
-    background: linear-gradient(135deg, #b30000, #ff1e00);
-    box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+  background: linear-gradient(135deg, #b30000, #ff1e00);
+  box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
 }
 
 /* Mobile Menu Icon */
 .menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .navbar {
-        padding: 10px 30px;
-    }
-    .nav-links {
-        gap: 20px;
-    }
+  .navbar {
+      padding: 10px 30px;
+  }
+  .nav-links {
+      gap: 20px;
+  }
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        background: rgba(10, 10, 22, 0.85);
-         border-radius: 12px;
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-    }
-    /* Logo */
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+  /* Navbar */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      background: rgba(10, 10, 22, 0.85);
+       border-radius: 12px;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+  }
 
-    .logo img {
-        height: 50px; /* Larger logo on mobile */
-    }
+  /* Logo */
+  .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
 
-    /* Right Section (Login + Menu Button in a Row) */
-    .right-section {
-        display: flex;
-        align-items: center;
-        gap: 10px; /* Space between login & menu button */
-    }
+  .logo img {
+      height: 50px; /* Larger logo on mobile */
+  }
 
-    /* Login Button */
-    .login-btn {
-        background: linear-gradient(135deg, #ff1e00, #b30000);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        font-size: 14px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
-    }
+  /* Right Section (Login + Menu Button in a Row) */
+  .right-section {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Space between login & menu button */
+  }
 
-    .login-btn:hover {
-        background: linear-gradient(135deg, #b30000, #ff1e00);
-        box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
-    }
+  /* Login Button */
+  .login-btn {
+      background: linear-gradient(135deg, #ff1e00, #b30000);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+  }
 
-    /* Menu Toggle Button */
-    .menu-toggle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        color: white;
-        background: linear-gradient(135deg, #333, #111);
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-        position: relative;
-    }
+  .login-btn:hover {
+      background: linear-gradient(135deg, #b30000, #ff1e00);
+      box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+  }
 
-    /* Move Close Button Inside the Menu */
-    .menu-toggle.menu-open {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 1001;
-    }
+  /* Menu Toggle Button */
+  .menu-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: white;
+      background: linear-gradient(135deg, #333, #111);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      position: relative;
+  }
 
-    /* Hover Effect */
-    .menu-toggle:hover {
-        background: linear-gradient(135deg, #111, #333);
-    }
+  /* Move Close Button Inside the Menu */
+  .menu-toggle.menu-open {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1001;
+  }
 
-    /* Mobile Nav */
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background: rgba(10, 10, 22, 0.95);
-        padding: 50px 20px;
-        text-align: center;
-        transition: right 0.4s ease-in-out;
-        overflow-y: auto; /* Enables vertical scroll */
-    }
+  /* Hover Effect */
+  .menu-toggle:hover {
+      background: linear-gradient(135deg, #111, #333);
+  }
 
-    /* Show Menu */
-    .nav-links.active {
-        right: 0;
-    }
+  /* Mobile Nav */
+  .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(10, 10, 22, 0.95);
+      padding: 50px 20px;
+      text-align: center;
+      transition: right 0.4s ease-in-out;
+      overflow-y: auto; /* Enables vertical scroll */
+  }
 
-    /* Mobile Nav Links */
-    .nav-links li {
-        margin-bottom: 20px;
-        width: 100%;
-    }
+  /* Show Menu */
+  .nav-links.active {
+      right: 0;
+  }
 
-    .nav-links a {
-        font-size: 18px;
-        color: white;
-        display: block;
-        padding: 10px;
-        width: 100%;
-        border-radius: 8px;
-        transition: background 0.3s ease;
-    }
+  /* Mobile Nav Links */
+  .nav-links li {
+      margin-bottom: 20px;
+      width: 100%;
+  }
 
-    .nav-links a:hover {
-        background: rgba(255, 30, 0, 0.6);
-    }
+  .nav-links a {
+      font-size: 18px;
+      color: white;
+      display: block;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+  }
+
+  .nav-links a:hover {
+      background: rgba(255, 30, 0, 0.6);
+  }
 }
 
-    </style>
-    <script>/* Toggle Mobile Menu */
-        /* Toggle Mobile Menu */
-function toggleMenu() {
-    let menu = document.querySelector('.nav-links');
-    let toggleButton = document.querySelector('.menu-toggle');
-    let translateBtn = document.querySelector('.translate-btn').cloneNode(true);
-
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        toggleButton.textContent = "☰";
-        document.querySelector('.nav-links .translate-btn')?.remove();
-    } else {
-        menu.classList.add('active');
-        toggleButton.textContent = "✕";
-        const listItem = document.createElement('li');
-        listItem.appendChild(translateBtn);
-        menu.appendChild(listItem);
-    }
-}
-function toggleMenu() {
-    let menu = document.querySelector('.nav-links');
-    let toggleButton = document.querySelector('.menu-toggle');
-
-    menu.classList.toggle('active');
-
-    // If menu is open, move button inside and change text to "CLOSE"
-    if (menu.classList.contains('active')) {
-        toggleButton.textContent = "CLOSE";
-        toggleButton.classList.add("menu-open"); // Moves button inside menu
-    } 
-    // If menu is closed, reset button position & text
-    else {
-        toggleButton.textContent = "MENU";
-        toggleButton.classList.remove("menu-open"); // Returns to original position
-    }
+  </style>
+  <script>/* Toggle Mobile Menu */
+  function toggleMenu() {
+  document.querySelector('.nav-links').classList.add('active');
 }
 
-        </script>
+function closeMenu() {
+  document.querySelector('.nav-links').classList.remove('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  const navLinks = document.querySelector('.nav-links');
+  const menuToggle = document.querySelector('.menu-toggle');
+  
+  if (navLinks.classList.contains('active') && 
+      !event.target.closest('.nav-links') && 
+      !event.target.closest('.menu-toggle')) {
+      closeMenu();
+  }
+});
+
+// Close menu when clicking navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+
+      </script>
  <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
     <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
     <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">

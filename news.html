@@ -97,7 +97,7 @@
     
             <!-- Navigation Links -->
             <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
+                <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>        <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="events.html">EVENTS</a></li>
                 <li><a href="community.html">COMMUNITY</a></li>
@@ -107,7 +107,8 @@
                         <li><a href="referee.htm">Apply as a referee</a></li>
                         <li><a href="coach.html">Apply as coach</a></li>
                         <li><a href="event.htm">Event license</a></li>
-                        <li><a href="talent.html">Apply as a talent</a></li>
+                        <li><a href="talent.html">Apply as a talent</a></li>  
+
                         <li><a href="team.htm">Apply as a team/club</a></li>
                     </ul>
                 </li>
@@ -115,14 +116,7 @@
     
             <!-- Right Section -->
             <div class="right-section">
-                <!-- Translate Button
-                <button class="translate-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        <path d="M2 12h20"/>
-                    </svg>
-                    <span>عربي</span>
-                </button> -->
+          
                 
                 <!-- Signup/Login Button -->
                 <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
@@ -132,7 +126,24 @@
             </div>
         </nav>
     </header>
-    <style>
+    <style>/* Add this to your existing mobile styles */
+        /* Mobile Close Button */
+        .mobile-close-btn {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+@media (max-width: 768px) {
+    .mobile-close-btn {
+        display: block;
+    }
   /* General Reset */
 /* Updated Translate Button Tooltip */
 .translate-btn:hover::before {
@@ -323,6 +334,16 @@
     .translate-btn span {
         display: none;
     }
+    /* Adjust menu padding to accommodate close button */
+    .nav-links {
+        padding-top: 70px !important;
+    }
+    
+    /* Hide the original menu toggle when mobile menu is open */
+    .nav-links.active + .right-section .menu-toggle {
+        visibility: hidden;
+    }
+}
 
     .nav-links.active .translate-btn {
         display: flex;
@@ -475,6 +496,7 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    /* Navbar */
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -602,41 +624,31 @@ body {
 
     </style>
     <script>/* Toggle Mobile Menu */
-        /* Toggle Mobile Menu */
-function toggleMenu() {
-    let menu = document.querySelector('.nav-links');
-    let toggleButton = document.querySelector('.menu-toggle');
-    let translateBtn = document.querySelector('.translate-btn').cloneNode(true);
-
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        toggleButton.textContent = "☰";
-        document.querySelector('.nav-links .translate-btn')?.remove();
-    } else {
-        menu.classList.add('active');
-        toggleButton.textContent = "✕";
-        const listItem = document.createElement('li');
-        listItem.appendChild(translateBtn);
-        menu.appendChild(listItem);
-    }
+    function toggleMenu() {
+    document.querySelector('.nav-links').classList.add('active');
 }
-function toggleMenu() {
-    let menu = document.querySelector('.nav-links');
-    let toggleButton = document.querySelector('.menu-toggle');
 
-    menu.classList.toggle('active');
-
-    // If menu is open, move button inside and change text to "CLOSE"
-    if (menu.classList.contains('active')) {
-        toggleButton.textContent = "CLOSE";
-        toggleButton.classList.add("menu-open"); // Moves button inside menu
-    } 
-    // If menu is closed, reset button position & text
-    else {
-        toggleButton.textContent = "MENU";
-        toggleButton.classList.remove("menu-open"); // Returns to original position
-    }
+function closeMenu() {
+    document.querySelector('.nav-links').classList.remove('active');
 }
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    if (navLinks.classList.contains('active') && 
+        !event.target.closest('.nav-links') && 
+        !event.target.closest('.menu-toggle')) {
+        closeMenu();
+    }
+});
+
+// Close menu when clicking navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+ 
 
         </script>
     <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
@@ -874,481 +886,286 @@ function toggleMenu() {
                 </div>
               </section>
           
-              <section class="modern-news">
-                <div class="news-wrapper">
-                    <nav class="news-filter">
-                        <h2 class="filter-title">Filter by Category</h2>
-                        <div class="filter-buttons">
-                            <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="iqesf">IQESF</button>
-                            <button class="filter-btn" data-filter="events">Events</button>
-                            <button class="filter-btn" data-filter="gaming">Gaming</button>
-                            <button class="filter-btn" data-filter="other">Other</button>
-                        </div>
-                    </nav>
+              <section class="news-section">
+                <!-- Categories Sidebar -->
+                <aside class="news-sidebar">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <ul class="category-list">
+                        <li><button class="category-btn active" data-category="all">All News</button></li>
+                        <li><button class="category-btn" data-category="iqesf">IQESF</button></li>
+                        <li><button class="category-btn" data-category="events">Events</button></li>
+                        <li><button class="category-btn" data-category="games">Games</button></li>
+                        <li><button class="category-btn" data-category="other">Other</button></li>
+
+                    </ul>
+                </aside>
             
-                    <main class="news-column">
-                        <!-- News Articles (20 items) -->
-                        <article class="news-article" data-category="iqesf">
-                            <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
-                            <div class="article-content">
-                                <span class="article-category tech">iqesf</span>
-                                <time class="article-date">Dec 20, 2023</time>
-                                <h2 class="article-title">iqesf news </h2>
-                                <p class="article-excerpt">dfsfsfs sfdfa dsgdvs sdhnb shs</p>
-                            </div>
-                        </article>
-            
-                        <article class="news-article" data-category="gaming">
-                            <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
-                            <div class="article-content">
-                                <span class="article-category tech">gaming</span>
-                                <time class="article-date">Dec 20, 2023</time>
-                                <h2 class="article-title">iqesf news </h2>
-                                <p class="article-excerpt">dfsfsfs sfdfa dsgdvs sdhnb shs</p>
-                            </div>
-                        </article>
-            
-                        <!-- Continue adding 18 more articles following the same structure -->
-                        <!-- Example articles 3-20 -->
-                        <article class="news-article" data-category="events">
-                            <div class="article-image"><img src="esports.webp" alt="Entertainment News"></div>
-                            <div class="article-content">
-                                <span class="article-category entertainment">events</span>
-                                <time class="article-date">Dec 18, 2023</time>
-                                <h2 class="article-title">Award Season Highlights</h2>
-                                <p class="article-excerpt">This year's award season brings unexpected nominations and fierce competition across all categories. Critics are praising the diversity of nominees and groundbreaking performances that challenge traditional cinematic conventions.This year's award season brings unexpected nominations and fierce competition across all categories. Critics are praising the diversity of nominees and groundbreaking performances that challenge traditional cinematic conventions.</p>
-                            </div>
-                        </article>
-            
-                        <!-- Remaining articles... -->
-                        <article class="news-article" data-category="other">
-                            <div class="article-image"><img src="esports.webp" alt="Tech News"></div>
-                            <div class="article-content">
-                                <span class="article-category tech">other</span>
-                                <time class="article-date">Dec 20, 2023</time>
-                                <h2 class="article-title">iqesf news </h2>
-                                <p class="article-excerpt">dfsfsfs sfdfa dsgdvs sdhnb shs</p>
-                            </div>
-                        </article>
-                        <div class="pagination-controls">
-                            <button class="page-btn prev-btn" disabled>Previous</button>
-                            <span class="page-indicator">Page 1 of 4</span>
-                            <button class="page-btn next-btn">Next</button>
-                        </div>
-                    </main>
+                <!-- News Grid -->
+                <div class="news-main">
+                    <div class="news-grid"></div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled>‹</button>
+                        <div class="page-numbers"></div>
+                        <button class="page-btn next">›</button>
+                    </div>
                 </div>
             
+                <!-- News Modal -->
                 <div class="news-modal">
-                    <div class="modal-container">
-                        <button class="modal-close">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                        </button>
-                        <div class="modal-header">
-                            <div class="header-image">
-                                <img src="" alt="News Image">
-                                <div class="header-gradient"></div>
-                            </div>
-                            <div class="header-content">
-                                <span class="modal-category"></span>
-                                <h1 class="modal-title"></h1>
-                                <div class="modal-meta">
-                                    <time class="modal-date"></time>
-                                    <span class="modal-reading-time"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-scroll">
-                            <div class="modal-body"></div>
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modal-image"></div>
+                        <div class="modal-text">
+                            <h2 class="modal-title"></h2>
+                            <span class="modal-date"></span>
+                            <p class="modal-desc"></p>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <style>.news-modal {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(10,10,10,0.97);
-                z-index: 10000;
-                backdrop-filter: blur(25px);
-                opacity: 0;
-                transition: opacity 0.4s cubic-bezier(0.87, 0, 0.13, 1);
-                overflow: hidden;
-            }
-            
-            .news-modal.active {
-                opacity: 1;
-                display: grid;
-                place-items: center;
-            }
-            
-            .modal-container {
-                position: relative;
-                width: 90%;
-                max-width: 600px;
-                background: #0f0f0f;
-                border-radius: 24px;
-                border: 1px solid rgba(255,255,255,0.08);
-                transform: scale(0.7) rotate(5deg);
-                transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-                overflow: hidden;
-                box-shadow: 
-                    0 0 0 1px rgba(255,255,255,0.03),
-                    0 30px 60px -20px rgba(0,0,0,0.5),
-                    0 0 50px -20px rgba(0,102,255,0.2);
-            }
-            
-            .news-modal.active .modal-container {
-                transform: scale(1) rotate(0deg);
-            }
-            
-            /* Radical New Header */
-        
-            
-            .modal-title {
-                font-size: 2.8rem;
-                margin: 0 0 1.5rem;
-                line-height: 1.1;
-                font-weight: 800;
-                background: linear-gradient(45deg, #fff 30%, #888 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-                letter-spacing: -0.03em;
-            }
-            
-            .modal-meta {
-                display: flex;
-                gap: 1.5rem;
-                color: #666;
-                font-size: 0.9rem;
-                font-weight: 500;
-            }
-            
-            /* Cyberpunk-inspired Content */
-            .modal-scroll {
-                padding: 2rem;
-                background: repeating-linear-gradient(
-                    0deg,
-                    rgba(255,255,255,0.02) 0px,
-                    rgba(255,255,255,0.02) 1px,
-                    transparent 1px,
-                    transparent 4px
-                );
-                max-height: 60vh;
-                overflow-y: auto;
-            }
-            
-            .modal-body {
-                color: rgba(255,255,255,0.9);
-                font-size: 1.1rem;
-                line-height: 1.7;
-                position: relative;
-                padding-left: 2rem;
-                border-left: 2px solid rgba(0,102,255,0.3);
-            }
-            
-            .modal-body::before {
-                content: "◼";
-                position: absolute;
-                left: -1.2rem;
-                top: -0.5rem;
-                color: #0066ff;
-                font-size: 2rem;
-                opacity: 0.3;
-            }
-            
-            /* Holographic Close Button */
-            .modal-close {
-                position: absolute;
-                top: 1.5rem;
-                right: 1.5rem;
-                width: 40px;
-                height: 40px;
-                border: none;
-                background: rgba(255,255,255,0.05);
-                border-radius: 50%;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                display: grid;
-                place-items: center;
-            }
-            
-            .modal-close::before,
-            .modal-close::after {
-                content: '';
-                position: absolute;
-                width: 18px;
-                height: 2px;
-                background: #fff;
-                transform: rotate(45deg);
-            }
-            
-            .modal-close::after {
-                transform: rotate(-45deg);
-            }
-            
-            .modal-close:hover {
-                background: rgba(255,50,0,0.2);
-                transform: rotate(90deg) scale(1.1);
-            }
-            
-            .modal-close:hover::before,
-            .modal-close:hover::after {
-                background: #ff3200;
-            }
-            
-            /* Neon Category Tag */
-            .modal-category {
-                display: inline-block;
-                padding: 0.4rem 1rem;
-                border-radius: 20px;
-                font-size: 0.8rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                background: rgba(0,102,255,0.15);
-                color: #0066ff;
-                border: 1px solid rgba(0,102,255,0.3);
-                margin-bottom: 1.5rem;
-                position: relative;
-                overflow: hidden;
-            }
-            
-            .modal-category::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(90deg, 
-                    transparent 0%,
-                    rgba(255,255,255,0.2) 50%,
-                    transparent 100%
-                );
-                animation: shine 2s infinite;
-            }
-            
-            @keyframes shine {
-                100% {
-                    left: 200%;
-                }
-            }
-            
-            /* Futuristic Scrollbar */
-            .modal-scroll::-webkit-scrollbar {
-                width: 6px;
-            }
-            
-            .modal-scroll::-webkit-scrollbar-track {
-                background: rgba(255,255,255,0.02);
-            }
-            
-            .modal-scroll::-webkit-scrollbar-thumb {
-                background: rgba(0,102,255,0.4);
-                border-radius: 3px;
-            }
-            
-            /* Mobile Adaptation */
-            @media (max-width: 768px) {
-                .modal-container {
-                    width: 95%;
-                    border-radius: 16px;
-                }
-            
-                .modal-title {
-                    font-size: 2rem;
-                }
-            
-                .modal-header {
-                    padding: 3rem 1.5rem 1.5rem;
-                }
-            
-                .modal-scroll {
-                    padding: 1.5rem;
-                }
-            
-                .modal-close {
-                    top: 1rem;
-                    right: 1rem;
-                    width: 36px;
-                    height: 36px;
-                }
-            }
-  .modern-news {
-    background: #0a0a0a;
-    color: #fff;
-    padding: 4rem 2rem;
-    min-height: 100vh;
-    font-family: 'Inter', system-ui, sans-serif;
+            <style>
+        :root {
+    --primary-accent: #ff3559;
+    --secondary-accent: #ff6b6b;
+    --dark-bg: #0a0a0a;
+    --card-bg: rgba(18, 18, 18, 0.95);
+    --text-primary: #f5f5f5;
+    --text-secondary: #a0a0a0;
+    --gradient: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
 }
 
-.news-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+.news-section {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    padding: 4rem 5%;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-.news-filter {
-    padding: 1.5rem;
-    background: #151515;
-    border-radius: 12px;
-    height: fit-content;
+.news-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, 
+        rgba(255, 53, 89, 0.05) 0%, 
+        rgba(18, 18, 18, 1) 70%);
+    pointer-events: none;
+}
+
+.news-sidebar {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
     position: sticky;
     top: 2rem;
+    height: fit-content;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
-.filter-title {
-    font-size: 1.1rem;
-    color: #888;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.filter-buttons {
+.category-list {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.category-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    padding: 1.25rem 2rem;
+    text-align: left;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.category-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0.1;
+    transition: left 0.4s ease;
+}
+
+.category-btn:hover {
+    background: rgba(255,255,255,0.03);
+    transform: translateX(8px);
+}
+
+.category-btn:hover::before {
+    left: 0;
+}
+
+.category-btn.active {
+    background: rgba(255,53,89,0.1);
+    color: var(--primary-accent);
+    font-weight: 600;
+}
+
+.news-grid {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    padding: 1rem 0;
+}
+
+.news-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    cursor: pointer;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient);
+    opacity: 0;
+    mix-blend-mode: soft-light;
+    transition: opacity 0.4s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+}
+
+.news-card:hover::after {
+    opacity: 0.3;
+}
+
+.news-image {
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,0.8) 100%);
+}
+
+.news-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-date {
+    color: var(--primary-accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
     gap: 0.75rem;
 }
 
-.filter-btn {
-    background: transparent;
-    border: 1px solid #333;
-    color: #fff;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.3s ease;
+.news-date::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--primary-accent);
+    border-radius: 50%;
 }
 
-.filter-btn:hover, .filter-btn.active {
-    border-color: #0066ff;
-    background: rgba(0, 102, 255, 0.1);
-    color: #0066ff;
-}
-
-.news-column {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.news-article {
-    background: #151515;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: articleFade 0.6s ease forwards;
-}
-
-@keyframes articleFade {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.news-article:nth-child(1) { animation-delay: 0.1s; }
-.news-article:nth-child(2) { animation-delay: 0.2s; }
-.news-article:nth-child(3) { animation-delay: 0.3s; }
-.news-article:nth-child(4) { animation-delay: 0.4s; }
-.news-article:nth-child(5) { animation-delay: 0.5s; }
-
-.news-article:hover {
-    transform: translateY(-3px);
-}
-
-.article-image {
-    height: 240px;
-    position: relative;
-    overflow: hidden;
-}
-
-.article-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.article-image:hover img {
-    transform: scale(1.05);
-}
-
-.article-content {
-    padding: 1.5rem;
-    position: relative;
-}
-
-.article-category {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.article-category.tech { background: rgba(0, 102, 255, 0.15); color: #0066ff; }
-.article-category.politics { background: rgba(255, 50, 0, 0.15); color: #ff3200; }
-.article-category.entertainment { background: rgba(255, 200, 0, 0.15); color: #ffc800; }
-.article-category.sports { background: rgba(0, 200, 0, 0.15); color: #00c800; }
-
-.article-date {
-    display: block;
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.article-title {
-    font-size: 1.5rem;
-    margin: 0 0 1rem;
+.news-title {
+    font-size: 1.75rem;
+    margin: 0 0 1.5rem 0;
     line-height: 1.3;
+    font-weight: 600;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.article-excerpt {
-    color: #aaa;
-    line-height: 1.6;
-    margin: 0 0 1rem;
+.news-desc {
+    color: var(--text-secondary);
+    line-height: 1.7;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-size: 1.05rem;
 }
 
-.read-more {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 4rem;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-btn {
+    background: rgba(255,255,255,0.05);
+    border: none;
+    color: var(--text-primary);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     cursor: pointer;
-    font-weight: 500;
     transition: all 0.3s ease;
-    display: none;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.read-more:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: #444;
+.page-btn:hover:not(:disabled) {
+    background: var(--primary-accent);
+    color: var(--dark-bg);
+    transform: scale(1.1);
+}
+
+.page-btn.active {
+    background: var(--gradient);
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px rgba(255,53,89,0.2);
 }
 
 .news-modal {
@@ -1358,220 +1175,176 @@ function toggleMenu() {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.95);
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    background: rgba(0,0,0,0.96);
+    z-index: 9999;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 2rem;
-    box-sizing: border-box;
+    backdrop-filter: blur(16px);
 }
 
-.news-modal.active {
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-container {
-    position: relative;
+.modal-content {
+    background: var(--card-bg);
     max-width: 800px;
-    width: 90%;
-    margin: auto;
-    background: #0f0f0f;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    transform: scale(0.95);
-    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.news-modal.active .modal-container {
-    transform: scale(1);
-}
-
-.modal-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: #fff;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(4px);
-}
-
-.modal-close:hover {
-    background: rgba(255,255,255,0.2);
-    transform: rotate(90deg) scale(1.1);
-}
-
-.modal-header {
-    position: relative;
-    flex-shrink: 0;
-}
-
-.header-image {
-    height: 400px;
-    position: relative;
-}
-
-.header-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-.header-gradient {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60%;
-    background: linear-gradient(180deg, transparent 0%, #0f0f0f 100%);
-}
-
-.header-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin: 2rem auto;
+    border-radius: 24px;
     padding: 2.5rem;
-    z-index: 2;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    animation: modalEnter 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-.modal-category {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.15);
+.modal-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.modal-text {
+    padding: 0 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .modal-title {
-    font-size: 2.2rem;
-    margin: 0 0 1.5rem;
-    line-height: 1.25;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.7);
-    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.modal-meta {
+.modal-date {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-accent);
     display: flex;
-    gap: 1.5rem;
-    color: #888;
-    font-size: 0.95rem;
     align-items: center;
+    gap: 0.75rem;
 }
 
-.modal-scroll {
-    flex: 1;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 2.5rem;
+.modal-date::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--primary-accent);
+    border-radius: 50%;
 }
 
-.modal-body {
-    color: #ddd;
-    line-height: 1.8;
-    font-size: 1.05rem;
-    max-width: 700px;
-    margin: 0 auto;
+.modal-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    opacity: 0.9;
+    padding-bottom: 2rem;
 }
-
-.modal-body p {
-    margin: 0 0 2rem;
-    font-weight: 300;
-}
-
-.modal-body strong {
-    color: #fff;
-    font-weight: 500;
-}
-
-.modal-body a {
-    color: #0066ff;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.modal-body a:hover {
-    opacity: 0.8;
-}
-
-.pagination-controls {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem 0;
-}
-
-.page-btn {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid #333;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 44px; /* Minimum touch target size */
+    height: 44px;
+    background: rgba(255,255,255,0.08);
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    z-index: 10000; /* Ensure it's above other elements */
+    touch-action: manipulation; /* Improve touch responsiveness */
 }
 
-.page-btn:hover:not(:disabled) {
-    background: rgba(0, 102, 255, 0.1);
-    border-color: #0066ff;
-    color: #0066ff;
+/* Add mobile-specific styling */
+@media (max-width: 768px) {
+    .close-modal {
+        top: 1rem;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+        background: rgba(255,255,255,0.15);
+    }
+    
+    .close-modal:hover {
+        transform: none; /* Disable hover effects on mobile */
+    }
+}
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.08);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
 }
 
-.page-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+.close-modal:hover {
+    background: var(--primary-accent);
+    color: var(--dark-bg);
+    transform: rotate(90deg);
 }
 
-.page-indicator {
-    color: #666;
-    font-size: 0.9rem;
+@keyframes modalEnter {
+    from { 
+        transform: scale(0.96);
+        opacity: 0; 
+    }
+    to { 
+        transform: scale(1);
+        opacity: 1; 
+    }
 }
 
-@media (max-width: 1024px) {
-    .news-wrapper {
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.03);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-accent);
+    border-radius: 6px;
+    border: 2px solid var(--dark-bg);
+}
+
+@media (max-width: 1200px) {
+    .news-section {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    
+    .news-sidebar {
+        position: static;
+        margin-bottom: 3rem;
+    }
+    
+    .news-grid {
         grid-template-columns: 1fr;
     }
     
-    .news-filter {
-        position: static;
-        margin-bottom: 2rem;
+    .modal-content {
+        margin: 2rem;
+        padding: 2rem;
     }
     
-    .modal-container {
-        margin: 1rem;
-        max-width: calc(100% - 2rem);
-    }
-    
-    .header-image {
-        height: 300px;
+    .modal-image {
+        height: 250px;
     }
     
     .modal-title {
@@ -1580,180 +1353,304 @@ function toggleMenu() {
 }
 
 @media (max-width: 768px) {
-    .modern-news {
-        padding: 2rem 1rem;
+    .news-card {
+        min-height: 320px;
     }
     
-    .modal-container {
-        margin: 0;
-        border-radius: 0;
-        max-height: 100vh;
-        width: 100%;
+    .news-image {
+        height: 200px;
     }
     
-    .header-image {
-        height: 220px;
-    }
-    
-    .header-content {
+    .news-content {
         padding: 1.5rem;
     }
     
-    .modal-scroll {
+    .news-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-content {
+        margin: 1rem;
         padding: 1.5rem;
+    }
+    
+    .modal-image {
+        height: 200px;
+        margin-bottom: 1.5rem;
     }
     
     .modal-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin-bottom: 1rem;
     }
     
-    .modal-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    .modal-date {
+        margin-bottom: 1rem;
     }
     
-    .modal-body {
-        font-size: 1rem;
+    .modal-desc {
+        font-size: 0.95rem;
     }
     
-    .modal-close {
-        top: 1rem;
-        right: 1rem;
-        width: 36px;
-        height: 36px;
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.3rem;
     }
-}
-
-@keyframes articleFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .page-btn {
+        width: 40px;
+        height: 40px;
     }
 }
             </style>
             
             <script>
-            const itemsPerPage = 5;
-            let currentPage = 1;
-            let currentFilter = 'all';
-            let filteredArticles = [];
+            document.addEventListener('DOMContentLoaded', () => {
+                const newsData = [
+                    // Add 15 news items here following the structure
+                    // Example:
+                    {
+                        category: 'iqesf',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },     {
+                        category: 'events',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'games',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'other',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'iqesf',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },     {
+                        category: 'events',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'games',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'other',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'iqesf',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },     {
+                        category: 'events',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'games',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'other',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'iqesf',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },     {
+                        category: 'events',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'games',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    },      {
+                        category: 'other',
+                        image: 'esports.webp',
+                        date: 'May 15, 2024',
+                        title: 'Updates in the news ',
+                        desc: 'here is an example here is an example here is an example here is an example here is an example '
+                    }, 
+                ];
             
-            function initializePagination() {
-                filteredArticles = Array.from(document.querySelectorAll('.news-article'))
-                    .filter(article => currentFilter === 'all' || article.dataset.category === currentFilter);
-                
-                const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
-                updatePaginationControls(totalPages);
-                showPage(currentPage);
-                addReadMoreButtons();
-            }
+                let currentPage = 1;
+                const itemsPerPage = 5;
+                let filteredNews = [...newsData];
             
-            function showPage(page) {
-                const start = (page - 1) * itemsPerPage;
-                const end = start + itemsPerPage;
-                
-                document.querySelectorAll('.news-article').forEach(article => article.style.display = 'none');
-                filteredArticles.slice(start, end).forEach(article => article.style.display = 'grid');
-            }
+                // Initialize news grid
+                const newsGrid = document.querySelector('.news-grid');
+                const pagination = document.querySelector('.pagination');
+                const pageNumbers = document.querySelector('.page-numbers');
             
-            function updatePaginationControls(totalPages) {
-                const prevBtn = document.querySelector('.prev-btn');
-                const nextBtn = document.querySelector('.next-btn');
-                const pageIndicator = document.querySelector('.page-indicator');
-                
-                prevBtn.disabled = currentPage === 1;
-                nextBtn.disabled = currentPage === totalPages;
-                pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
-            }
+                function renderNews() {
+                    newsGrid.innerHTML = '';
+                    const start = (currentPage - 1) * itemsPerPage;
+                    const end = start + itemsPerPage;
+                    filteredNews.slice(start, end).forEach(item => {
+                        const card = document.createElement('article');
+                        card.className = 'news-card';
+                        card.dataset.category = item.category;
+                        card.innerHTML = `
+                            <div class="news-image" style="background-image: url('${item.image}')"></div>
+                            <div class="news-content">
+                                <span class="news-date">${item.date}</span>
+                                <h3 class="news-title">${item.title}</h3>
+                                <p class="news-desc">${item.desc}</p>
+                            </div>
+                        `;
+                        newsGrid.appendChild(card);
+                    });
+                    renderPagination();
+                    addNewsClickHandlers();
+                }
             
-            function addReadMoreButtons() {
-                document.querySelectorAll('.news-article').forEach(article => {
-                    const excerpt = article.querySelector('.article-excerpt');
-                    const existingButton = article.querySelector('.read-more');
+                function renderPagination() {
+                    const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+                    pageNumbers.innerHTML = '';
                     
-                    if (!existingButton && excerpt.scrollHeight > excerpt.clientHeight) {
-                        const readMore = document.createElement('button');
-                        readMore.className = 'read-more';
-                        readMore.textContent = 'Read More';
-                        article.querySelector('.article-content').appendChild(readMore);
+                    for (let i = 1; i <= totalPages; i++) {
+                        const btn = document.createElement('button');
+                        btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                        btn.textContent = i;
+                        btn.addEventListener('click', () => {
+                            currentPage = i;
+                            renderNews();
+                        });
+                        pageNumbers.appendChild(btn);
+                    }// Update the modal handling code
+const closeModal = document.querySelector('.close-modal');
+
+// Add both click and touch events
+['click', 'touchstart'].forEach(eventType => {
+    closeModal.addEventListener(eventType, (e) => {
+        e.preventDefault();
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+});
+
+// Close when clicking outside modal (including touch)
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Add touch support for outside click
+window.addEventListener('touchstart', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+            
+                    document.querySelector('.prev').disabled = currentPage === 1;
+                    document.querySelector('.next').disabled = currentPage === totalPages;
+                }
+            
+                // Pagination controls
+                document.querySelector('.prev').addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        renderNews();
                     }
                 });
-            }
             
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentFilter = btn.dataset.filter;
-                    currentPage = 1;
-                    initializePagination();
-                });
-            });
-            
-            document.querySelector('.next-btn').addEventListener('click', () => {
-                currentPage++;
-                initializePagination();
-            });
-            
-            document.querySelector('.prev-btn').addEventListener('click', () => {
-                currentPage--;
-                initializePagination();
-            });
-            
-            document.querySelectorAll('.news-article').forEach(article => {
-                article.addEventListener('click', (e) => {
-                    if (!e.target.classList.contains('read-more')) {
-                        openModal(article);
+                document.querySelector('.next').addEventListener('click', () => {
+                    if (currentPage < Math.ceil(filteredNews.length / itemsPerPage)) {
+                        currentPage++;
+                        renderNews();
                     }
                 });
-                
-                article.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('read-more')) {
-                        e.stopPropagation();
-                        openModal(article);
-                    }
-                });
-            });
             
-            function openModal(article) {
+                // Category filtering
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const category = btn.dataset.category;
+                        filteredNews = category === 'all' 
+                            ? [...newsData] 
+                            : newsData.filter(item => item.category === category);
+                        currentPage = 1;
+                        renderNews();
+                    });
+                });
+            
+                // Modal handling
                 const modal = document.querySelector('.news-modal');
-                const excerpt = article.querySelector('.article-excerpt').textContent;
-                
-                modal.querySelector('.header-image img').src = article.querySelector('img').src;
-                modal.querySelector('.modal-category').textContent = article.querySelector('.article-category').textContent;
-                modal.querySelector('.modal-title').textContent = article.querySelector('.article-title').textContent;
-                modal.querySelector('.modal-date').textContent = article.querySelector('.article-date').textContent;
-                modal.querySelector('.modal-body').textContent = excerpt;
-                
-                const words = excerpt.split(/\s+/).length;
-                const readingTime = Math.ceil(words / 200);
-                modal.querySelector('.modal-reading-time').textContent = `${readingTime} min read`;
-                
-                modal.style.display = 'block';
-                setTimeout(() => modal.classList.add('active'));
-                document.body.style.overflow = 'hidden';
-            }
+                const closeModal = document.querySelector('.close-modal');
             
-            document.querySelector('.modal-close').addEventListener('click', closeModal);
-            window.addEventListener('click', (e) => e.target === document.querySelector('.news-modal') && closeModal());
-            document.addEventListener('keydown', (e) => e.key === 'Escape' && closeModal());
+                function addNewsClickHandlers() {
+                    document.querySelectorAll('.news-card').forEach(card => {
+                        card.addEventListener('click', () => {
+                            const item = newsData.find(item => 
+                                card.querySelector('.news-title').textContent === item.title
+                            );
+                            
+                            modal.querySelector('.modal-image').style.backgroundImage = 
+                                card.querySelector('.news-image').style.backgroundImage;
+                            modal.querySelector('.modal-title').textContent = item.title;
+                            modal.querySelector('.modal-date').textContent = item.date;
+                            modal.querySelector('.modal-desc').textContent = item.desc;
+                            
+                            modal.style.display = 'block';
+                            document.body.style.overflow = 'hidden';
+                        });
+                    });
+                }
             
-            function closeModal() {
-                const modal = document.querySelector('.news-modal');
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                setTimeout(() => {
+                closeModal.addEventListener('click', () => {
                     modal.style.display = 'none';
-                }, 300);
-            }
+                    document.body.style.overflow = 'auto';
+                });
             
-            initializePagination();
+                window.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            
+                // Initial render
+                renderNews();
+            });
             </script>
         </main>
         <!-- main-area-end -->
