@@ -817,7 +817,7 @@ font-style: normal;
                     try {
                         const userCredential = await signInWithEmailAndPassword(auth, email, password);
                         // Redirect to dashboard or desired page after successful login
-                        window.location.href = '/dashboard.html';
+                        window.location.href = '/profile.html';
                     } catch (error) {
                         handleLoginError(error);
                     }

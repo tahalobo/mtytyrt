@@ -36,59 +36,119 @@
                   font-family: "Cairo", sans-serif;
               }</style>
         <style>/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
-        ::-webkit-scrollbar {
-            width: 12px; /* Width of the scrollbar */
-            height: 10px; /* Height for horizontal scrolling */
-        }
-        
-        /* Scrollbar Track (Background) */
-        ::-webkit-scrollbar-track {
-            background: #0a071b; /* Dark futuristic background */
-            border-radius: 10px;
-            box-shadow: inset 0 0 10px #ff0047; /* Inner glow effect */
-        }
-        
-        /* Scrollbar Thumb (Draggable Part) */
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #ff0047, #800020, #ff2267);
-            border-radius: 10px;
-            box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047;
-            animation: neon-pulse 1.5s infinite alternate;
-        }
-        
-        /* Scrollbar Thumb Hover Effect */
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #ff2267, #990033, #ff0047);
-            box-shadow: 0 0 25px #ff0047, 0 0 35px #ff0047;
-            animation: neon-glow 0.7s infinite alternate;
-        }
-        
-        /* Scrollbar Corner (for when two scrollbars meet) */
-        ::-webkit-scrollbar-corner {
-            background: #0a071b;
-        }
-        
-        /* Firefox Scrollbar */
-        * {
-            scrollbar-width: thin; /* Options: auto, thin, none */
-            scrollbar-color: #ff0047 #0a071b; /* thumb color, track color */
-        }
-        
-        /* Pulsating Neon Effect */
-        @keyframes neon-pulse {
-            0% { box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047; }
-            100% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
-        }
-        
-        /* Glowing Animation for Hover */
-        @keyframes neon-glow {
-            0% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
-            100% { box-shadow: 0 0 30px #ff0047, 0 0 40px #ff0047; }
-        }
+       /* Cybernetic Scrollbar System */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 12px;
+    background: transparent;
+}
+
+/* Matrix Track */
+::-webkit-scrollbar-track {
+    background: 
+        linear-gradient(45deg, 
+            rgba(10,7,27,0.8) 30%,
+            rgba(16,2,36,0.9) 70%),
+        repeating-linear-gradient(
+            -45deg,
+            #0a071b,
+            #0a071b 2px,
+            #ff004722 3px,
+            #ff004722 5px
+        );
+    border-radius: 12px;
+    border: 2px solid #ff0047;
+    box-shadow:
+        inset 0 0 15px #ff0047,
+        0 0 20px #ff004744;
+    animation: matrix-scan 20s linear infinite;
+}
+
+/* Holographic Thumb */
+::-webkit-scrollbar-thumb {
+    background: 
+        linear-gradient(145deg,
+            #ff0047 0%,
+            #800020 30%,
+            #ff2267 70%,
+            #ff0047 100%),
+        radial-gradient(circle at 50% 0%,
+            #fff 10%,
+            #ff0047 30%,
+            transparent 70%);
+    border-radius: 12px;
+    border: 2px solid #fff;
+    box-shadow:
+        0 0 25px #ff0047,
+        0 0 15px #ff0047 inset,
+        0 0 5px white inset;
+    animation:
+        cyber-pulse 2s ease infinite,
+        thumb-shine 3s linear infinite;
+    position: relative;
+}
+
+/* Thumb Hover State - Weapon Charge Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: 
+        linear-gradient(145deg,
+            #ff2267 0%,
+            #990033 30%,
+            #ff0047 70%,
+            #ff2267 100%);
+    box-shadow:
+        0 0 40px #ff0047,
+        0 0 25px #ff0047 inset,
+        0 0 10px white inset;
+    transform: scaleX(1.1);
+    filter: brightness(1.2);
+    animation: cyber-hover 0.8s infinite;
+}
+
+/* Advanced Animations */
+@keyframes cyber-pulse {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(10deg) brightness(1.1); }
+}
+
+@keyframes thumb-shine {
+    0% { background-position: 0% 0%, 50% 0%; }
+    100% { background-position: 100% 100%, 50% 300%; }
+}
+
+@keyframes cyber-hover {
+    0% { box-shadow: 0 0 40px #ff0047; }
+    50% { box-shadow: 0 0 60px #ff0047, 0 0 20px #fff; }
+    100% { box-shadow: 0 0 40px #ff0047; }
+}
+
+@keyframes matrix-scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+/* Firefox Compatibility */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ff0047 #0a071b;
+}
+
+/* Special Effects */
+::-webkit-scrollbar-thumb:active {
+    animation: 
+        cyber-hover 0.3s infinite,
+        thumb-click 0.5s forwards;
+}
+
+@keyframes thumb-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
         </style>
      <!-- header -->
-     <!-- header -->
-     <header>
+       <!-- header -->
+       <header>
         <nav class="navbar">
             <!-- Logo -->
             <div class="logo">
@@ -97,9 +157,10 @@
     
             <!-- Navigation Links -->
             <ul class="nav-links">
-                <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>        <li><a href="index.html">HOME</a></li>
+                <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="#">EVENTS</a></li>
                 <li><a href="community.html">COMMUNITY</a></li>
                 <li class="dropdown">
                     <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
@@ -107,8 +168,7 @@
                         <li><a href="referee.htm">Apply as a referee</a></li>
                         <li><a href="coach.html">Apply as coach</a></li>
                         <li><a href="event.htm">Event license</a></li>
-                        <li><a href="talent.html">Apply as a talent</a></li>  
-
+                        <li><a href="talent.html">Apply as a talent</a></li>
                         <li><a href="team.htm">Apply as a team/club</a></li>
                     </ul>
                 </li>
@@ -116,10 +176,8 @@
     
             <!-- Right Section -->
             <div class="right-section">
-          
-                
-                <!-- Signup/Login Button -->
-                <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
+                <!-- Dynamic Auth Button -->
+                <button id="authButton" class="login-btn">SIGNUP/LOGIN</button>
                 
                 <!-- Mobile Menu Icon -->
                 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -127,7 +185,17 @@
         </nav>
     </header>
     <style>/* Add this to your existing mobile styles */
-        /* Mobile Close Button */
+       /* Mobile Close Button */    .profile-btn {
+        background: linear-gradient(135deg, #ff1e00, #b30000);
+
+box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
+.profile-btn:hover {
+background: linear-gradient(135deg, #b30000, #ff1e00);
+box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
         .mobile-close-btn {
             display: none;
             position: absolute;
@@ -623,34 +691,75 @@ body {
 }
 
     </style>
-    <script>/* Toggle Mobile Menu */
-    function toggleMenu() {
-    document.querySelector('.nav-links').classList.add('active');
-}
-
-function closeMenu() {
-    document.querySelector('.nav-links').classList.remove('active');
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const navLinks = document.querySelector('.nav-links');
-    const menuToggle = document.querySelector('.menu-toggle');
     
-    if (navLinks.classList.contains('active') && 
-        !event.target.closest('.nav-links') && 
-        !event.target.closest('.menu-toggle')) {
-        closeMenu();
-    }
-});
-
-// Close menu when clicking navigation links
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
- 
-
-        </script>
+    <script type="module">
+        // Firebase Configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { 
+            getAuth, 
+            onAuthStateChanged
+        } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyC0j7fWNCVHHEnVhNIkh-A1UuP9MnNL4Lg",
+            authDomain: "iqesf-94953.firebaseapp.com",
+            projectId: "iqesf-94953",
+            storageBucket: "iqesf-94953.firebasestorage.app",
+            messagingSenderId: "174920297377",
+            appId: "1:174920297377:web:f5e3bc39798a3da0e339e0",
+            measurementId: "G-8HX3RZRGD4"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    
+        // Auth Button Handling
+        const authButton = document.getElementById('authButton');
+    
+        // Auth State Listener
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                authButton.textContent = 'PROFILE';
+                authButton.classList.add('profile-btn');
+                authButton.onclick = () => window.location.href = '/profile.html';
+            } else {
+                authButton.textContent = 'SIGNUP/LOGIN';
+                authButton.classList.remove('profile-btn');
+                authButton.onclick = () => window.location.href = '/sign.html';
+            }
+        });
+    
+        // Mobile Menu Functions
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.add('active');
+        }
+    
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('active');
+        }
+    
+        // Make functions available globally for HTML onclick
+        window.toggleMenu = toggleMenu;
+        window.closeMenu = closeMenu;
+    
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.querySelector('.nav-links');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (navLinks.classList.contains('active') && 
+                !event.target.closest('.nav-links') && 
+                !event.target.closest('.menu-toggle')) {
+                closeMenu();
+            }
+        });
+    
+        // Close menu when clicking navigation links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
      <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
         <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
         <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">

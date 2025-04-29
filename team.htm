@@ -36,619 +36,718 @@
                   font-family: "Cairo", sans-serif;
               }</style>
         <style>/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
-        ::-webkit-scrollbar {
-            width: 12px; /* Width of the scrollbar */
-            height: 10px; /* Height for horizontal scrolling */
-        }
-        
-        /* Scrollbar Track (Background) */
-        ::-webkit-scrollbar-track {
-            background: #0a071b; /* Dark futuristic background */
-            border-radius: 10px;
-            box-shadow: inset 0 0 10px #ff0047; /* Inner glow effect */
-        }
-        
-        /* Scrollbar Thumb (Draggable Part) */
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #ff0047, #800020, #ff2267);
-            border-radius: 10px;
-            box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047;
-            animation: neon-pulse 1.5s infinite alternate;
-        }
-        
-        /* Scrollbar Thumb Hover Effect */
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #ff2267, #990033, #ff0047);
-            box-shadow: 0 0 25px #ff0047, 0 0 35px #ff0047;
-            animation: neon-glow 0.7s infinite alternate;
-        }
-        
-        /* Scrollbar Corner (for when two scrollbars meet) */
-        ::-webkit-scrollbar-corner {
-            background: #0a071b;
-        }
-        
-        /* Firefox Scrollbar */
-        * {
-            scrollbar-width: thin; /* Options: auto, thin, none */
-            scrollbar-color: #ff0047 #0a071b; /* thumb color, track color */
-        }
-        
-        /* Pulsating Neon Effect */
-        @keyframes neon-pulse {
-            0% { box-shadow: 0 0 15px #ff0047, 0 0 25px #ff0047; }
-            100% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
-        }
-        
-        /* Glowing Animation for Hover */
-        @keyframes neon-glow {
-            0% { box-shadow: 0 0 20px #ff0047, 0 0 30px #ff0047; }
-            100% { box-shadow: 0 0 30px #ff0047, 0 0 40px #ff0047; }
-        }
-        </style>
-    <header>
-      <nav class="navbar">
-          <!-- Logo -->
-          <div class="logo">
-              <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
-          </div>
-  
-          <!-- Navigation Links -->
-          <ul class="nav-links">
-            <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>        <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-              <li><a href="events.html">EVENTS</a></li>
-              <li><a href="community.html">COMMUNITY</a></li>
-              <li class="dropdown">
-                  <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
-                  <ul class="dropdown-menu">
-                      <li><a href="referee.htm">Apply as a referee</a></li>
-                      <li><a href="coach.html">Apply as coach</a></li>
-                      <li><a href="event.htm">Event license</a></li>
-                      <li><a href="talent.html">Apply as a talent</a></li>  
+         /* Cybernetic Scrollbar System */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 12px;
+    background: transparent;
+}
 
-                      <li><a href="team.htm">Apply as a team/club</a></li>
-                  </ul>
-              </li>
-          </ul>
-  
-          <!-- Right Section -->
-          <div class="right-section">
-        
-              
-              <!-- Signup/Login Button -->
-              <a href="sign.html"><button class="login-btn">SIGNUP/LOGIN</button></a>
-              
-              <!-- Mobile Menu Icon -->
-              <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-          </div>
-      </nav>
-  </header>
-  <style>/* Add this to your existing mobile styles */
-      /* Mobile Close Button */
-      .mobile-close-btn {
-          display: none;
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          font-size: 32px;
-          color: white;
-          cursor: pointer;
-          background: none;
-          border: none;
-          padding: 0;
-      }
+/* Matrix Track */
+::-webkit-scrollbar-track {
+    background: 
+        linear-gradient(45deg, 
+            rgba(10,7,27,0.8) 30%,
+            rgba(16,2,36,0.9) 70%),
+        repeating-linear-gradient(
+            -45deg,
+            #0a071b,
+            #0a071b 2px,
+            #ff004722 3px,
+            #ff004722 5px
+        );
+    border-radius: 12px;
+    border: 2px solid #ff0047;
+    box-shadow:
+        inset 0 0 15px #ff0047,
+        0 0 20px #ff004744;
+    animation: matrix-scan 20s linear infinite;
+}
+
+/* Holographic Thumb */
+::-webkit-scrollbar-thumb {
+    background: 
+        linear-gradient(145deg,
+            #ff0047 0%,
+            #800020 30%,
+            #ff2267 70%,
+            #ff0047 100%),
+        radial-gradient(circle at 50% 0%,
+            #fff 10%,
+            #ff0047 30%,
+            transparent 70%);
+    border-radius: 12px;
+    border: 2px solid #fff;
+    box-shadow:
+        0 0 25px #ff0047,
+        0 0 15px #ff0047 inset,
+        0 0 5px white inset;
+    animation:
+        cyber-pulse 2s ease infinite,
+        thumb-shine 3s linear infinite;
+    position: relative;
+}
+
+/* Thumb Hover State - Weapon Charge Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: 
+        linear-gradient(145deg,
+            #ff2267 0%,
+            #990033 30%,
+            #ff0047 70%,
+            #ff2267 100%);
+    box-shadow:
+        0 0 40px #ff0047,
+        0 0 25px #ff0047 inset,
+        0 0 10px white inset;
+    transform: scaleX(1.1);
+    filter: brightness(1.2);
+    animation: cyber-hover 0.8s infinite;
+}
+
+/* Advanced Animations */
+@keyframes cyber-pulse {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(10deg) brightness(1.1); }
+}
+
+@keyframes thumb-shine {
+    0% { background-position: 0% 0%, 50% 0%; }
+    100% { background-position: 100% 100%, 50% 300%; }
+}
+
+@keyframes cyber-hover {
+    0% { box-shadow: 0 0 40px #ff0047; }
+    50% { box-shadow: 0 0 60px #ff0047, 0 0 20px #fff; }
+    100% { box-shadow: 0 0 40px #ff0047; }
+}
+
+@keyframes matrix-scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+/* Firefox Compatibility */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ff0047 #0a071b;
+}
+
+/* Special Effects */
+::-webkit-scrollbar-thumb:active {
+    animation: 
+        cyber-hover 0.3s infinite,
+        thumb-click 0.5s forwards;
+}
+
+@keyframes thumb-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+        </style>
+     <!-- header -->
+       <!-- header -->
+       <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+                <li class="dropdown">
+                    <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="referee.htm">Apply as a referee</a></li>
+                        <li><a href="coach.html">Apply as coach</a></li>
+                        <li><a href="event.htm">Event license</a></li>
+                        <li><a href="talent.html">Apply as a talent</a></li>
+                        <li><a href="#">Apply as a team/club</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Right Section -->
+            <div class="right-section">
+                <!-- Dynamic Auth Button -->
+                <button id="authButton" class="login-btn">SIGNUP/LOGIN</button>
+                
+                <!-- Mobile Menu Icon -->
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+    <style>/* Add this to your existing mobile styles */
+        /* Mobile Close Button */    .profile-btn {
+          background: linear-gradient(135deg, #ff1e00, #b30000);
+
+box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
+.profile-btn:hover {
+background: linear-gradient(135deg, #b30000, #ff1e00);
+box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+        .mobile-close-btn {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
 @media (max-width: 768px) {
-  .mobile-close-btn {
-      display: block;
-  }
-/* General Reset */
+    .mobile-close-btn {
+        display: block;
+    }
+  /* General Reset */
 /* Updated Translate Button Tooltip */
 .translate-btn:hover::before {
-  content: "Translate website to Arabic";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1a1a1a;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  white-space: nowrap;
-  pointer-events: none;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-  width: max-content;
-  max-width: 200px;
-  text-align: center;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 /* Mobile Tooltip Adjustments */
 @media (max-width: 768px) {
-  .translate-btn:hover::before {
-      left: auto;
-      right: 0;
-      transform: none;
-      bottom: auto;
-      top: 100%;
-      margin-top: 8px;
-      white-space: normal;
-      width: 160px;
-      font-size: 11px;
-      line-height: 1.4;
-  }
-  
-  .translate-btn:hover::after {
-      content: '';
-      position: absolute;
-      right: 15px;
-      top: 100%;
-      border-width: 0 6px 6px;
-      border-style: solid;
-      border-color: #1a1a1a transparent;
-      margin-top: 2px;
-  }
+    .translate-btn:hover::before {
+        left: auto;
+        right: 0;
+        transform: none;
+        bottom: auto;
+        top: 100%;
+        margin-top: 8px;
+        white-space: normal;
+        width: 160px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    
+    .translate-btn:hover::after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 100%;
+        border-width: 0 6px 6px;
+        border-style: solid;
+        border-color: #1a1a1a transparent;
+        margin-top: 2px;
+    }
 }
 
 /* Add slight delay for mobile hover */
 @media (hover: hover) {
-  .translate-btn::before {
-      transition-delay: 0.1s;
-  }
+    .translate-btn::before {
+        transition-delay: 0.1s;
+    }
 }
 /* Translate Button Improvements */
 .translate-btn {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid #333;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  font-size: 14px;
-  margin-left: 15px; /* Add space between buttons */
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 14px;
+    margin-left: 15px; /* Add space between buttons */
 }
 
 .translate-btn:hover {
-  background: rgba(255,255,255,0.2);
-  border-color: #444;
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
 }
 
 .translate-btn:hover::before {
-  content: "Translate website to Arabic";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1a1a1a;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 1;
-  margin-bottom: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 1;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .translate-btn::before {
-  content: "";
-  opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  transform: translate(-50%, 5px);
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translate(-50%, 5px);
 }
 
 .translate-btn svg {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.2s ease;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
 }
 
 .translate-btn:hover svg {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 /* Adjust right section spacing */
 .right-section {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Increased gap between elements */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between elements */
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .translate-btn {
-      margin-left: 0;
-      padding: 8px 12px;
-  }
-  
-  .translate-btn span {
-      display: none;
-  }
-  
-  .nav-links.active .translate-btn span {
-      display: inline;
-  }
-  
-  .right-section {
-      gap: 8px;
-  }
+    .translate-btn {
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+    
+    .translate-btn span {
+        display: none;
+    }
+    
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+    
+    .right-section {
+        gap: 8px;
+    }
 }
 
-/* Add to existing CSS */
+  /* Add to existing CSS */
 .translate-btn {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid #333;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .translate-btn:hover {
-  background: rgba(255,255,255,0.2);
-  border-color: #444;
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
 }
 
 .translate-btn svg {
-  width: 18px;
-  height: 18px;
+    width: 18px;
+    height: 18px;
 }
 
 /* Mobile Logo Replacement */
 @media (max-width: 768px) {
-  .logo img {
-      display: none;
-  }
-  
-  .logo::before {
-      content: "iqesf";
-      color: white;
-      font-weight: bold;
-      font-size: 1.4rem;
-      letter-spacing: 1px;
-      position: relative;
-      top: 2px;
-  }
+    .logo img {
+        display: none;
+    }
+    
+    .logo::before {
+        content: "iqesf";
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        position: relative;
+        top: 2px;
+    }
 }
 
 /* Update mobile menu for translate button */
 @media (max-width: 768px) {
-  .right-section {
-      gap: 8px;
-  }
+    .right-section {
+        gap: 8px;
+    }
 
-  .translate-btn span {
-      display: none;
-  }
-  /* Adjust menu padding to accommodate close button */
-  .nav-links {
-      padding-top: 70px !important;
-  }
-  
-  /* Hide the original menu toggle when mobile menu is open */
-  .nav-links.active + .right-section .menu-toggle {
-      visibility: hidden;
-  }
+    .translate-btn span {
+        display: none;
+    }
+    /* Adjust menu padding to accommodate close button */
+    .nav-links {
+        padding-top: 70px !important;
+    }
+    
+    /* Hide the original menu toggle when mobile menu is open */
+    .nav-links.active + .right-section .menu-toggle {
+        visibility: hidden;
+    }
 }
 
-  .nav-links.active .translate-btn {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      margin-top: 20px;
-      padding: 12px;
-  }
+    .nav-links.active .translate-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 12px;
+    }
 
-  .nav-links.active .translate-btn span {
-      display: inline;
-  }
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
 }
 @font-face {
-font-family: 'Cairo';
-src: url('font.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+  font-family: 'Cairo';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Cairo", sans-serif;
+    font-family: "Cairo", sans-serif;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 20px; /* Added top space */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
-  padding: 15px 50px;
-  border-radius: 12px; /* Rounded edges for a modern look */
-  backdrop-filter: blur(10px); /* Glass effect */
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20px; /* Added top space */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
+    padding: 15px 50px;
+    border-radius: 12px; /* Rounded edges for a modern look */
+    backdrop-filter: blur(10px); /* Glass effect */
+    z-index: 1000;
 }
 
 /* Logo */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
 }
 
 .logo img {
-  height: 100%; /* Ensures logo scales properly */
-  max-height: 120px; /* Ensures maximum height of logo */
-  width: auto; /* Keeps aspect ratio intact */
+    height: 100%; /* Ensures logo scales properly */
+    max-height: 120px; /* Ensures maximum height of logo */
+    width: auto; /* Keeps aspect ratio intact */
 }
 
 /* Nav Links */
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links li {
-  position: relative;
+    position: relative;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff3333;
+    color: #ff3333;
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
-  padding: 10px;
-  list-style: none;
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
+    padding: 10px;
+    list-style: none;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 .dropdown-menu li {
-  padding: 8px 12px;
+    padding: 8px 12px;
 }
 
 .dropdown-menu a {
-  color: white;
-  display: block;
+    color: white;
+    display: block;
 }
 
 .dropdown-menu a:hover {
-  color: #ff3333;
+    color: #ff3333;
 }
 
 /* Signup/Login Button */
 .login-btn {
-  background: linear-gradient(135deg, #ff1e00, #b30000);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+    background: linear-gradient(135deg, #ff1e00, #b30000);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
 }
 
 .login-btn:hover {
-  background: linear-gradient(135deg, #b30000, #ff1e00);
-  box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+    background: linear-gradient(135deg, #b30000, #ff1e00);
+    box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
 }
 
 /* Mobile Menu Icon */
 .menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .navbar {
-      padding: 10px 30px;
-  }
-  .nav-links {
-      gap: 20px;
-  }
+    .navbar {
+        padding: 10px 30px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      background: rgba(10, 10, 22, 0.85);
-       border-radius: 12px;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-  }
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: rgba(10, 10, 22, 0.85);
+         border-radius: 12px;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
 
-  /* Logo */
-  .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-  }
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-  .logo img {
-      height: 50px; /* Larger logo on mobile */
-  }
+    .logo img {
+        height: 50px; /* Larger logo on mobile */
+    }
 
-  /* Right Section (Login + Menu Button in a Row) */
-  .right-section {
-      display: flex;
-      align-items: center;
-      gap: 10px; /* Space between login & menu button */
-  }
+    /* Right Section (Login + Menu Button in a Row) */
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between login & menu button */
+    }
 
-  /* Login Button */
-  .login-btn {
-      background: linear-gradient(135deg, #ff1e00, #b30000);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-size: 14px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
-  }
+    /* Login Button */
+    .login-btn {
+        background: linear-gradient(135deg, #ff1e00, #b30000);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+    }
 
-  .login-btn:hover {
-      background: linear-gradient(135deg, #b30000, #ff1e00);
-      box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
-  }
+    .login-btn:hover {
+        background: linear-gradient(135deg, #b30000, #ff1e00);
+        box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+    }
 
-  /* Menu Toggle Button */
-  .menu-toggle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-      color: white;
-      background: linear-gradient(135deg, #333, #111);
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      position: relative;
-  }
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+        background: linear-gradient(135deg, #333, #111);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        position: relative;
+    }
 
-  /* Move Close Button Inside the Menu */
-  .menu-toggle.menu-open {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      z-index: 1001;
-  }
+    /* Move Close Button Inside the Menu */
+    .menu-toggle.menu-open {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
 
-  /* Hover Effect */
-  .menu-toggle:hover {
-      background: linear-gradient(135deg, #111, #333);
-  }
+    /* Hover Effect */
+    .menu-toggle:hover {
+        background: linear-gradient(135deg, #111, #333);
+    }
 
-  /* Mobile Nav */
-  .nav-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background: rgba(10, 10, 22, 0.95);
-      padding: 50px 20px;
-      text-align: center;
-      transition: right 0.4s ease-in-out;
-      overflow-y: auto; /* Enables vertical scroll */
-  }
+    /* Mobile Nav */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 22, 0.95);
+        padding: 50px 20px;
+        text-align: center;
+        transition: right 0.4s ease-in-out;
+        overflow-y: auto; /* Enables vertical scroll */
+    }
 
-  /* Show Menu */
-  .nav-links.active {
-      right: 0;
-  }
+    /* Show Menu */
+    .nav-links.active {
+        right: 0;
+    }
 
-  /* Mobile Nav Links */
-  .nav-links li {
-      margin-bottom: 20px;
-      width: 100%;
-  }
+    /* Mobile Nav Links */
+    .nav-links li {
+        margin-bottom: 20px;
+        width: 100%;
+    }
 
-  .nav-links a {
-      font-size: 18px;
-      color: white;
-      display: block;
-      padding: 10px;
-      width: 100%;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-  }
+    .nav-links a {
+        font-size: 18px;
+        color: white;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
 
-  .nav-links a:hover {
-      background: rgba(255, 30, 0, 0.6);
-  }
+    .nav-links a:hover {
+        background: rgba(255, 30, 0, 0.6);
+    }
 }
 
-  </style>
-  <script>/* Toggle Mobile Menu */
-  function toggleMenu() {
-  document.querySelector('.nav-links').classList.add('active');
-}
-
-function closeMenu() {
-  document.querySelector('.nav-links').classList.remove('active');
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-  const navLinks = document.querySelector('.nav-links');
-  const menuToggle = document.querySelector('.menu-toggle');
+    </style>
+    
+    <script type="module">
+      // Firebase Initialization (Only happens once)
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import { getAuth, onAuthStateChanged as authStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
   
-  if (navLinks.classList.contains('active') && 
-      !event.target.closest('.nav-links') && 
-      !event.target.closest('.menu-toggle')) {
-      closeMenu();
-  }
-});
-
-// Close menu when clicking navigation links
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', closeMenu);
-});
-
-
-      </script>
+      const firebaseConfig = {
+          apiKey: "AIzaSyC0j7fWNCVHHEnVhNIkh-A1UuP9MnNL4Lg",
+          authDomain: "iqesf-94953.firebaseapp.com",
+          projectId: "iqesf-94953",
+          storageBucket: "iqesf-94953.firebasestorage.app",
+          messagingSenderId: "174920297377",
+          appId: "1:174920297377:web:f5e3bc39798a3da0e339e0",
+          measurementId: "G-8HX3RZRGD4"
+      };
+  
+      // Initialize and store on window object
+      window.firebaseApp = initializeApp(firebaseConfig);
+      window.firebaseAuth = getAuth(window.firebaseApp);
+  
+      // Header Auth Button Logic
+      const authButton = document.getElementById('authButton');
+      
+      authStateChanged(window.firebaseAuth, (user) => {
+          if (user) {
+              authButton.textContent = 'PROFILE';
+              authButton.classList.add('profile-btn');
+              authButton.onclick = () => window.location.href = '/profile.html';
+          } else {
+              authButton.textContent = 'SIGNUP/LOGIN';
+              authButton.classList.remove('profile-btn');
+              authButton.onclick = () => window.location.href = '/sign.html';
+          }
+      });
+  
+      // Mobile Menu Functions
+      window.toggleMenu = function() {
+          document.querySelector('.nav-links').classList.add('active');
+      };
+  
+      window.closeMenu = function() {
+          document.querySelector('.nav-links').classList.remove('active');
+      };
+  
+      // Menu Event Listeners
+      document.addEventListener('click', (event) => {
+          const navLinks = document.querySelector('.nav-links');
+          if (navLinks.classList.contains('active') && 
+              !event.target.closest('.nav-links') && 
+              !event.target.closest('.menu-toggle')) {
+              window.closeMenu();
+          }
+      });
+  
+      document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', window.closeMenu);
+      });
+  </script>
   <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
     <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
     <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
@@ -924,7 +1023,7 @@ font-style: normal;
                               <option value="">Select players</option>
                               <script>
                                 for(let i = 2; i <= 50; i++) {
-                                  document.write(`<option value="${i}">${i} Years</option>`);
+                                  document.write(`<option value="${i}">${i} player(s)</option>`);
                                 }
                               </script>
                             </select>
@@ -1313,164 +1412,140 @@ font-style: normal;
               }
               </style>
               
-              <script type="module">
-              import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-              import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-              document.addEventListener('DOMContentLoaded', () => {
-                const steps = document.querySelectorAll('.form-step');
-                const progressSteps = document.querySelectorAll('.progress-step');
-                const form = document.getElementById('talentForm');
-                let currentStep = 0;
-              
-                // Navigation
-                document.querySelectorAll('.next-btn').forEach(btn => {
-                  btn.addEventListener('click', () => {
-                    if(validateStep(currentStep)) {
-                      goToStep(currentStep + 1);
-                    }
-                  });
-                });
-              
-                document.querySelectorAll('.prev-btn').forEach(btn => {
-                  btn.addEventListener('click', () => goToStep(currentStep - 1));
-                });
-              
-                function goToStep(step) {
-                  steps[currentStep].classList.remove('active');
-                  progressSteps[currentStep].classList.remove('active');
-                  currentStep = step;
-                  steps[currentStep].classList.add('active');
-                  progressSteps[currentStep].classList.add('active');
-                }
-              
-                // Validation
-                function validateStep(step) {
-                  let valid = true;
-                  const currentFields = steps[step].querySelectorAll('input, select, textarea');
-                  
-                  currentFields.forEach(field => {
-                    if(field.id === 'phone' && !validatePhone(field.value)) {
-                      showError(field, 'Invalid Iraqi number (must start with 07 and 11 digits)');
-                      valid = false;
-                    }
-                    if(field.id === 'email' && !validateEmail(field.value)) {
-                      showError(field, 'Invalid email address');
-                      valid = false;
-                    }
-                    if(field.id === 'instagram' && !validateInstagram(field.value)) {
-                      showError(field, 'Invalid Instagram URL');
-                      valid = false;
-                    }
-                    if(field.required && !field.value.trim()) {
-                      showError(field, 'This field is required');
-                      valid = false;
-                    }
-                  });
-              
-                  return valid;
-                }
-              
-                function validatePhone(number) {
-                  return /^07\d{9}$/.test(number);
-                }
-              
-                function validateEmail(email) {
-                  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-                }
-              
-                function validateInstagram(url) {
-                  return /^(https?:\/\/)?(www\.)?instagram\.com\/[a-zA-Z0-9_\.]+\/?$/.test(url);
-                }
-              
-                function showError(field, message) {
-                  const error = field.closest('.form-group').querySelector('.error-message');
-                  error.textContent = message;
-                  error.style.display = 'block';
-                  field.style.borderColor = '#ff4757';
-                }
-              
-                // File Upload
-                const dropZone = document.getElementById('dropZone');
-                const fileInput = document.getElementById('cv');
-                const fileInfo = document.querySelector('.file-info');
-              
-                dropZone.addEventListener('click', () => fileInput.click());
-                
-                fileInput.addEventListener('change', handleFileSelect);
-                
-                ['dragover', 'dragenter'].forEach(event => {
-                  dropZone.addEventListener(event, (e) => {
-                    e.preventDefault();
-                    dropZone.classList.add('dragover');
-                  });
-                });
-              
-                ['dragleave', 'dragend', 'drop'].forEach(event => {
-                  dropZone.addEventListener(event, () => {
-                    dropZone.classList.remove('dragover');
-                  });
-                });
-              
-                dropZone.addEventListener('drop', (e) => {
-                  e.preventDefault();
-                  const files = e.dataTransfer.files;
-                  if(files.length) {
-                    fileInput.files = files;
-                    handleFileSelect();
-                  }
-                });
-              
-                function handleFileSelect() {
-                  const file = fileInput.files[0];
-                  if(file && file.type === 'application/pdf') {
-                    fileInfo.textContent = `Selected: ${file.name}`;
-                  } else {
-                    fileInfo.textContent = 'Please select a PDF file';
-                    fileInput.value = '';
-                  }
-                }
-              
-                // Form Submission
-                form.addEventListener('submit', (e) => {
-                  e.preventDefault();
-                  if(validateStep(currentStep)) {
-                    // Submit form
-                    alert('Application submitted successfully!');
-                    form.reset();
-                    goToStep(0);
-                  }
-                });
-              });    
-              const firebaseConfig = {
-                apiKey: "AIzaSyC0j7fWNCVHHEnVhNIkh-A1UuP9MnNL4Lg",
-                authDomain: "iqesf-94953.firebaseapp.com",
-                projectId: "iqesf-94953",
-                storageBucket: "iqesf-94953.firebasestorage.app",
-                messagingSenderId: "174920297377",
-                appId: "1:174920297377:web:f5e3bc39798a3da0e339e0",
-                measurementId: "G-8HX3RZRGD4"
-              };
-              
-              const app = initializeApp(firebaseConfig);
-              const auth = getAuth(app);
-              
-              const authContent = document.getElementById('authContent');
-              const unauthContent = document.getElementById('unauthContent');
-              
-              onAuthStateChanged(auth, (user) => {
-                if (user) {
-                  authContent.classList.remove('hidden');
-                  unauthContent.style.display = 'none';
-                } else {
-                  authContent.classList.add('hidden');
-                  unauthContent.style.display = 'flex';
-                }
-              });
-              
-              // Keep all your existing form JavaScript code here
-              // ... [your existing script content] ...
-              </script>
-            
+           
+<!-- Script 2: Form Handling with Shared Firebase Instance -->
+<script type="module">
+  // Use initialized Firebase instance
+  import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+  
+  const auth = window.firebaseAuth;
+  const app = window.firebaseApp;
+
+  document.addEventListener('DOMContentLoaded', () => {
+      // Form Step Logic
+      const steps = document.querySelectorAll('.form-step');
+      const progressSteps = document.querySelectorAll('.progress-step');
+      const form = document.getElementById('talentForm');
+      let currentStep = 0;
+
+      // Navigation Controls
+      document.querySelectorAll('.next-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+              if(validateStep(currentStep)) goToStep(currentStep + 1);
+          });
+      });
+
+      document.querySelectorAll('.prev-btn').forEach(btn => {
+          btn.addEventListener('click', () => goToStep(currentStep - 1));
+      });
+
+      function goToStep(step) {
+          steps[currentStep].classList.remove('active');
+          progressSteps[currentStep].classList.remove('active');
+          currentStep = step;
+          steps[currentStep].classList.add('active');
+          progressSteps[currentStep].classList.add('active');
+      }
+
+      // Validation Logic
+      function validateStep(step) {
+          let valid = true;
+          const currentFields = steps[step].querySelectorAll('input, select, textarea');
+          
+          currentFields.forEach(field => {
+              if(field.id === 'phone' && !/^07\d{9}$/.test(field.value)) {
+                  showError(field, 'Invalid Iraqi number (must start with 07 and 11 digits)');
+                  valid = false;
+              }
+              if(field.id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                  showError(field, 'Invalid email address');
+                  valid = false;
+              }
+              if(field.id === 'instagram' && !/^(https?:\/\/)?(www\.)?instagram\.com\/[a-zA-Z0-9_\.]+\/?$/.test(field.value)) {
+                  showError(field, 'Invalid Instagram URL');
+                  valid = false;
+              }
+              if(field.required && !field.value.trim()) {
+                  showError(field, 'This field is required');
+                  valid = false;
+              }
+          });
+          return valid;
+      }
+
+      function showError(field, message) {
+          const error = field.closest('.form-group').querySelector('.error-message');
+          error.textContent = message;
+          error.style.display = 'block';
+          field.style.borderColor = '#ff4757';
+      }
+
+      // File Upload Handling
+      const dropZone = document.getElementById('dropZone');
+      const fileInput = document.getElementById('cv');
+      const fileInfo = document.querySelector('.file-info');
+
+      dropZone.addEventListener('click', () => fileInput.click());
+      
+      fileInput.addEventListener('change', handleFileSelect);
+      
+      ['dragover', 'dragenter'].forEach(event => {
+          dropZone.addEventListener(event, (e) => {
+              e.preventDefault();
+              dropZone.classList.add('dragover');
+          });
+      });
+
+      ['dragleave', 'dragend', 'drop'].forEach(event => {
+          dropZone.addEventListener(event, () => {
+              dropZone.classList.remove('dragover');
+          });
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          const files = e.dataTransfer.files;
+          if(files.length) {
+              fileInput.files = files;
+              handleFileSelect();
+          }
+      });
+
+      function handleFileSelect() {
+          const file = fileInput.files[0];
+          if(file && file.type === 'application/pdf') {
+              fileInfo.textContent = `Selected: ${file.name}`;
+          } else {
+              fileInfo.textContent = 'Please select a PDF file';
+              fileInput.value = '';
+          }
+      }
+
+      // Form Submission
+      form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if(validateStep(currentStep)) {
+              alert('Application submitted successfully!');
+              form.reset();
+              goToStep(0);
+          }
+      });
+
+      // Auth State for Form Content
+      const authContent = document.getElementById('authContent');
+      const unauthContent = document.getElementById('unauthContent');
+
+      onAuthStateChanged(auth, (user) => {
+          if (user) {
+              authContent.classList.remove('hidden');
+              unauthContent.style.display = 'none';
+          } else {
+              authContent.classList.add('hidden');
+              unauthContent.style.display = 'flex';
+          }
+      });
+  });
+</script>
          
         </main>
         <!-- main-area-end -->

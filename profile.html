@@ -1,0 +1,1097 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>IQESF Profile </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images.ico">
+
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="font-flaticon/flaticon.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/meanmenu.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        
+        <style>    @font-face {
+            font-family: 'Cairo';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+          }
+          
+           
+              body {
+                  font-family: "Cairo", sans-serif;
+              }</style>
+        <style>/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+             /* Cybernetic Scrollbar System */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 12px;
+    background: transparent;
+}
+
+/* Matrix Track */
+::-webkit-scrollbar-track {
+    background: 
+        linear-gradient(45deg, 
+            rgba(10,7,27,0.8) 30%,
+            rgba(16,2,36,0.9) 70%),
+        repeating-linear-gradient(
+            -45deg,
+            #0a071b,
+            #0a071b 2px,
+            #ff004722 3px,
+            #ff004722 5px
+        );
+    border-radius: 12px;
+    border: 2px solid #ff0047;
+    box-shadow:
+        inset 0 0 15px #ff0047,
+        0 0 20px #ff004744;
+    animation: matrix-scan 20s linear infinite;
+}
+
+/* Holographic Thumb */
+::-webkit-scrollbar-thumb {
+    background: 
+        linear-gradient(145deg,
+            #ff0047 0%,
+            #800020 30%,
+            #ff2267 70%,
+            #ff0047 100%),
+        radial-gradient(circle at 50% 0%,
+            #fff 10%,
+            #ff0047 30%,
+            transparent 70%);
+    border-radius: 12px;
+    border: 2px solid #fff;
+    box-shadow:
+        0 0 25px #ff0047,
+        0 0 15px #ff0047 inset,
+        0 0 5px white inset;
+    animation:
+        cyber-pulse 2s ease infinite,
+        thumb-shine 3s linear infinite;
+    position: relative;
+}
+
+/* Thumb Hover State - Weapon Charge Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: 
+        linear-gradient(145deg,
+            #ff2267 0%,
+            #990033 30%,
+            #ff0047 70%,
+            #ff2267 100%);
+    box-shadow:
+        0 0 40px #ff0047,
+        0 0 25px #ff0047 inset,
+        0 0 10px white inset;
+    transform: scaleX(1.1);
+    filter: brightness(1.2);
+    animation: cyber-hover 0.8s infinite;
+}
+
+/* Advanced Animations */
+@keyframes cyber-pulse {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(10deg) brightness(1.1); }
+}
+
+@keyframes thumb-shine {
+    0% { background-position: 0% 0%, 50% 0%; }
+    100% { background-position: 100% 100%, 50% 300%; }
+}
+
+@keyframes cyber-hover {
+    0% { box-shadow: 0 0 40px #ff0047; }
+    50% { box-shadow: 0 0 60px #ff0047, 0 0 20px #fff; }
+    100% { box-shadow: 0 0 40px #ff0047; }
+}
+
+@keyframes matrix-scan {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+/* Firefox Compatibility */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ff0047 #0a071b;
+}
+
+/* Special Effects */
+::-webkit-scrollbar-thumb:active {
+    animation: 
+        cyber-hover 0.3s infinite,
+        thumb-click 0.5s forwards;
+}
+
+@keyframes thumb-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+        </style>
+     <!-- header -->
+       <!-- header -->
+       <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="iraqiEsportsFederationLogoWhite.png" alt="Iraqi Esports Federation">
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <button class="mobile-close-btn" onclick="closeMenu()">&times;</button>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="community.html">COMMUNITY</a></li>
+                <li class="dropdown">
+                    <a href="#">COMMUNITY APPLICATION PORTAL ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="referee.htm">Apply as a referee</a></li>
+                        <li><a href="coach.html">Apply as coach</a></li>
+                        <li><a href="event.htm">Event license</a></li>
+                        <li><a href="talent.html">Apply as a talent</a></li>
+                        <li><a href="team.htm">Apply as a team/club</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <!-- Right Section -->
+            <div class="right-section">
+                <!-- Dynamic Auth Button -->
+                <button id="authButton" class="login-btn">SIGNUP/LOGIN</button>
+                
+                <!-- Mobile Menu Icon -->
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+    <style>/* Add this to your existing mobile styles */
+     /* Mobile Close Button */    .profile-btn {
+        background: linear-gradient(135deg, #ff1e00, #b30000);
+
+box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
+.profile-btn:hover {
+background: linear-gradient(135deg, #b30000, #ff1e00);
+box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+        .mobile-close-btn {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+@media (max-width: 768px) {
+    .mobile-close-btn {
+        display: block;
+    }
+  /* General Reset */
+/* Updated Translate Button Tooltip */
+.translate-btn:hover::before {
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Mobile Tooltip Adjustments */
+@media (max-width: 768px) {
+    .translate-btn:hover::before {
+        left: auto;
+        right: 0;
+        transform: none;
+        bottom: auto;
+        top: 100%;
+        margin-top: 8px;
+        white-space: normal;
+        width: 160px;
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    
+    .translate-btn:hover::after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 100%;
+        border-width: 0 6px 6px;
+        border-style: solid;
+        border-color: #1a1a1a transparent;
+        margin-top: 2px;
+    }
+}
+
+/* Add slight delay for mobile hover */
+@media (hover: hover) {
+    .translate-btn::before {
+        transition-delay: 0.1s;
+    }
+}
+/* Translate Button Improvements */
+.translate-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 14px;
+    margin-left: 15px; /* Add space between buttons */
+}
+
+.translate-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.translate-btn:hover::before {
+    content: "Translate website to Arabic";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 1;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.translate-btn::before {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translate(-50%, 5px);
+}
+
+.translate-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+}
+
+.translate-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* Adjust right section spacing */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap between elements */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .translate-btn {
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+    
+    .translate-btn span {
+        display: none;
+    }
+    
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+    
+    .right-section {
+        gap: 8px;
+    }
+}
+
+  /* Add to existing CSS */
+.translate-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.translate-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #444;
+}
+
+.translate-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Mobile Logo Replacement */
+@media (max-width: 768px) {
+    .logo img {
+        display: none;
+    }
+    
+    .logo::before {
+        content: "iqesf";
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        position: relative;
+        top: 2px;
+    }
+}
+
+/* Update mobile menu for translate button */
+@media (max-width: 768px) {
+    .right-section {
+        gap: 8px;
+    }
+
+    .translate-btn span {
+        display: none;
+    }
+    /* Adjust menu padding to accommodate close button */
+    .nav-links {
+        padding-top: 70px !important;
+    }
+    
+    /* Hide the original menu toggle when mobile menu is open */
+    .nav-links.active + .right-section .menu-toggle {
+        visibility: hidden;
+    }
+}
+
+    .nav-links.active .translate-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 12px;
+    }
+
+    .nav-links.active .translate-btn span {
+        display: inline;
+    }
+}
+@font-face {
+  font-family: 'Cairo';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20px; /* Added top space */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(10, 10, 22, 0.8); /* Semi-transparent dark */
+    padding: 15px 50px;
+    border-radius: 12px; /* Rounded edges for a modern look */
+    backdrop-filter: blur(10px); /* Glass effect */
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100%; /* Ensures logo scales properly */
+    max-height: 120px; /* Ensures maximum height of logo */
+    width: auto; /* Keeps aspect ratio intact */
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff3333;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 10, 22, 0.9); /* Transparent dropdown */
+    padding: 10px;
+    list-style: none;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu a {
+    color: white;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #ff3333;
+}
+
+/* Signup/Login Button */
+.login-btn {
+    background: linear-gradient(135deg, #ff1e00, #b30000);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #b30000, #ff1e00);
+    box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+}
+
+/* Mobile Menu Icon */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background: rgba(10, 10, 22, 0.85);
+         border-radius: 12px;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
+
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 50px; /* Larger logo on mobile */
+    }
+
+    /* Right Section (Login + Menu Button in a Row) */
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between login & menu button */
+    }
+
+    /* Login Button */
+    .login-btn {
+        background: linear-gradient(135deg, #ff1e00, #b30000);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 30, 0, 0.6);
+    }
+
+    .login-btn:hover {
+        background: linear-gradient(135deg, #b30000, #ff1e00);
+        box-shadow: 0 0 15px rgba(255, 30, 0, 0.9);
+    }
+
+    /* Menu Toggle Button */
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+        background: linear-gradient(135deg, #333, #111);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    /* Move Close Button Inside the Menu */
+    .menu-toggle.menu-open {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    /* Hover Effect */
+    .menu-toggle:hover {
+        background: linear-gradient(135deg, #111, #333);
+    }
+
+    /* Mobile Nav */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(10, 10, 22, 0.95);
+        padding: 50px 20px;
+        text-align: center;
+        transition: right 0.4s ease-in-out;
+        overflow-y: auto; /* Enables vertical scroll */
+    }
+
+    /* Show Menu */
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Mobile Nav Links */
+    .nav-links li {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        color: white;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 30, 0, 0.6);
+    }
+}
+
+    </style>
+    
+    <script type="module">
+        // Firebase Configuration (Initialize only once)
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyC0j7fWNCVHHEnVhNIkh-A1UuP9MnNL4Lg",
+            authDomain: "iqesf-94953.firebaseapp.com",
+            projectId: "iqesf-94953",
+            storageBucket: "iqesf-94953.firebasestorage.app",
+            messagingSenderId: "174920297377",
+            appId: "1:174920297377:web:f5e3bc39798a3da0e339e0",
+            measurementId: "G-8HX3RZRGD4"
+        };
+    
+        // Initialize and store on window object
+        window.firebaseApp = initializeApp(firebaseConfig);
+        window.firebaseAuth = getAuth(window.firebaseApp);
+    
+        // Auth Button Handling
+        const authButton = document.getElementById('authButton');
+        
+        onAuthStateChanged(window.firebaseAuth, (user) => {
+            if (user) {
+                authButton.textContent = 'PROFILE';
+                authButton.classList.add('profile-btn');
+                authButton.onclick = () => window.location.href = '/profile.html';
+            } else {
+                authButton.textContent = 'SIGNUP/LOGIN';
+                authButton.classList.remove('profile-btn');
+                authButton.onclick = () => window.location.href = '/sign.html';
+            }
+        });
+    
+        // Mobile Menu Functions
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.add('active');
+        }
+    
+        function closeMenu() {
+            document.querySelector('.nav-links').classList.remove('active');
+        }
+    
+        window.toggleMenu = toggleMenu;
+        window.closeMenu = closeMenu;
+    
+        document.addEventListener('click', function(event) {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.classList.contains('active') && 
+                !event.target.closest('.nav-links') && 
+                !event.target.closest('.menu-toggle')) {
+                closeMenu();
+            }
+        });
+    
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+    
+    
+    <div id="mobile-alert" class="mobile-alert" style="display: none; position: fixed; top: 0; left: 0; width: 100%; padding: 15px 30px; text-align: center; font-size: 20px; z-index: 1000; font-family: 'Press Start 2P', cursive; animation: slideIn 1s ease-out;">
+        <p style="color: #ffffff; font-size: 24px; text-shadow: 0 0 5px rgba(178, 226, 178, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);">🎮 Get ready! We have a mobile app for you! 🎮</p>
+        <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+            <button id="download-btn" style="background: linear-gradient(45deg, #ff3366, #ff66cc); border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(255, 105, 180, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+                Download Now
+            </button>
+            <button id="close-alert" style="background-color: #dc3545; border: none; padding: 10px 35px; font-size: 18px; cursor: pointer; border-radius: 12px; color: white; box-shadow: 0 4px 20px rgba(220, 53, 69, 0.8); transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s;">
+                Close
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // Function to detect mobile devices
+        function isMobile() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+    
+        // Show the alert if the user is on a mobile device
+        window.onload = function() {
+            if (isMobile()) {
+                document.getElementById("mobile-alert").style.display = "block";
+            }
+    
+            // Close the alert when the close button is clicked
+            document.getElementById("close-alert").onclick = function() {
+                document.getElementById("mobile-alert").style.display = "none";
+            };
+    
+            // Download button click (replace this with your actual download link)
+            document.getElementById("download-btn").onclick = function() {
+                window.location.href = "https://yourappdownloadlink.com"; // Replace with your actual download link
+            };
+        };
+    </script>
+    
+    <style>
+        /* Keyframe animation for sliding the alert in */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    
+        /* Animation for pulsing neon effect */
+        @keyframes pulseText {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+        }
+        @font-face {
+    font-family: 'Cairo';
+    src: url('font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{font-family: "Cairo";}  
+        /* Styling for the alert box */
+        #mobile-alert {
+            background: rgba(75, 0, 130, 0.8); /* Transparent background */
+            color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.6), 0 0 30px rgba(138, 43, 226, 0.6);
+            text-align: center;
+            padding: 15px;
+            animation: slideIn 1s ease-out;
+             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        /* Pulse effect on text */
+        #mobile-alert p {
+            animation: pulseText 1.5s infinite alternate;
+        }
+    
+        /* Button hover effects */
+        #download-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 105, 180, 0.8);
+            background: linear-gradient(45deg, #ff66cc, #ff3366);
+        }
+    
+        #close-alert:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(220, 53, 69, 0.8);
+            background-color: #c82333;
+        }
+    
+        /* Flexbox for button layout */
+        .mobile-alert div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+
+        <main>
+          <section class="auth-status-section" style="background: url(s.jpeg) no-repeat;">
+                    <div class="auth-status-container">
+                        <div class="auth-status-card">
+                            <!-- Animated Checkmark -->
+                            <div class="status-animation">
+                                <svg class="checkmark" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#6c5ce7" stroke-width="5"/>
+                                    <path class="check" d="M25,55 L45,75 L75,35" fill="none" stroke="#fff" stroke-width="8" 
+                                          stroke-linecap="round" stroke-dasharray="100" stroke-dashoffset="100"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Status Message -->
+                            <h2 class="status-message">You're Logged In</h2>
+                            <p class="status-description">Welcome back to the community!</p>
+                            
+                            <!-- Logout Button -->
+                            <button class="auth-logout-btn">
+                                <span>Log Out</span>
+                                <div class="btn-hover-effect"></div>
+                            </button>
+                        </div>
+                    </div>
+                
+                    <style>
+                        .auth-status-section {
+                            min-height: 100vh;
+                            background: #0a0a0a;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 2rem;
+                        }
+                
+                        .auth-status-container {
+                            max-width: 500px;
+                            width: 100%;
+                        }
+                
+                        .auth-status-card {
+                            background: rgba(16, 16, 24, 0.95);
+                            border-radius: 20px;
+                            padding: 3rem 2rem;
+                            text-align: center;
+                            position: relative;
+                            overflow: hidden;
+                            transform: translateY(20px);
+                            opacity: 0;
+                            animation: cardEntry 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+                        }
+                
+                        .status-animation {
+                            margin: 0 auto 2rem;
+                            width: 120px;
+                            height: 120px;
+                        }
+                
+                        .checkmark {
+                            width: 100%;
+                            height: 100%;
+                            animation: checkmarkDraw 1.2s ease-in-out forwards;
+                        }
+                
+                        .check {
+                            animation: checkStroke 0.8s ease-out 0.4s forwards;
+                        }
+                
+                        .status-message {
+                            color: #fff;
+                            font-size: 2rem;
+                            margin-bottom: 1rem;
+                        }
+                
+                        .status-description {
+                            color: #888;
+                            margin-bottom: 2rem;
+                        }
+                
+                        .auth-logout-btn {
+                            background: linear-gradient(135deg, #6c5ce7, #8577e9);
+                            color: white;
+                            border: none;
+                            padding: 1rem 2rem;
+                            border-radius: 50px;
+                            font-size: 1.1rem;
+                            cursor: pointer;
+                            position: relative;
+                            overflow: hidden;
+                            transition: all 0.3s ease;
+                        }
+                
+                        .btn-hover-effect {
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(
+                                90deg,
+                                transparent,
+                                rgba(255, 255, 255, 0.2),
+                                transparent
+                            );
+                            transition: 0.5s;
+                        }
+                
+                        .auth-logout-btn:hover .btn-hover-effect {
+                            left: 100%;
+                        }
+                
+                        @keyframes cardEntry {
+                            to {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                        }
+                
+                        @keyframes checkmarkDraw {
+                            from {
+                                transform: scale(0) rotate(-45deg);
+                                opacity: 0;
+                            }
+                            to {
+                                transform: scale(1) rotate(0);
+                                opacity: 1;
+                            }
+                        }
+                
+                        @keyframes checkStroke {
+                            to {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+                    </style>
+                
+              
+<!-- Script 2: Logout Functionality -->
+<script type="module">
+    import { signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+    // Use shared instance from window
+    const auth = window.firebaseAuth;
+
+    // Auth check
+    auth.onAuthStateChanged((user) => {
+        if (!user) window.location.href = '/sign.html';
+    });
+
+    // Logout handler
+    document.querySelector('.auth-logout-btn')?.addEventListener('click', async () => {
+        try {
+            await signOut(auth);
+            window.location.href = '/sign.html';
+        } catch (error) {
+            console.error('Logout error:', error);
+        }
+    });
+</script>
+                </section>
+        </main>
+        <!-- main-area-end -->
+ <!-- footer -->
+ <footer>
+
+    <div class="footer-top" style="padding-top: 10px; background-color: #0a071b;">
+      <div class="container">
+
+       
+
+        
+
+          <div class="footer-menu-wrapper">
+
+   
+            <ul class="footer-menu-list">
+        
+                <li>
+                    <a href="index.html" class="footer-menu-link">Home</a>
+                </li>
+  
+                <li>
+                  <a href="about.html" class="footer-menu-link">About</a>
+                </li>
+  
+                <li>
+                  <a href="community.html" class="footer-menu-link">Community</a>
+                </li>
+  
+                <li>
+                  <a href="sign.html" class="footer-menu-link">Login</a>
+                </li>
+  
+                
+              </ul>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          Copyright &copy; 2025 all rights reserved
+        </p>
+
+        <figure class="footer-bottom-img">
+          <img src="d.png" alt="Online payment companies logo">
+        </figure>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+		<!-- JS here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+         <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/parallax-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
